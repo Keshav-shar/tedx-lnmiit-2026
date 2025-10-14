@@ -1,11 +1,162 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainLayout title="TEDx LNMIIT">
+  <!-- HERO SECTION -->
+  <section class=" w-full h-screen bg-black ">
+    <img 
+      src="../../public/images/MainElement.png"  
+      alt="TEDx LNMIIT Hero" 
+      class="w-full h-full object-cover"
+      style="object-position: center;"
+    />
+  </section>
+
+  <!-- Forging the Future Text -->
+  <section class="w-full py-5  flex justify-center bg-black">
+    <h1 class="text-3xl md:text-7xl font-extrabold text-red-600 molten-text">
+      FORGING THE FUTURE
+    </h1>
+  </section>
+
+  <style>
+    
+    .molten-text {
+      position: relative;
+      color: #580808;
+      text-shadow: 
+        0 0 5px #670606,
+        0 0 10px #5e0303,
+        0 0 20px #7a0505,
+        0 0 40px #6b0808,
+        0 0 60px #560606;
+      animation: molten 1.5s infinite alternate;
+    }
+
+    @keyframes molten {
+      0% {
+        text-shadow:
+          0 0 5px #ff0000,
+          0 0 10px #ff4d4d,
+          0 0 20px #ff1a1a,
+          0 0 40px #ff0000,
+          0 0 60px #ff4d4d;
+      }
+      100% {
+        text-shadow:
+          0 0 10px #ff4d4d,
+          0 0 15px #ff1a1a,
+          0 0 25px #ff0000,
+          0 0 50px #ff4d4d,
+          0 0 70px #ff1a1a;
+      }
+    }
+  </style>
+
+
+  <!-- Teaser Video-->
+  <section class="w-full bg-black py-16 flex justify-center">
+    <div class="max-w-4xl w-full bg-gray-900/80 border border-gray-800 shadow-lg overflow-hidden aspect-video">
+      <iframe
+        src="https://www.youtube.com/embed/xGv4oAeEe6M"
+        title="TEDxLNMIIT Teaser"
+        class="w-full h-full"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </section>
+
+
+ 
+  <section class="relative w-full h-screen overflow-hidden bg-black">
+
+
+    <!-- Content , we can write anything else  -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+      <h2 class="text-4xl md:text-6xl font-extrabold text-red-700 tracking-tight mb-6 drop-shadow-lg">HELLO EXPLORER</h2>
+
+      <!-- Countdown card -->
+      <div class="mt-4 bg-black/40 border border-gray-700 px-6 py-6 rounded-md backdrop-blur-sm">
+        <div class="text-gray-300 mb-3">Time until the event</div>
+        <div id="countdown" class="flex gap-6 justify-center text-center">
+          <div class="min-w-[72px]">
+            <div id="days" class="text-4xl md:text-5xl font-extrabold text-white">0</div>
+            <div class="text-xs text-gray-400 mt-1">Days</div>
+          </div>
+          <div class="min-w-[60px]">
+            <div id="hours" class="text-4xl md:text-5xl font-extrabold text-white">0</div>
+            <div class="text-xs text-gray-400 mt-1">Hours</div>
+          </div>
+          <div class="min-w-[60px]">
+            <div id="minutes" class="text-4xl md:text-5xl font-extrabold text-white">0</div>
+            <div class="text-xs text-gray-400 mt-1">Minutes</div>
+          </div>
+          <div class="min-w-[60px]">
+            <div id="seconds" class="text-4xl md:text-5xl font-extrabold text-white">0</div>
+            <div class="text-xs text-gray-400 mt-1">Seconds</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="max-w-2xl text-red-500 mt-8 leading-relaxed">
+        Join us as we bring bold ideas and pioneers together — a celebration of creativity,
+        innovation and the people shaping tomorrow.
+      </p>
+    </div>
+  </section>
+
+</MainLayout>
+
+
+<!-- live countdown -->
+<script type="module">
+ 
+  // Event datetime in ISO with timezone (Asia/Kolkata +05:30)
+  const EVENT_ISO = '2026-01-10T09:00:00+05:30';
+
+  
+  //  COUNTDOWN 
+  (function initCountdown() {
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
+
+    function update() {
+      const now = new Date();
+      const target = new Date(EVENT_ISO);
+      let diff = target - now; // ms
+
+      if (diff < 0) {
+        // If event passed, show zeros
+        daysEl.textContent = '0';
+        hoursEl.textContent = '0';
+        minutesEl.textContent = '0';
+        secondsEl.textContent = '0';
+        clearInterval(interval);
+        return;
+      }
+
+      // calculate time components
+      const totalSeconds = Math.floor(diff / 1000);
+      const secs = totalSeconds % 60;
+      const totalMinutes = Math.floor(totalSeconds / 60);
+      const mins = totalMinutes % 60;
+      const totalHours = Math.floor(totalMinutes / 60);
+      const hrs = totalHours % 24;
+      const days = Math.floor(totalHours / 24);
+
+      daysEl.textContent = String(days);
+      hoursEl.textContent = String(hrs).padStart(2, '0');
+      minutesEl.textContent = String(mins).padStart(2, '0');
+      secondsEl.textContent = String(secs).padStart(2, '0');
+    }
+
+    // initial update + every second
+    update();
+    const interval = setInterval(update, 1000);
+  })();
+</script>
