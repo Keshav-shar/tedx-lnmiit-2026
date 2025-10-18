@@ -1,7 +1,7 @@
 ---
 // component imports
 import MainHead from './MainHead.astro';
-import Footer from '../components/Footer.astro';
+import Footer from '../components/Footer.jsx';
 // style import 
 import '../styles/global.css';
 // import React Navbar instead of Astro Nav
@@ -22,6 +22,6 @@ const { title = "Default Title", description = "Default Description" } = Astro.p
             </slot>
         </main>
 
-        
+        <Footer client:load/>
     </body>
 </html>

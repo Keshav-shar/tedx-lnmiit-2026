@@ -1,67 +1,36 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
+import FAQPage from "../components/FAQ.jsx";
 ---
 
 <MainLayout title="TEDx LNMIIT">
   <!-- HERO SECTION -->
-  <section class=" w-full h-screen bg-black ">
-    <img 
-      src="../../public/images/MainElement.png"  
-      alt="TEDx LNMIIT Hero" 
-      class="w-full h-full object-cover"
-      style="object-position: center;"
-    />
-  </section>
+ <section 
+  class="relative flex flex-col items-center justify-center bg-black min-h-[calc(100vh-80px)] overflow-hidden pt-4"
+>
+  <!-- Sculpture Image -->
+  <img 
+    src="../../public/images/MainElement.png"  
+    alt="TEDx LNMIIT Hero" 
+    class="object-contain w-auto max-h-[70vh] md:max-h-[75vh]"
+  />
 
-  <!-- Forging the Future Text -->
-  <section class="w-full py-5  flex justify-center bg-black">
-    <h1 class="text-3xl md:text-7xl font-extrabold text-red-600 molten-text">
-      FORGING THE FUTURE
-    </h1>
-  </section>
-
-  <style>
-    
-    .molten-text {
-      position: relative;
-      color: #580808;
-      text-shadow: 
-        0 0 5px #670606,
-        0 0 10px #5e0303,
-        0 0 20px #7a0505,
-        0 0 40px #6b0808,
-        0 0 60px #560606;
-      animation: molten 1.5s infinite alternate;
-    }
-
-    @keyframes molten {
-      0% {
-        text-shadow:
-          0 0 5px #ff0000,
-          0 0 10px #ff4d4d,
-          0 0 20px #ff1a1a,
-          0 0 40px #ff0000,
-          0 0 60px #ff4d4d;
-      }
-      100% {
-        text-shadow:
-          0 0 10px #ff4d4d,
-          0 0 15px #ff1a1a,
-          0 0 25px #ff0000,
-          0 0 50px #ff4d4d,
-          0 0 70px #ff1a1a;
-      }
-    }
-  </style>
+  <!-- Title Text -->
+  <h1 class="mt-4 text-center font-extrabold tracking-tight leading-none">
+    <span class="text-red-600 text-5xl md:text-7xl">FORGING</span>
+    <span class="text-white text-5xl md:text-7xl ml-2">THE FUTURE</span>
+  </h1>
+</section>
 
 
-  <!-- Teaser Video-->
-  <section class="w-full bg-black py-16 flex justify-center">
-    <div class="max-w-4xl w-full bg-gray-900/80 border border-gray-800 shadow-lg overflow-hidden aspect-video">
+  <!-- TEASER VIDEO SECTION -->
+  <section class="w-full bg-black py-20 px-6 flex justify-center">
+    <div class="max-w-5xl w-full border-2 border-red-700 rounded-2xl overflow-hidden shadow-[0_0_25px_#ff0000aa]">
       <iframe
-        src="https://www.youtube.com/embed/xGv4oAeEe6M"
+        src="https://www.youtube.com/embed/xGv4oAeEe6M?autoplay=1&mute=1&loop=1&playlist=xGv4oAeEe6M"
         title="TEDxLNMIIT Teaser"
-        class="w-full h-full"
+        class="w-full aspect-video"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
@@ -70,55 +39,114 @@ import MainLayout from "../layouts/MainLayout.astro";
   </section>
 
 
- 
-  <section class="relative w-full h-screen overflow-hidden bg-black">
+  <!-- COUNTDOWN SECTION -->
+  <section class="relative w-full bg-gradient-to-b from-black to-[#1a0000] py-20 flex flex-col items-center text-center">
+    <h2 class="text-4xl md:text-6xl font-extrabold text-red-600 mb-10 drop-shadow-[0_0_15px_#ff0000]">
+      HELLO EXPLORER
+    </h2>
 
-
-    <!-- Content , we can write anything else  -->
-    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-      <h2 class="text-4xl md:text-6xl font-extrabold text-red-700 tracking-tight mb-6 drop-shadow-lg">HELLO EXPLORER</h2>
-
-      <!-- Countdown card -->
-      <div class="mt-4 bg-black/40 border border-gray-700 px-6 py-6 rounded-md backdrop-blur-sm">
-        <div class="text-gray-300 mb-3">Time until the event</div>
-        <div id="countdown" class="flex gap-6 justify-center text-center">
-          <div class="min-w-[72px]">
-            <div id="days" class="text-4xl md:text-5xl font-extrabold text-white">0</div>
-            <div class="text-xs text-gray-400 mt-1">Days</div>
-          </div>
-          <div class="min-w-[60px]">
-            <div id="hours" class="text-4xl md:text-5xl font-extrabold text-white">0</div>
-            <div class="text-xs text-gray-400 mt-1">Hours</div>
-          </div>
-          <div class="min-w-[60px]">
-            <div id="minutes" class="text-4xl md:text-5xl font-extrabold text-white">0</div>
-            <div class="text-xs text-gray-400 mt-1">Minutes</div>
-          </div>
-          <div class="min-w-[60px]">
-            <div id="seconds" class="text-4xl md:text-5xl font-extrabold text-white">0</div>
-            <div class="text-xs text-gray-400 mt-1">Seconds</div>
-          </div>
+    <div class="bg-black/60 border border-red-700 px-10 py-8 rounded-2xl shadow-[0_0_40px_#ff000055] backdrop-blur-sm">
+      <div class="text-gray-300 mb-4 tracking-widest uppercase text-sm">Time until the event</div>
+      <div id="countdown" class="flex flex-wrap justify-center gap-8">
+        <div class="count-box">
+          <div id="days" class="count-number">0</div>
+          <div class="count-label">Days</div>
+        </div>
+        <div class="count-box">
+          <div id="hours" class="count-number">0</div>
+          <div class="count-label">Hours</div>
+        </div>
+        <div class="count-box">
+          <div id="minutes" class="count-number">0</div>
+          <div class="count-label">Minutes</div>
+        </div>
+        <div class="count-box">
+          <div id="seconds" class="count-number">0</div>
+          <div class="count-label">Seconds</div>
         </div>
       </div>
-
-      <p class="max-w-2xl text-red-500 mt-8 leading-relaxed">
-        Join us as we bring bold ideas and pioneers together — a celebration of creativity,
-        innovation and the people shaping tomorrow.
-      </p>
     </div>
+
+    <p class="max-w-2xl text-red-500 mt-12 leading-relaxed text-lg">
+      Join us as we bring bold ideas and pioneers together — a celebration of creativity,
+      innovation, and the people shaping tomorrow.
+    </p>
   </section>
+
+  <style>
+    /* --- HERO TEXT EFFECT --- */
+    .molten-text {
+      text-shadow:
+        0 0 10px #ff0000,
+        0 0 20px #ff4d4d,
+        0 0 40px #ff1a1a,
+        0 0 60px #ff0000,
+        0 0 80px #ff4d4d;
+      animation: molten 2s infinite alternate;
+    }
+
+    @keyframes molten {
+      0% {
+        text-shadow:
+          0 0 5px #ff0000,
+          0 0 15px #ff4d4d,
+          0 0 30px #ff1a1a;
+      }
+      100% {
+        text-shadow:
+          0 0 20px #ff4d4d,
+          0 0 40px #ff1a1a,
+          0 0 80px #ff0000;
+      }
+    }
+
+    /* --- COUNTDOWN BOX --- */
+    .count-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(30, 0, 0, 0.7);
+      border: 2px solid #ff0000;
+      border-radius: 1rem;
+      padding: 1rem 1.5rem;
+      min-width: 90px;
+      box-shadow: 0 0 15px #ff000055;
+      transition: transform 0.3s ease;
+    }
+
+    .count-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #ff000099;
+    }
+
+    .count-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #fff;
+      text-shadow: 0 0 15px #ff0000;
+    }
+
+    .count-label {
+      margin-top: 0.5rem;
+      color: #ff6666;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+  </style>
+
+
+
+<FAQPage client:load/>
 
 </MainLayout>
 
 
-<!-- live countdown -->
+<!-- COUNTDOWN SCRIPT -->
 <script type="module">
- 
-  // Event datetime in ISO with timezone (Asia/Kolkata +05:30)
   const EVENT_ISO = '2026-01-10T09:00:00+05:30';
 
-  
-  //  COUNTDOWN 
   (function initCountdown() {
     const daysEl = document.getElementById('days');
     const hoursEl = document.getElementById('hours');
@@ -128,34 +156,25 @@ import MainLayout from "../layouts/MainLayout.astro";
     function update() {
       const now = new Date();
       const target = new Date(EVENT_ISO);
-      let diff = target - now; // ms
-
-      if (diff < 0) {
-        // If event passed, show zeros
-        daysEl.textContent = '0';
-        hoursEl.textContent = '0';
-        minutesEl.textContent = '0';
-        secondsEl.textContent = '0';
+      const diff = target - now;
+      if (diff <= 0) {
+        [daysEl, hoursEl, minutesEl, secondsEl].forEach(el => el.textContent = '0');
         clearInterval(interval);
         return;
       }
 
-      // calculate time components
       const totalSeconds = Math.floor(diff / 1000);
       const secs = totalSeconds % 60;
-      const totalMinutes = Math.floor(totalSeconds / 60);
-      const mins = totalMinutes % 60;
-      const totalHours = Math.floor(totalMinutes / 60);
-      const hrs = totalHours % 24;
-      const days = Math.floor(totalHours / 24);
+      const mins = Math.floor(totalSeconds / 60) % 60;
+      const hrs = Math.floor(totalSeconds / 3600) % 24;
+      const days = Math.floor(totalSeconds / 86400);
 
-      daysEl.textContent = String(days);
+      daysEl.textContent = days;
       hoursEl.textContent = String(hrs).padStart(2, '0');
       minutesEl.textContent = String(mins).padStart(2, '0');
       secondsEl.textContent = String(secs).padStart(2, '0');
     }
 
-    // initial update + every second
     update();
     const interval = setInterval(update, 1000);
   })();
