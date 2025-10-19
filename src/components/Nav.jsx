@@ -1,67 +1,62 @@
-import { useState } from "react";
-
-const navItems = [
-  { name: "Home", path: "/" },
-  { name: "Theme", path: "/theme" },
-  { name: "About", path: "/about" },
-  { name: "Speakers", path: "/speakers" },
-  { name: "Gallery", path: "/gallery" },
-  { name: "Team", path: "/team" },
-];
+import { useContext, useEffect, useState } from "react";
+import { NavbarContext } from "../context/NavContext";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const { setNavOpen } = useContext(NavbarContext);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        // Scrolling down → hide navbar
+        setShowNavbar(false);
+      } else {
+        // Scrolling up → show navbar
+        setShowNavbar(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
-    <header className="w-full flex items-center justify-between px-4 py-3 bg-black shadow-md relative">
-
-      {/* Left Logo */}
-      <div className="flex flex-col">
-        <img 
+    <header
+      className={`fixed top-0 left-0 w-full flex items-center justify-between px-4 py-3 bg-black shadow-md z-50 transition-transform duration-300 ${
+        showNavbar ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
+      {/* LEFT SECTION */}
+      <div className="flex flex-col items-start">
+        <img
           src="/images/logo-white.png"
-          alt="TEDx LNMIIT Logo" 
-          className="h-8 w-auto object-contain"
+          alt="TEDx LNMIIT Logo"
+          className="h-10 w-auto object-contain object-left"
         />
-        <span className="text-xs text-white leading-tight">
-          x = independently organized <span className="text-red-600 font-semibold">TED</span> event
+        <span className="mt-1 text-[11px] leading-tight text-white">
+          x = independently organized{" "}
+          <span className="text-red-600 font-semibold">TED</span> event
         </span>
       </div>
 
-      {/* Right side: Get Tickets + Hamburger */}
-      <div className="flex items-center space-x-3">
-        <button className="bg-red-600 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap">
+      {/* RIGHT SECTION */}
+      <div className="flex items-center space-x-4">
+        <button className="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">
           Get Tickets
         </button>
         <button
-          className="text-2xl text-white"
-          onClick={() => setIsOpen(!isOpen)}
+          className="text-3xl text-white"
+          onClick={() => setNavOpen(true)}
         >
           ☰
         </button>
       </div>
-
-      {/* Mobile Menu (Full Screen) */}
-      {isOpen && (
-        <div className="fixed inset-0 bg-black/90 flex flex-col items-center justify-center space-y-6 z-50">
-          {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.path}
-              className="text-white text-2xl font-semibold"
-              onClick={() => setIsOpen(false)}
-            >
-              {item.name}
-            </a>
-          ))}
-
-          <button
-            onClick={() => setIsOpen(false)}
-            className="absolute top-5 right-5 text-white text-3xl"
-          >
-            ✕
-          </button>
-        </div>
-      )}
     </header>
   );
 }
+
