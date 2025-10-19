@@ -1,27 +1,81 @@
 ---
-// component imports
 import MainHead from './MainHead.astro';
 import Footer from '../components/Footer.jsx';
-// style import 
 import '../styles/global.css';
-// import React Navbar instead of Astro Nav
-import Navbar from '../components/Nav.jsx';
-
+import NavWrapper from '../components/NavWrapper.jsx';
 const { title = "Default Title", description = "Default Description" } = Astro.props;
 ---
 
 <html lang="en">
-    <MainHead title={title} description={description} />
-    <body>
-        <!-- React Navbar with hydration -->
-        <Navbar client:load />
+  <MainHead title={title} description={description} />
+  <body class="bg-black text-white overflow-x-hidden min-h-screen">
 
-        <main>
-            <slot>
-                Default Text
-            </slot>
-        </main>
 
-        <Footer client:load/>
-    </body>
+     <NavWrapper client:load />
+    <!-- Page Transition Wrapper -->
+    <div 
+      id="page-transition" 
+      class="opacity-0 translate-y-4 transition-all duration-700 ease-out min-h-screen pt-20"
+    >
+      <main>
+        <slot>
+          Default Text
+        </slot>
+      </main>
+    </div>
+
+    
+    <Footer client:visible />
+
+
+    <!-- Safe page transition script (runs only in browser) -->
+    <script type="module">
+      // Protect against server-side execution
+      if (typeof window !== 'undefined') {
+        window.addEventListener('DOMContentLoaded', () => {
+          const page = document.getElementById('page-transition');
+          if (!page) return;
+
+          // Fade-in on initial load
+          requestAnimationFrame(() => {
+            page.classList.remove('opacity-0', 'translate-y-4');
+            page.classList.add('opacity-100', 'translate-y-0');
+          });
+
+          // Add navigation fade-out for internal links
+          document.querySelectorAll('a[href]').forEach(link => {
+            // Defensive try/catch in case new URL() fails for some href
+            try {
+              const href = link.getAttribute('href');
+              // ignore empty, hash-only, anchors within page, mailto, tel
+              if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+
+              const linkUrl = new URL(href, location.href);
+
+              // only handle same-origin navigations
+              if (linkUrl.origin !== location.origin) return;
+
+              // ignore external targets and modifier clicks (open in new tab, etc.)
+              link.addEventListener('click', (e) => {
+                if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+                if (link.target && link.target !== '_self') return;
+
+                // Prevent default navigation, play fade-out, then navigate
+                e.preventDefault();
+                page.classList.add('opacity-0', 'translate-y-4');
+                setTimeout(() => {
+                  // Use location.assign to preserve history semantics
+                  location.assign(linkUrl.href);
+                }, 450);
+              });
+            } catch (err) {
+              // Some hrefs can be invalid — ignore them safely
+              console.warn('Skipping link for transition:', link, err);
+            }
+          });
+        });
+      }
+    </script>
+    
+  </body>
 </html>

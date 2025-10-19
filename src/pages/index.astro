@@ -7,21 +7,26 @@ import FAQPage from "../components/FAQ.jsx";
 <MainLayout title="TEDx LNMIIT">
   <!-- HERO SECTION -->
  <section 
-  class="relative flex flex-col items-center justify-center bg-black min-h-[calc(100vh-80px)] overflow-hidden pt-4"
->
-  <!-- Sculpture Image -->
-  <img 
-    src="../../public/images/MainElement.png"  
-    alt="TEDx LNMIIT Hero" 
-    class="object-contain w-auto max-h-[70vh] md:max-h-[75vh]"
-  />
+    class="relative flex flex-col items-center justify-center bg-black min-h-[calc(100vh-80px)] overflow-hidden pt-4"
+    style="content-visibility: auto; contain-intrinsic-size: 800px;"
+  >
+    <!-- Optimized Sculpture Image -->
+    <img 
+      src="/images/MainElement.png"  
+      alt="TEDx LNMIIT Hero" 
+      loading="lazy"
+      width="800"
+      height="600"
+      class="object-contain w-auto max-h-[70vh] md:max-h-[75vh] transition-opacity duration-500 opacity-0"
+      onload="this.style.opacity='1'"
+    />
 
-  <!-- Title Text -->
-  <h1 class="mt-4 text-center font-extrabold tracking-tight leading-none">
-    <span class="text-red-600 text-5xl md:text-7xl">FORGING</span>
-    <span class="text-white text-5xl md:text-7xl ml-2">THE FUTURE</span>
-  </h1>
-</section>
+    <!-- Title Text -->
+    <h1 class="mt-4 text-center font-extrabold tracking-tight leading-none">
+      <span class="text-red-600 text-5xl md:text-7xl">FORGING</span>
+      <span class="text-white text-5xl md:text-7xl ml-2">THE FUTURE</span>
+    </h1>
+  </section>
 
 
   <!-- TEASER VIDEO SECTION -->
@@ -138,7 +143,7 @@ import FAQPage from "../components/FAQ.jsx";
 
 
 
-<FAQPage client:load/>
+<FAQPage client:visible/>
 
 </MainLayout>
 
