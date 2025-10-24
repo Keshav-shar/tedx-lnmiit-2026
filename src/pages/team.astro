@@ -2,11 +2,12 @@
 
 // component imports 
 import MainLayout from "../layouts/MainLayout.astro";
-
+import TeamComponent from '../components/Team.jsx';
 
 ---
 
-<MainLayout title=" Team" >
-    <p> hi from <span>Team</span></p>
-	
+<MainLayout title=" Team|TEDxLNMIIT" >
+    
+    <TeamComponent client:load />
+
 </MainLayout>
