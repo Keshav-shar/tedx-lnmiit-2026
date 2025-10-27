@@ -4,19 +4,19 @@ import { ChevronDown, ChevronUp } from "lucide-react"; // icons
 const faqs = [
   {
     question: "What is TEDx?",
-    answer: "TEDx is a program of local, self-organized events that bring people together to share a TED-like experience."
+    answer: "TEDx is a locally organized event that is licensed by TED, allowing communities to host live speakers who share their ideas, experiences, and viewpoints."
   },
   {
     question: "How can I attend a TEDx event?",
-    answer: "You can attend a TEDx event by registering on the official website of the local TEDx event in your city or institution."
+    answer: "To attend a TEDx event, visit the official TEDx website or the page dedicated to the specific event for information on registration, dates, and ticket availability."
   },
   {
     question: "Are TEDx talks available online?",
-    answer: "Yes, most TEDx talks are recorded and available on the official TEDx YouTube channel and website."
+    answer: "Yes, the majority of TEDx talks are recorded and published on the TEDx YouTube channel and the TEDx website, enabling a worldwide audience to access this inspiring content."
   },
   {
     question: "What makes TEDx talks different from TED talks?",
-    answer: "TED talks are organized by TED itself, while TEDx events are independently organized under a free license granted by TED."
+    answer: "TEDx talks are organized and managed at the local level, whereas TED talks are curated by the main TED organization. While both platforms aim to share ideas, they function on different scales and have distinct structures."
   }
 ];
 

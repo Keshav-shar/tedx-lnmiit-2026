@@ -1,12 +1,17 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import PastSpeakers from '../components/PastSpeakers.jsx';
+import SpeakersCarousel from '../components/CurrentSpeakers.jsx';
 ---
 
 <MainLayout title="Speakers">
 
-  
+
+  <SpeakersCarousel client:load />
+
+
   <section class="text-center my-12">
+ 
     <h1
       class="text-4xl md:text-6xl font-extrabold uppercase tracking-widest 
              bg-gradient-to-r from-red-700 to-gray-500 bg-clip-text text-transparent"
@@ -16,6 +21,6 @@ import PastSpeakers from '../components/PastSpeakers.jsx';
     <PastSpeakers client:load />
   </section>
 
-  
+
 
 </MainLayout>
