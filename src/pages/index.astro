@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-
+import SpeakersCarousel from '../components/CurrentSpeakers.jsx';
+import PastSpeakers from "../components/PastSpeakers.jsx";
 import FAQPage from "../components/FAQ.jsx";
 ---
 
@@ -44,108 +45,109 @@ import FAQPage from "../components/FAQ.jsx";
   </section>
 
 
-  <!-- COUNTDOWN SECTION -->
-  <section class="relative w-full bg-gradient-to-b from-black to-[#1a0000] py-20 flex flex-col items-center text-center">
-    <h2 class="text-4xl md:text-6xl font-extrabold text-red-600 mb-10 drop-shadow-[0_0_15px_#ff0000]">
-      HELLO EXPLORER
-    </h2>
+<!-- COUNTDOWN SECTION -->
+<section class="relative w-full bg-gradient-to-b from-black to-[#120000] py-20 flex flex-col items-center text-center px-4">
+  <!-- Heading -->
+  <h2 class="text-4xl md:text-6xl font-extrabold mb-10">
+    <span class="text-white">HELLO</span>
+    <span class="text-red-600 ml-2">EXPLORER</span>
+  </h2>
 
-    <div class="bg-black/60 border border-red-700 px-10 py-8 rounded-2xl shadow-[0_0_40px_#ff000055] backdrop-blur-sm">
-      <div class="text-gray-300 mb-4 tracking-widest uppercase text-sm">Time until the event</div>
-      <div id="countdown" class="flex flex-wrap justify-center gap-8">
-        <div class="count-box">
-          <div id="days" class="count-number">0</div>
-          <div class="count-label">Days</div>
-        </div>
-        <div class="count-box">
-          <div id="hours" class="count-number">0</div>
-          <div class="count-label">Hours</div>
-        </div>
-        <div class="count-box">
-          <div id="minutes" class="count-number">0</div>
-          <div class="count-label">Minutes</div>
-        </div>
-        <div class="count-box">
-          <div id="seconds" class="count-number">0</div>
-          <div class="count-label">Seconds</div>
-        </div>
+  <!-- Countdown Container -->
+  <div class="bg-black/70 border border-red-600 px-6 py-8 md:px-12 md:py-10 rounded-2xl shadow-[0_0_30px_#ff000033] backdrop-blur-sm w-full max-w-3xl">
+    <div class="text-gray-300 mb-6 tracking-widest uppercase text-sm md:text-base">Time Until the Event</div>
+
+    <div id="countdown" class="flex justify-between items-center gap-4 md:gap-8 overflow-x-auto no-scrollbar">
+      <div class="count-box flex-1">
+        <div id="days" class="count-number">0</div>
+        <div class="count-label">Days</div>
+      </div>
+      <div class="count-box flex-1">
+        <div id="hours" class="count-number">0</div>
+        <div class="count-label">Hours</div>
+      </div>
+      <div class="count-box flex-1">
+        <div id="minutes" class="count-number">0</div>
+        <div class="count-label">Minutes</div>
+      </div>
+      <div class="count-box flex-1">
+        <div id="seconds" class="count-number">0</div>
+        <div class="count-label">Seconds</div>
       </div>
     </div>
+  </div>
 
-    <p class="max-w-2xl text-red-500 mt-12 leading-relaxed text-lg">
-      Join us as we bring bold ideas and pioneers together — a celebration of creativity,
-      innovation, and the people shaping tomorrow.
-    </p>
-  </section>
+  <!-- Description -->
+  <p class="max-w-2xl text-lg md:text-xl mt-12 leading-relaxed font-medium text-gray-200">
+    Join us as we bring <span class="text-red-500 font-semibold">bold ideas</span> and pioneers together — 
+    a celebration of <span class="text-white font-semibold">creativity</span>, 
+    <span class="text-red-500 font-semibold">innovation</span>, and the people shaping tomorrow.
+  </p>
+</section>
 
-  <style>
-    /* --- HERO TEXT EFFECT --- */
-    .molten-text {
-      text-shadow:
-        0 0 10px #ff0000,
-        0 0 20px #ff4d4d,
-        0 0 40px #ff1a1a,
-        0 0 60px #ff0000,
-        0 0 80px #ff4d4d;
-      animation: molten 2s infinite alternate;
-    }
+<style>
+  .count-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(20, 0, 0, 0.5);
+    border: 2px solid #ff3333;
+    border-radius: 1rem;
+    padding: 1rem;
+    min-width: 70px;
+    box-shadow: 0 0 10px #ff000033;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
-    @keyframes molten {
-      0% {
-        text-shadow:
-          0 0 5px #ff0000,
-          0 0 15px #ff4d4d,
-          0 0 30px #ff1a1a;
-      }
-      100% {
-        text-shadow:
-          0 0 20px #ff4d4d,
-          0 0 40px #ff1a1a,
-          0 0 80px #ff0000;
-      }
-    }
+  .count-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px #ff000099;
+  }
 
-    /* --- COUNTDOWN BOX --- */
-    .count-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: rgba(30, 0, 0, 0.7);
-      border: 2px solid #ff0000;
-      border-radius: 1rem;
-      padding: 1rem 1.5rem;
-      min-width: 90px;
-      box-shadow: 0 0 15px #ff000055;
-      transition: transform 0.3s ease;
-    }
+  .count-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 0 5px #ff0000aa;
+  }
 
-    .count-box:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px #ff000099;
-    }
+  .count-label {
+    margin-top: 0.3rem;
+    color: #d4d4d4;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+  }
 
-    .count-number {
-      font-size: 3rem;
-      font-weight: 800;
-      color: #fff;
-      text-shadow: 0 0 15px #ff0000;
-    }
-
-    .count-label {
-      margin-top: 0.5rem;
-      color: #ff6666;
-      font-weight: 500;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      letter-spacing: 1px;
-    }
-  </style>
+  /* Hide horizontal scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
 
 
+<SpeakersCarousel client:visible/>
+<h1
+      class="text-4xl text-center md:text-6xl font-extrabold uppercase tracking-widest 
+             bg-gradient-to-r from-red-700 to-gray-500 bg-clip-text text-transparent"
+    >
+      Past Speakers
+    </h1>
+<PastSpeakers client:visible/>
 
 <FAQPage client:visible/>
 
 </MainLayout>
+
+
+
+
+
 
 
 <!-- COUNTDOWN SCRIPT -->
