@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollToPlugin);
 
 const SPEAKERS = [
   { id: 1, name: "Dr. Tanu Jain", title: "Assistant Director, DRDO", image: "/images/image0.png", bio: "Former IAS officer and DRDO Assistant Director, Dr. Jain advocates for education and UPSC reforms. Her multifaceted career exemplifies her dedication to creating impact beyond conventional roles.", linkedin: "#", instagram: "#" },
-  { id: 2, name: "Gunjan Saini", title: "AI Researcher", image: "/images/image01.png", bio: "Poet, writer, and founder of @officialletstalk, she fosters emotional well-being through shared stories. Gunjan’s creative force helps bridge emotional gaps, making a significant impact in mental health.", linkedin: "#", instagram: "#" },
+  { id: 2, name: "Gunjan Saini", title: "AI Researcher", image: "/images/image01.png", bio: "Poet, writer, and founder of @officialletstalk, she fosters emotional well-being through shared stories. Gunjan's creative force helps bridge emotional gaps, making a significant impact in mental health.", linkedin: "#", instagram: "#" },
   { id: 3, name: "Preksha Kaparwan", title: "Founder", image: "/images/image1.png", bio: "Preksha Kaparwan - the dynamic entrepreneur and storyteller revolutionizing the way we access and understand data! As the Co-Founder and CMO of Alphaa AI, she's on a mission to democratize data using AI and NLP, building a platform that empowers users to interact with data effortlessly. A passionate marketer and a curious technologist, Preksha blends creativity and innovation to drive change.", linkedin: "#", instagram: "#" },
   { id: 4, name: "Arnim Agarwal", title: "Founder", image: "/images/image2.png", bio: "Dr. Kamna Chhibber, Head of Mental Health at Fortis Healthcare, is a renowned clinical psychologist with over 15 years of experience specializing in Cognitive Behaviour Therapy, relationships, trauma, and abuse. A passionate advocate for mental health awareness, she is an accomplished author and speaker whose insights have shaped the discourse on mental well-being across leading platforms.", linkedin: "#", instagram: "#" },
   { id: 5, name: "Vatsal Jain", title: "Founder", image: "/images/image3.png", bio: "Dr. Ajay Data, Managing Director of Data Group of Industries, is a visionary entrepreneur who introduced the internet to Rajasthan. As founder of Data XGen Technologies, he developed the world’s first linguistic email solution, driving global digital inclusion.", linkedin: "#", instagram: "#" },
@@ -207,84 +207,86 @@ export default function CurrentSpeakers() {
   };
 
   return (
-    <section className="w-full bg-black text-white py-20">
-      <div className="max-w-7xl mx-auto px-6 flex gap-10">
-        {/* BIO */}
-        <div className="hidden lg:block lg:w-1/3 sticky top-28">
-          <h2 className="text-6xl md:text-7xl font-extrabold uppercase bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-white">
-            SPEAKERS
-          </h2>
+  <section className="w-full bg-black text-white py-20">
+    <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-10">
 
-          <div className="mt-8">
-            <h3 className="text-3xl font-bold">{SPEAKERS[active].name}</h3>
-            <p className="text-red-500 font-medium mt-1">{SPEAKERS[active].title}</p>
-            <p className="mt-4 text-gray-300 text-lg">{SPEAKERS[active].bio}</p>
+      {/* CAROUSEL (Mobile first) */}
+      <div className="relative w-full lg:w-2/3 order-1 lg:order-none">
+        <button
+          aria-label="previous"
+          className="absolute left-2 top-1/2 transform -translate-y-1/2 z-20 hidden md:flex bg-white/10 text-white w-10 h-10 rounded-full"
+          onClick={handlePrev}
+        >
+          ←
+        </button>
 
-            <div className="mt-6 flex gap-3">
-              {SPEAKERS[active].linkedin && (
-                <a
-                  href={SPEAKERS[active].linkedin}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="border px-3 py-2 rounded-full hover:bg-red-600 transition"
-                >
-                  <FaLinkedin />
-                </a>
-              )}
-              {SPEAKERS[active].instagram && (
-                <a
-                  href={SPEAKERS[active].instagram}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="border px-3 py-2 rounded-full hover:bg-red-600 transition"
-                >
-                  <FaInstagram />
-                </a>
-              )}
+        <button
+          aria-label="next"
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 z-20 hidden md:flex bg-white/10 text-white w-10 h-10 rounded-full"
+          onClick={handleNext}
+        >
+          →
+        </button>
+
+        <div
+          ref={trackRef}
+          className="flex overflow-x-auto scrollbar-none gap-12 py-12 px-4 md:px-20"
+          style={{ scrollbarWidth: "none" }} // Firefox
+        >
+          {SPEAKERS.map((spk, i) => (
+            <div
+              key={spk.id}
+              ref={(el) => (cards.current[i] = el)}
+              onClick={() => {
+                pauseAutoplay();
+                centerCard(i, true);
+                resumeAutoplayAfterIdle();
+              }}
+              className="min-w-[250px] md:min-w-[400px] h-[400px] md:h-[500px] rounded-2xl overflow-hidden cursor-pointer transition-all"
+            >
+              <img src={spk.image} alt={spk.name} className="w-full h-full object-cover" />
             </div>
-          </div>
+          ))}
         </div>
+      </div>
 
-        {/* CAROUSEL */}
-        <div className="relative w-full lg:w-2/3">
-          <button
-            aria-label="previous"
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 z-20 hidden md:flex bg-white/10 text-white w-10 h-10 rounded-full"
-            onClick={handlePrev}
-          >
-            ←
-          </button>
+      {/* BIO (Mobile below carousel) */}
+      <div className="w-full lg:w-1/3 order-2 lg:order-none lg:sticky lg:top-28">
+        <h2 className="text-4xl md:text-6xl font-extrabold uppercase text-center lg:text-left bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-white">
+          SPEAKERS
+        </h2>
 
-          <button
-            aria-label="next"
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 z-20 hidden md:flex bg-white/10 text-white w-10 h-10 rounded-full"
-            onClick={handleNext}
-          >
-            →
-          </button>
+        <div className="mt-8 text-center lg:text-left">
+          <h3 className="text-2xl md:text-3xl font-bold">{SPEAKERS[active].name}</h3>
+          <p className="text-red-500 font-medium mt-1">{SPEAKERS[active].title}</p>
+          <p className="mt-4 text-gray-300 text-lg">{SPEAKERS[active].bio}</p>
 
-          <div
-            ref={trackRef}
-            className="flex overflow-x-auto scrollbar-none gap-12 py-12 px-20"
-            style={{ scrollbarWidth: "none" }} // Firefox
-          >
-            {SPEAKERS.map((spk, i) => (
-              <div
-                key={spk.id}
-                ref={(el) => (cards.current[i] = el)}
-                onClick={() => {
-                  pauseAutoplay();
-                  centerCard(i, true);
-                  resumeAutoplayAfterIdle();
-                }}
-                className="min-w-[300px] md:min-w-[400px] h-[500px] rounded-2xl overflow-hidden cursor-pointer transition-all"
+          <div className="mt-6 flex justify-center lg:justify-start gap-3">
+            {SPEAKERS[active].linkedin && (
+              <a
+                href={SPEAKERS[active].linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="border px-3 py-2 rounded-full hover:bg-red-600 transition"
               >
-                <img src={spk.image} alt={spk.name} className="w-full h-full object-cover" />
-              </div>
-            ))}
+                <FaLinkedin />
+              </a>
+            )}
+            {SPEAKERS[active].instagram && (
+              <a
+                href={SPEAKERS[active].instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="border px-3 py-2 rounded-full hover:bg-red-600 transition"
+              >
+                <FaInstagram />
+              </a>
+            )}
           </div>
         </div>
       </div>
-    </section>
-  );
+
+    </div>
+  </section>
+);
 }
