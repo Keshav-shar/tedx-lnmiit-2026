@@ -33,7 +33,8 @@ export default function Navbar() {
     showNavbar ? "translate-y-0" : "-translate-y-full"
   }`}
 >
-    
+  
+  
       {/* LEFT SECTION */}
      <div className="flex flex-col items-start">
   <img
