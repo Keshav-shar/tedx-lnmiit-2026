@@ -3,32 +3,38 @@ import MainLayout from "../layouts/MainLayout.astro";
 import SpeakersCarousel from '../components/CurrentSpeakers.jsx';
 import PastSpeakers from "../components/PastSpeakers.jsx";
 import FAQPage from "../components/FAQ.jsx";
+
 ---
 
 <MainLayout title="TEDx LNMIIT">
   <!-- HERO SECTION -->
  <section 
-    class="relative flex flex-col items-center justify-center bg-black min-h-[calc(100vh-80px)] overflow-hidden pt-4"
-    style="content-visibility: auto; contain-intrinsic-size: 800px;"
-  >
-    <!-- Optimized Sculpture Image -->
+  class="relative flex flex-col items-center justify-center bg-black min-h-[calc(100vh-80px)] overflow-hidden pt-4"
+>
+  <!-- Sculpture Image -->
+  <img 
+    src="/images/MainElement2.png"  
+    alt="TEDx LNMIIT Hero" 
+    loading="lazy"
+    width="800"
+    height="600"
+    class="object-contain w-auto 
+           max-h-[70vh] 
+           md:max-h-[85vh] 
+           transition-opacity duration-500 opacity-0"
+    onload="this.style.opacity='1'"
+  />
+
+  <!-- Title Image -->
+  <div class="mt-6 flex justify-center items-center">
     <img 
-      src="/images/MainElement.png"  
-      alt="TEDx LNMIIT Hero" 
+      src="/graphics/ForgingTheFuture.png"
+      alt="Forging the Future"
+      class="max-w-[80vw] md:max-w-[50vw] h-auto object-contain drop-shadow-[0_0_25px_#ff000066]"
       loading="lazy"
-      width="800"
-      height="600"
-      class="object-contain w-auto max-h-[70vh] md:max-h-[75vh] transition-opacity duration-500 opacity-0"
-      onload="this.style.opacity='1'"
     />
-
-    <!-- Title Text -->
-    <h1 class="mt-4 text-center font-extrabold tracking-tight leading-none">
-      <span class="text-red-600 text-5xl md:text-7xl">FORGING</span>
-      <span class="text-white text-5xl md:text-7xl ml-2">THE FUTURE</span>
-    </h1>
-  </section>
-
+  </div>
+</section>
 
   <!-- TEASER VIDEO SECTION -->
   <section class="w-full bg-black py-20 px-6 flex justify-center">
@@ -132,6 +138,7 @@ import FAQPage from "../components/FAQ.jsx";
 
 
 <SpeakersCarousel client:visible/>
+
 <h1
       class="text-4xl text-center md:text-6xl font-extrabold uppercase tracking-widest 
              bg-gradient-to-r from-red-700 to-gray-500 bg-clip-text text-transparent"
