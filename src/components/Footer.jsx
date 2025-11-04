@@ -1,4 +1,5 @@
 import React from "react";
+import ShootingStars from "./ShootingStars";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -6,11 +7,16 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white pt-12 pb-24 md:pb-12 relative shadow-[0_-4px_20px_rgba(255,0,0,0.2)]">
+    <footer className="bg-black text-white pt-12 pb-24 md:pb-12 relative shadow-[0_-4px_20px_rgba(255,0,0,0.2)] overflow-hidden">
+      {/* 🌠 Shooting Stars Background */}
+      <div className="absolute inset-0 z-0">
+        <ShootingStars />
+      </div>
+
       {/* Logo */}
-      <div className="flex flex-col items-center mb-6">
+      <div className="flex flex-col items-center mb-6 relative z-10">
         <img
-          src="/images/logo-white.png" // 🔴 Replace with your logo path
+          src="/images/logo-white.png"
           alt="TEDx Logo"
           className="h-12 md:h-16 object-contain"
         />
@@ -21,7 +27,7 @@ const Footer = () => {
       </div>
 
       {/* Navigation Links */}
-      <div className="flex flex-wrap justify-center gap-6 text-lg font-light mb-6 px-4 text-center">
+      <div className="flex flex-wrap justify-center gap-6 text-lg font-light mb-6 px-4 text-center relative z-10">
         <a href="/" className="hover:text-red-500 transition">Home</a>
         <a href="/speakers" className="hover:text-red-500 transition">Speakers</a>
         <a href="/gallery" className="hover:text-red-500 transition">Gallery</a>
@@ -30,7 +36,7 @@ const Footer = () => {
       </div>
 
       {/* Social Icons */}
-      <div className="flex justify-center space-x-6 mb-8">
+      <div className="flex justify-center space-x-6 mb-8 relative z-10">
         <a
           href="https://facebook.com"
           target="_blank"
@@ -58,10 +64,10 @@ const Footer = () => {
       </div>
 
       {/* Divider */}
-      <div className="border-t border-gray-700 w-3/4 mx-auto mb-6"></div>
+      <div className="border-t border-gray-700 w-3/4 mx-auto mb-6 relative z-10"></div>
 
       {/* Footer Text */}
-      <div className="text-center text-sm md:text-base px-6 leading-relaxed">
+      <div className="text-center text-sm md:text-base px-6 leading-relaxed relative z-10">
         © 2026 <span className="text-red-500 font-semibold">TEDxLNMIIT</span>.
         THIS INDEPENDENT TEDX EVENT IS OPERATED UNDER LICENSE FROM TED &nbsp;|&nbsp;
         <a href="#terms" className="hover:text-red-500">Terms & Conditions</a> &nbsp;|&nbsp;
