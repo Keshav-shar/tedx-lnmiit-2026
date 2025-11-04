@@ -36,17 +36,13 @@ export default function Navbar() {
   
   
       {/* LEFT SECTION */}
-     <div className="flex flex-col items-start">
+     <a href="/" className="flex flex-col items-start">
   <img
-    src="/images/logo-white.png"
+    src="/images/logo-white2.png"
     alt="TEDx LNMIIT Logo"
-    className="h-10 lg:h-12 w-auto object-contain"
+    className="h-15 lg:h-15 w-auto object-contain cursor-pointer"
   />
-  <span className="mt-1 text-[11px] lg:text-[12px] text-white leading-tight">
-    x = independently organized{" "}
-    <span className="text-red-600 font-bold">TED</span> event
-  </span>
-</div>
+</a>
 
 
       {/* DESKTOP NAVIGATION */}
