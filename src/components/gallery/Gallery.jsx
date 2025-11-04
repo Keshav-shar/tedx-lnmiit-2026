@@ -6,16 +6,24 @@ import GalleryCard from './GalleryCard.jsx'
 const Gallery = () => {
   const gallery = [
     {
-      image1: 'https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_1280x960-1280x960.jpg',
-      image2: 'https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---Thumbnail-1280x960.jpg',
+      image1: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284831/_P3A7565_m4vaab.jpg',
+      image2: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/f_auto/v1734284830/IMG_1122_mwrzac.heic',
     },
     {
-      image1: 'https://k72.ca/uploads/caseStudies/OKA/OKA_thumbnail-1280x960.jpg',
-      image2: 'https://k72.ca/uploads/caseStudies/Opto/thumbnailimage_opto-1280x960.jpg',
+      image1: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/f_auto/v1734284828/IMG_4682_yi556w.heic',
+      image2: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284832/IMG20240112225947_g0q4vd.jpg',
     },
     {
-      image1: 'https://k72.ca/uploads/caseStudies/LAMAJEURE_-_Son_sur_mesure/chalaxeur-thumbnail_img-1280x960.jpg',
-      image2: 'https://k72.ca/uploads/caseStudies/SHELTON/thumbnailimage_shelton-1280x960.jpg',
+      image1: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284835/IMG20240113144545_hvayzz.jpg',
+      image2: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734287102/_DSC0512_q0lej7.jpg',
+    },
+    {
+      image1: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284835/IMG20240113175013_zbofr5.jpg',
+      image2: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/f_auto/v1734284830/IMG_1227_y52t89.heic',
+    },
+    {
+      image1: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284836/IMG20240113165706_ndioaf.jpg',
+      image2: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284836/IMG20240113124622_ncigry.jpg',
     },
   ]
 

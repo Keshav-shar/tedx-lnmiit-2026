@@ -2,11 +2,11 @@
 
 // component imports 
 import MainLayout from "../layouts/MainLayout.astro";
-
-
+import SponsorsComponent from '../components/Sponsors.jsx';
 ---
 
 <MainLayout title="Sponsors | TEDxLNMIIT" >
-    <p> hi from <span>sponsors</span></p>
+    
+    <SponsorsComponent client:load />
 	
 </MainLayout>
