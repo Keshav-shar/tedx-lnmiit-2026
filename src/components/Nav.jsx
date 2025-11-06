@@ -64,9 +64,16 @@ export default function Navbar() {
 
       {/* RIGHT BUTTONS */}
       <div className="flex items-center gap-3 sm:gap-4 lg:gap-4">
-    <button className="bg-red-600 hover:bg-red-700 transition text-white px-4 sm:px-5 lg:px-6 py-2 rounded-lg text-sm lg:text-base font-semibold shadow-lg">
-      Get Tickets
-    </button>
+    <button
+  className="bg-red-600 hover:bg-red-700 transition text-white 
+             px-3 sm:px-4 md:px-5 lg:px-6 
+             py-1.5 sm:py-2 
+             rounded-lg 
+             text-xs sm:text-sm md:text-base 
+             font-bold shadow-lg whitespace-nowrap"
+>
+  Get Tickets
+</button>
 
     {/* Hamburger menu (only on mobile) */}
     <button
