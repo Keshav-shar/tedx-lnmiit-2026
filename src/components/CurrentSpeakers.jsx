@@ -24,8 +24,8 @@ export default function CurrentSpeakers() {
   const autoplayPausedRef = useRef(false);
   const interactionTimeoutRef = useRef(null);
   const wheelStopTimerRef = useRef(null);
-  const AUTOPLAY_MS = 2000;
-  const RESUME_AFTER_MS = 1800;
+  const AUTOPLAY_MS = 1500;
+  const RESUME_AFTER_MS = 1000;
   const WHEEL_SENSITIVITY = 1;
 
   const centerCard = (index, setActiveCard = true) => {
@@ -213,20 +213,35 @@ export default function CurrentSpeakers() {
       {/* CAROUSEL (Mobile first) */}
       <div className="relative w-full lg:w-2/3 order-1 lg:order-none">
         <button
-          aria-label="previous"
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 z-20 hidden md:flex bg-white/10 text-white w-10 h-10 rounded-full"
-          onClick={handlePrev}
-        >
-          ←
-        </button>
+  aria-label="previous"
+  className="absolute left-3 top-1/2 -translate-y-1/2 z-20 
+             flex items-center justify-center
+             w-12 h-12 rounded-full 
+             bg-white/15 backdrop-blur 
+             text-white text-2xl font-extrabold
+             shadow-[0_0_10px_rgba(255,0,0,0.4)]
+             hover:bg-white/25 hover:scale-110 
+             transition-all duration-200"
+  onClick={handlePrev}
+>
+  ←
+</button>
 
-        <button
-          aria-label="next"
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 z-20 hidden md:flex bg-white/10 text-white w-10 h-10 rounded-full"
-          onClick={handleNext}
-        >
-          →
-        </button>
+<button
+  aria-label="next"
+  className="absolute right-3 top-1/2 -translate-y-1/2 z-20 
+             flex items-center justify-center
+             w-12 h-12 rounded-full 
+             bg-white/15 backdrop-blur 
+             text-white text-2xl font-extrabold
+             shadow-[0_0_10px_rgba(255,0,0,0.4)]
+             hover:bg-white/25 hover:scale-110 
+             transition-all duration-200"
+  onClick={handleNext}
+>
+  →
+</button>
+
 
         <div
           ref={trackRef}
