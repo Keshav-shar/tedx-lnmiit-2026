@@ -22,9 +22,9 @@ export default function Navbar() {
     { name: "Home", href: "/" },
     { name: "Theme", href: "/theme" },
     { name: "About", href: "/about" },
-    { name: "CA", href: "/ca" },
     { name: "Gallery", href: "/gallery" },
     { name: "Team", href: "/team" },
+    { name: "Campus Ambassador", href: "/ca" },
   ];
 
   return (
@@ -65,7 +65,9 @@ export default function Navbar() {
       {/* RIGHT BUTTONS */}
       <div className="flex items-center gap-3 sm:gap-4 lg:gap-4">
     <button
-  className="bg-red-600 hover:bg-red-700 transition text-white 
+  className="bg-red-600 hover:bg-red-700 
+             transition duration-300 delay-100
+             text-white 
              px-3 sm:px-4 md:px-5 lg:px-6 
              py-1.5 sm:py-2 
              rounded-lg 
