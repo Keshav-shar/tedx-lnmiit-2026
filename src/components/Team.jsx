@@ -32,7 +32,7 @@ const teamData = [
       {
         name: "Keshav Sharma",
         role: "Development Head",
-        image: "/team/keshav.jpg",
+        image: "/team/keshav.png",
          linkedin: "#",
       },
       {
@@ -79,18 +79,18 @@ const teamData = [
   {
     domain: "Web Development",
     members: [
-      { name: "Arnim Agarwal", role: "Web Developer", image: "/team/abdul.png", linkedin: "https://www.linkedin.com/in/arnimaga", },
-      { name: "Priyanshi Jain", role: "Web Developer", image: "/team/anshika.png" , linkedin: "#",},
+      { name: "Arnim Agarwal", role: "Web Developer", image: "/team/arnim3.png", linkedin: "https://www.linkedin.com/in/arnimaga", },
+      { name: "Priyanshi Jain", role: "Web Developer", image: "/team/priyanshi.png" , linkedin: "#",},
     ],
   },
   {
     domain: "Content Writing",
     members: [
-      { name: "krishangee Tayal", role: "Content Writer", image: "/team/abdul.png" , linkedin: "#",},
-      { name: "Poorvi Jagga", role: "Content Writer", image: "/team/anshika.png", linkedin: "#", },
-      { name: "Praneel Dev", role: "Content Writer", image: "/team/vihaan.png" , linkedin: "#",},
-      { name: "Madhura Vyas", role: "Content Writer", image: "/team/vihaan.png" , linkedin: "#",},
-      { name: "Garvit Garg", role: "Content Writer", image: "/team/vihaan.png" , linkedin: "#",},
+      { name: "krishangee Tayal", role: "Content Writer", image: "/team/krishangee.png" , linkedin: "#",},
+      { name: "Poorvi Jagga", role: "Content Writer", image: "/team/poorvi.png", linkedin: "#", },
+      { name: "Praneel Dev", role: "Content Writer", image: "/team/praneel.png" , linkedin: "#",},
+      { name: "Madhura Vyas", role: "Content Writer", image: "/team/madhura.png" , linkedin: "#",},
+      { name: "Garvit Garg", role: "Content Writer", image: "/team/garvit.png" , linkedin: "#",},
     ],
   },
   {
@@ -135,8 +135,8 @@ const teamData = [
   {
     domain: "Social Media",
     members: [
-      { name: "Aayana Jain", role: "Social Media", image: "/team/abdul.png" , linkedin: "#",},
-      { name: "Kaustubh Gera", role: "Social Media", image: "/team/abdul.png" , linkedin: "#",},
+      { name: "Aayana Jain", role: "Social Media", image: "/team/aayana.png" , linkedin: "#",},
+      { name: "Kaustubh Gera", role: "Social Media", image: "/team/kaustubh.png" , linkedin: "#",},
     ],
   },
   {
