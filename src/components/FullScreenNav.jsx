@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { useContext } from 'react';
 import { NavbarContext } from '../context/NavContext';
 
-const menuLinks = ["Home", "Theme", "About", "Speakers", "Gallery", "Team"];
+const menuLinks = ["Home", "Theme", "About", "Gallery", "Team","CA"];
 
 export default function FullScreenNav() {
   const { navOpen, setNavOpen } = useContext(NavbarContext);

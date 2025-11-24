@@ -1,11 +1,16 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaYoutube, FaInstagram } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const speakers = [
+export default function PastSpeakers() {
+  const cardsRef = useRef([]);
+  const [isMobile, setIsMobile] = useState(false);
+
+  
+   const speakers = [
    {
     id: 1,
     name: "Dr. Tanu Jain",
@@ -30,13 +35,30 @@ const speakers = [
     instagram: "https://www.instagram.com/drtanujain" },
   { id: 9, name: "Shelly Jyoti", image: "/images/image7.png", description: "Former civil servant turned motivational speaker..." , youtube: "https://www.youtube.com/@DrTanuJain", 
     instagram: "https://www.instagram.com/drtanujain" },
+  { id: 10, name: "Shelly Jyoti", image: "/images/image7.png", description: "Former civil servant turned motivational speaker..." , youtube: "https://www.youtube.com/@DrTanuJain", 
+    instagram: "https://www.instagram.com/drtanujain" },
+  { id: 11, name: "Shelly Jyoti", image: "/images/image7.png", description: "Former civil servant turned motivational speaker..." , youtube: "https://www.youtube.com/@DrTanuJain", 
+    instagram: "https://www.instagram.com/drtanujain" },
+  { id: 12, name: "Shelly Jyoti", image: "/images/image7.png", description: "Former civil servant turned motivational speaker..." , youtube: "https://www.youtube.com/@DrTanuJain", 
+    instagram: "https://www.instagram.com/drtanujain" },
 ];
 
- export default function PastSpeakers() {
-  const cardsRef = useRef([]);
-
+  // ✅ Detect mobile screen
   useEffect(() => {
-    // ✅ Animation (unchanged)
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth < 640); // sm breakpoint
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
+  // ✅ Show only 5 speakers on mobile
+  const visibleSpeakers = isMobile ? speakers.slice(0, 5) : speakers;
+
+  // GSAP animations
+  useEffect(() => {
     cardsRef.current.forEach((card) => {
       if (!card) return;
       gsap.to(card, {
@@ -50,13 +72,21 @@ const speakers = [
         },
       });
     });
-  }, []);
+  }, [visibleSpeakers]);
 
   return (
     <main className="relative w-full text-white text-center flex flex-col items-center py-[15vh] bg-black">
-      {/* ✅ Grid layout for 2 cards per row on laptop */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[3vw] gap-y-[15vh] place-items-center w-full px-4 sm:px-6 md:px-10">
-        {speakers.map((speaker, index) => (
+      
+      <div
+        className="grid 
+        grid-cols-1 
+        sm:grid-cols-2 
+        lg:grid-cols-3 
+        gap-x-[3vw] gap-y-[15vh] 
+        place-items-center 
+        w-full px-4 sm:px-6 md:px-10"
+      >
+        {visibleSpeakers.map((speaker, index) => (
           <div
             key={speaker.id}
             ref={(el) => (cardsRef.current[index] = el)}
@@ -69,18 +99,14 @@ const speakers = [
               flex flex-col items-center text-center
             "
           >
-            {/* ✅ Background */}
+            {/* Background */}
             <div className="absolute inset-0 bg-[url('/images/bg-image.png')] bg-cover bg-center opacity-30"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80"></div>
 
-            {/* ✅ Content */}
+            {/* Content */}
             <div className="relative z-10 flex flex-col items-center gap-4 text-white px-2 sm:px-4">
               <div className="w-[220px] aspect-square rounded-[20px] overflow-hidden border-4 border-red-700 shadow-lg sm:w-[180px]">
-                <img
-                  src={speaker.image}
-                  alt={speaker.name}
-                  className="w-full h-full object-cover"
-                />
+                <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover" />
               </div>
 
               <h1 className="text-3xl font-extrabold text-red-500 drop-shadow-md sm:text-2xl">
@@ -91,7 +117,7 @@ const speakers = [
                 {speaker.description}
               </p>
 
-              {/* ✅ Social Icons */}
+              {/* Social Icons */}
               <div className="flex items-center justify-center gap-6 mt-4">
                 {speaker.youtube && (
                   <a
@@ -118,6 +144,7 @@ const speakers = [
           </div>
         ))}
       </div>
+
     </main>
   );
 }

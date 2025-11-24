@@ -267,7 +267,7 @@ export default function CurrentSpeakers() {
 
       {/* BIO (Mobile below carousel) */}
       <div className="w-full lg:w-1/3 order-2 lg:order-none lg:sticky lg:top-28">
-        <h2 className="text-4xl md:text-6xl font-extrabold uppercase text-center lg:text-left bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-white">
+        <h2 className="text-4xl md:text-6xl font-extrabold uppercase text-center lg:text-left bg-clip-text text-red-600">
           SPEAKERS
         </h2>
 
