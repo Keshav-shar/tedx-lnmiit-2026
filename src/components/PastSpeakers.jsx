@@ -75,7 +75,7 @@ export default function PastSpeakers() {
   }, [visibleSpeakers]);
 
   return (
-    <main className="relative w-full text-white text-center flex flex-col items-center py-[15vh] bg-black">
+    <main className="relative w-full text-white text-center flex flex-col items-center py-[15vh] ">
       
       <div
         className="grid 
@@ -101,7 +101,7 @@ export default function PastSpeakers() {
           >
             {/* Background */}
             <div className="absolute inset-0 bg-[url('/images/bg-image.png')] bg-cover bg-center opacity-30"></div>
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80"></div>
+            <div className="absolute inset-0 bg-gradient-to-b "></div>
 
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center gap-4 text-white px-2 sm:px-4">

@@ -45,7 +45,7 @@ export default function Sponsors() {
   const loopedPartners = [...previousPartners, ...previousPartners];
 
   return (
-    <section className="bg-black text-white py-20 flex flex-col items-center gap-20 overflow-hidden">
+    <section className=" text-white py-20 flex flex-col items-center gap-20 overflow-hidden">
       {/* CURRENT PARTNERS */}
       <div className="text-center">
         <h1 className="text-5xl font-light mb-10">

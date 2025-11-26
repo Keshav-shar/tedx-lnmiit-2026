@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Theme() {
   return (
-    <div className="w-full bg-black text-white overflow-hidden">
+    <div className="w-full bg-black/200 text-white overflow-hidden">
       {/* 🌅 Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center px-4 text-center">
         <motion.h1

@@ -2,7 +2,7 @@ import { FaBullhorn, FaUsers, FaGift, FaLink } from "react-icons/fa";
 
 export default function CA() {
   return (
-    <main className="bg-gradient-to-b from-black via-[#0a0a0a] to-black text-white min-h-screen flex flex-col items-center font-sans">
+    <main className=" text-white min-h-screen flex flex-col items-center font-sans">
       {/* ---------- HEADER ---------- */}
       <section className="text-center py-16 px-4">
         <h1 className="text-4xl sm:text-5xl font-bold">

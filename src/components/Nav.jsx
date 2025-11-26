@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
     <header
-  className={`fixed top-0 left-0 w-full flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3 lg:py-4 bg-black/90 backdrop-blur-lg shadow-md z-50 transition-transform duration-300 ${
+  className={`fixed top-0 left-0 w-full flex items-center justify-between px-2 sm:px-6 lg:px-6 py-2 lg:py-2 bg-black/90 rounded-full  backdrop-blur-lg shadow-md z-50 transition-transform duration-300 ${
     showNavbar ? "translate-y-0" : "-translate-y-full"
   }`}
 >
