@@ -207,7 +207,7 @@ export default function CurrentSpeakers() {
   };
 
   return (
-  <section className="w-full bg-black/80 text-white py-20">
+  <section className="w-full bg-black/40 text-white py-20">
     <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-10">
 
       {/* CAROUSEL (Mobile first) */}

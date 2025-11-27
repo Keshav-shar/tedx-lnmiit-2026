@@ -181,7 +181,7 @@ export default function Team() {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen bg-black text-white flex flex-col items-center py-20 px-4"
+      className="min-h-screen bg-black/30 text-white flex flex-col items-center py-20 px-4"
     >
       {/* Heading with gradient */}
       <h2

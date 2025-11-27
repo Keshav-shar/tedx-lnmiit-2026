@@ -28,16 +28,9 @@ export default function FAQPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col items-center px-6 py-24">
+    <div className="min-h-screen bg-black/20 text-white flex flex-col items-center px-6 py-24">
       {/* Heading */}
-      <h1 className="text-5xl font-bold mb-12 text-center">
-        <span className="bg-gradient-to-r from-gray-200 via-white to-gray-400 bg-clip-text text-transparent animate-pulse">
-          Frequently Asked
-        </span>{" "}
-        <span className="text-red-600 drop-shadow-[0_0_10px_rgba(255,0,0,0.7)] hover:drop-shadow-[0_0_20px_rgba(255,0,0,1)] transition">
-          Questions
-        </span>
-      </h1>
+     <img class="h-10 w-auto mb-10" src="../images/FREQUENTLY ASKED QUESTIONS.png" alt="faq" />
 
       {/* FAQ List */}
       <div className="w-full max-w-2xl space-y-4">
@@ -49,7 +42,7 @@ export default function FAQPage() {
           >
             <div className="flex justify-between items-center">
               <h2 className="text-lg font-medium group">
-                <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent group-hover:drop-shadow-[0_0_10px_rgba(255,0,0,0.9)] transition">
+                <span className="bg-[#b3acac] bg-clip-text text-transparent ">
                   {faq.question}
                 </span>
               </h2>

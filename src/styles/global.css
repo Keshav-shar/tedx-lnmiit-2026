@@ -1,7 +1,9 @@
 @import "tailwindcss";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 
+
 html, body {
   max-width: 100%;
-  overflow-x: hidden;
+  
 }
+

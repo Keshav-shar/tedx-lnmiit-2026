@@ -75,7 +75,7 @@ export default function PastSpeakers() {
   }, [visibleSpeakers]);
 
   return (
-    <main className="relative w-full text-white text-center flex flex-col items-center py-[15vh] ">
+    <main className="relative w-full bg-black/50 text-white text-center flex flex-col items-center py-[15vh] ">
       
       <div
         className="grid 
