@@ -66,7 +66,7 @@ const Gallery = () => {
   return (
     <div className='lg:p-4 p-2 mb-[100vh]'>
       <div className='pt-[45vh]'>
-        <h2 className='font-[font2] lg:text-[9.5vw] text-7xl uppercase'>Gallery</h2>
+        <img className=' h-20 w-auto mb-[5vh] -mt-20' src="../images/SPEAKERS.png" alt="gallery" />
       </div>
       <div className='-lg:mt-20 lol'>
         {gallery.map((elem, idx) => (

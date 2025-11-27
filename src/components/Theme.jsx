@@ -5,16 +5,15 @@ export default function Theme() {
     <div className="w-full bg-black/200 text-white overflow-hidden">
       {/* 🌅 Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center px-4 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text 
-                     bg-gradient-to-r from-red-600 via-orange-500 to-red-700
-                     animate-gradient bg-[length:200%_200%]"
-        >
-          FORGING THE FUTURE
-        </motion.h1>
+        <motion.img
+  src="../images/THEME PAGE.png"
+  alt="Forging the Future"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  className="w-[70%] md:w-[50%] mx-auto object-contain"
+ />
+
 
         <motion.p
           initial={{ opacity: 0 }}

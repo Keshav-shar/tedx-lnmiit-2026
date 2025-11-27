@@ -7,150 +7,140 @@ gsap.registerPlugin(ScrollTrigger);
 
 const teamData = [
   {
-    domain: "Faculty Mentor",
+    domain: "../images/videoediting.png",   
     members: [
       {
         name: "Dr. Narendra Kumar",
-        role: "Faculty Mentor",
+        role: ["Faculty Mentor", "Licensee"],   
         image: "/team/narendra.png",
         linkedin: "#",
       },
     ],
   },
+
   {
-    domain: "Organizers",
+    domain: "../images/ORGANIZERS.png",
     members: [
       { name: "Abdul Hadi", role: "Organizer", image: "/team/abdul.png", linkedin: "#" },
-      { name: "Anshika Agarwal", role: "Organizer", image: "/team/anshika.png" , linkedin: "#"},
-      { name: "Vihaan Malik", role: "Organizer", image: "/team/vihaan.png" , linkedin: "#"},
+      { name: "Anshika Agarwal", role: "Organizer", image: "/team/anshika.png", linkedin: "#" },
+      { name: "Vihaan Malik", role: "Organizer", image: "/team/vihaan.png", linkedin: "#" },
       { name: "Parv Khandelwal", role: "Organizer", image: "/team/parv.png", linkedin: "#" },
     ],
   },
+
   {
-    domain: "Development & Content Head",
+    domain: "../images/DEVELOPMENT & CONTENT HEAD.png",
     members: [
       {
         name: "Keshav Sharma",
         role: "Development Head",
         image: "/team/keshav.png",
-         linkedin: "#",
+        linkedin: "#",
       },
       {
         name: "Aryan Jadhav",
         role: "Content Writing Head",
         image: "/team/aditya.jpg",
-         linkedin: "#",
+        linkedin: "#",
       },
-    ],
-  },
-  {
-    domain: "Creative Head",
-    members: [
-      { name: "Neha Raniwala", role: "Graphic Designing Head", image: "/team/abdul.png", linkedin: "#", },
-      { name: "Utkrasht Gupta", role: "Graphic Designing Head", image: "/team/anshika.png" , linkedin: "#",},
-      { name: "Yash Jain", role: "Video Editing Head", image: "/team/anshika.png" , linkedin: "#",},
-    ],
-  },
-  {
-    domain: "Hospitality & Speaker Outreach Head",
-    members: [
-      {
-        name: "Anmol Adwani",
-        role: "Hospitality Head",
-        image: "/team/keshav.jpg",
-         linkedin: "#",
-      },
-      {
-        name: "Priyal Maheshwari",
-        role: "Speaker Outreach Head",
-        image: "/team/aditya.jpg",
-         linkedin: "#",
-      },
-    ],
-  },
-  {
-    domain: "Sponsorship and Event Management Head",
-    members: [
-      { name: "Naman Agarwal", role: "Sponsorship Head", image: "/team/abdul.png", linkedin: "https://www.linkedin.com/in/arnimaga", },
-      { name: "Nirmal Patel", role: "Event Management Head", image: "/team/abdul.png", linkedin: "https://www.linkedin.com/in/arnimaga", },
     ],
   },
 
   {
-    domain: "Web Development",
+    domain: "../images/CREATIVE HEAD.png",
     members: [
-      { name: "Arnim Agarwal", role: "Web Developer", image: "/team/arnim3.png", linkedin: "https://www.linkedin.com/in/arnimaga", },
-      { name: "Priyanshi Jain", role: "Web Developer", image: "/team/priyanshi.png" , linkedin: "#",},
+      { name: "Neha Raniwala", role: "Graphic Designing Head", image: "/team/abdul.png", linkedin: "#" },
+      { name: "Utkrasht Gupta", role: "Graphic Designing Head", image: "/team/anshika.png", linkedin: "#" },
+      { name: "Yash Jain", role: "Video Editing Head", image: "/team/anshika.png", linkedin: "#" },
     ],
   },
+
   {
-    domain: "Content Writing",
+    domain: "../images/WEB DEVELOPMENT.png",
     members: [
-      { name: "krishangee Tayal", role: "Content Writer", image: "/team/krishangee.png" , linkedin: "#",},
-      { name: "Poorvi Jagga", role: "Content Writer", image: "/team/poorvi.png", linkedin: "#", },
-      { name: "Praneel Dev", role: "Content Writer", image: "/team/praneel.png" , linkedin: "#",},
-      { name: "Madhura Vyas", role: "Content Writer", image: "/team/madhura.png" , linkedin: "#",},
-      { name: "Garvit Garg", role: "Content Writer", image: "/team/garvit.png" , linkedin: "#",},
+      {
+        name: "Arnim Agarwal",
+        role: "Web Developer",
+        image: "/team/arnim3.png",
+        linkedin: "https://www.linkedin.com/in/arnimaga",
+      },
+      { name: "Priyanshi Jain", role: "Web Developer", image: "/team/priyanshi.png", linkedin: "#" },
     ],
   },
+
   {
-    domain: "Speaker Outreach",
+    domain: "../images/CONTENT WRITING.png",
     members: [
-      { name: "Aditya Jain", role: "Speaker Outreach", image: "/team/abdul.png", linkedin: "#", },
-      { name: "Diksha Sakhi", role: "Speaker Outreach", image: "/team/anshika.png" , linkedin: "#",},
-      { name: "Raghav Khandelwal", role: "Speaker Outreach", image: "/team/vihaan.png", linkedin: "#", },
+      { name: "krishangee Tayal", role: "Content Writer", image: "/team/krishangee.png", linkedin: "#" },
+      { name: "Poorvi Jagga", role: "Content Writer", image: "/team/poorvi.png", linkedin: "#" },
+      { name: "Praneel Dev", role: "Content Writer", image: "/team/praneel.png", linkedin: "#" },
+      { name: "Madhura Vyas", role: "Content Writer", image: "/team/madhura.png", linkedin: "#" },
+      { name: "Garvit Garg", role: "Content Writer", image: "/team/garvit.png", linkedin: "#" },
     ],
   },
+
   {
-    domain: "Graphic Designing",
+    domain: "../images/SPEAKER OUTREACH.png",
     members: [
-      { name: "Aditya Narula", role: "Graphic Designer", image: "/team/abdul.png" , linkedin: "#",},
-      { name: "Vedha Sinkar", role: "Graphic Designer", image: "/team/anshika.png" , linkedin: "#",},
-      { name: "Tanmay Sharma", role: "Graphic Designer", image: "/team/vihaan.png" , linkedin: "#",},
-      { name: "Aanya Agarwal", role: "Graphic Designer", image: "/team/parv.png" , linkedin: "#",},
-      { name: "Shubhangi", role: "Graphic Designer", image: "/team/parv.png" , linkedin: "#",},
-      { name: "Somil", role: "Graphic Designer", image: "/team/parv.png" , linkedin: "#",},
+      { name: "Aditya Jain", role: "Speaker Outreach", image: "/team/abdul.png", linkedin: "#" },
+      { name: "Diksha Sakhi", role: "Speaker Outreach", image: "/team/anshika.png", linkedin: "#" },
+      { name: "Raghav Khandelwal", role: "Speaker Outreach", image: "/team/vihaan.png", linkedin: "#" },
     ],
   },
+
   {
-    domain: "Event Management",
+    domain: "../images/GRAPHIC DESIGNING.png",
     members: [
-      { name: "Kavya Jethani", role: "Event Management", image: "/team/abdul.png" , linkedin: "#",},
-      { name: "Krittika Agarwal", role: "Event Management", image: "/team/anshika.png" , linkedin: "#",},
-      { name: "Pranav Vashisth", role: "Event Management", image: "/team/vihaan.png" , linkedin: "#",},
-      { name: "Devansh Kataria", role: "Event Management", image: "/team/parv.png" , linkedin: "#",},
-      { name: "Dev Rastogi", role: "Event Management", image: "/team/parv.png" , linkedin: "#",},
-      { name: "Anshul Bansal", role: "Event Management", image: "/team/parv.png" , linkedin: "#",},
+      { name: "Aditya Narula", role: "Graphic Designer", image: "/team/abdul.png", linkedin: "#" },
+      { name: "Vedha Sinkar", role: "Graphic Designer", image: "/team/anshika.png", linkedin: "#" },
+      { name: "Tanmay Sharma", role: "Graphic Designer", image: "/team/vihaan.png", linkedin: "#" },
+      { name: "Aanya Agarwal", role: "Graphic Designer", image: "/team/parv.png", linkedin: "#" },
+      { name: "Shubhangi", role: "Graphic Designer", image: "/team/parv.png", linkedin: "#" },
+      { name: "Somil", role: "Graphic Designer", image: "/team/parv.png", linkedin: "#" },
     ],
   },
+
   {
-    domain: "Sponsorship",
+    domain: "../images/EVENT MANAGEMENT.png",
     members: [
-      { name: "Adwaiy Mahajan", role: "Sponsorship", image: "/team/abdul.png" , linkedin: "#",},
-      { name: "Krishna Khairnar", role: "Sponsorship", image: "/team/anshika.png" , linkedin: "#",},
-      { name: "Manan Vaish", role: "Sponsorship", image: "/team/vihaan.png" , linkedin: "#",},
-      { name: "Samar Goyal", role: "Sponsorship", image: "/team/parv.png" , linkedin: "#",},
+      { name: "Kavya Jethani", role: "Event Management", image: "/team/abdul.png", linkedin: "#" },
+      { name: "Krittika Agarwal", role: "Event Management", image: "/team/anshika.png", linkedin: "#" },
+      { name: "Pranav Vashisth", role: "Event Management", image: "/team/vihaan.png", linkedin: "#" },
+      { name: "Devansh Kataria", role: "Event Management", image: "/team/parv.png", linkedin: "#" },
+      { name: "Dev Rastogi", role: "Event Management", image: "/team/parv.png", linkedin: "#" },
+      { name: "Anshul Bansal", role: "Event Management", image: "/team/parv.png", linkedin: "#" },
     ],
   },
+
   {
-    domain: "Social Media",
+    domain: "../images/SPONSORSHIP.png",
     members: [
-      { name: "Aayana Jain", role: "Social Media", image: "/team/aayana.png" , linkedin: "#",},
-      { name: "Kaustubh Gera", role: "Social Media", image: "/team/kaustubh.png" , linkedin: "#",},
+      { name: "Adwaiy Mahajan", role: "Sponsorship", image: "/team/abdul.png", linkedin: "#" },
+      { name: "Krishna Khairnar", role: "Sponsorship", image: "/team/anshika.png", linkedin: "#" },
+      { name: "Manan Vaish", role: "Sponsorship", image: "/team/vihaan.png", linkedin: "#" },
+      { name: "Samar Goyal", role: "Sponsorship", image: "/team/parv.png", linkedin: "#" },
     ],
   },
+
   {
-    domain: "Video Editing",
+    domain: "../images/SOCIAL MEDIA.png",
     members: [
-      { name: "K Arya Sekhar Das", role: "Organizer", image: "/team/karya.png", linkedin: "#", },
-      { name: "Rutwik Naik", role: "Organizer", image: "/team/anshika.png", linkedin: "#", },
-      { name: "Roodraksh Agarwal", role: "Organizer", image: "/team/vihaan.png", linkedin: "#", },
-      { name: "Somik Jain", role: "Organizer", image: "/team/parv.png" , linkedin: "#",},
+      { name: "Aayana Jain", role: "Social Media", image: "/team/aayana.png", linkedin: "#" },
+      { name: "Kaustubh Gera", role: "Social Media", image: "/team/kaustubh.png", linkedin: "#" },
+    ],
+  },
+
+
+  {
+    domain: "../images/videoediting.png",
+    members: [
+      { name: "K Arya Sekhar Das", role: "Organizer", image: "/team/karya.png", linkedin: "#" },
+      { name: "Rutwik Naik", role: "Organizer", image: "/team/anshika.png", linkedin: "#" },
+      { name: "Roodraksh Agarwal", role: "Organizer", image: "/team/vihaan.png", linkedin: "#" },
+      { name: "Somik Jain", role: "Organizer", image: "/team/parv.png", linkedin: "#" },
     ],
   },
 ];
-
-
 
 export default function Team() {
   const sectionRef = useRef(null);
@@ -183,30 +173,26 @@ export default function Team() {
       ref={sectionRef}
       className="min-h-screen bg-black/30 text-white flex flex-col items-center py-20 px-4"
     >
-      {/* Heading with gradient */}
-      <h2
-        className="text-5xl md:text-7xl font-semibold mb-20 text-center
-      bg-gradient-to-r from-red-700 via-red-500 to-red-300 
-      bg-clip-text text-transparent tracking-wide drop-shadow-md"
-      >
-        Meet Our Team
-      </h2>
+      <img className="h-15 w-auto -mt-4" src="../images/MEET OUR TEAM.png" alt="meet our team" />
 
       <div className="flex flex-col gap-16 w-full max-w-6xl">
         {teamData.map((domain, index) => (
           <div key={index} className="team-row w-full">
-            <h3 className="text-2xl md:text-3xl font-semibold text-center mb-10 text-gray-300 uppercase tracking-wider">
-              {domain.domain}
-            </h3>
+
+            <img
+              src={domain.domain}
+              alt=""
+              className="h-8 w-auto mt-8 mx-auto mb-10 object-contain"
+            />
 
             <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
               {domain.members.map((member, i) => (
                 <div
                   key={i}
                   className="team-card group relative flex flex-col items-center 
-                  bg-neutral-900 rounded-2xl shadow-lg p-5 
-                  w-[80%] xs:w-[70%] sm:w-[45%] md:w-[22%]
-                  transition-transform duration-250 hover:scale-95 hover:shadow-red-400/60"
+                    bg-neutral-900 rounded-2xl shadow-lg p-5 
+                    w-[80%] xs:w-[70%] sm:w-[45%] md:w-[22%]
+                    transition-transform duration-250 hover:scale-95 hover:shadow-red-400/60"
                 >
                   <div className="relative mb-4">
                     <img
@@ -230,12 +216,22 @@ export default function Team() {
                   <h4 className="text-base sm:text-lg font-semibold text-white text-center whitespace-nowrap">
                     {member.name}
                   </h4>
-                  <p className="text-xs sm:text-sm text-gray-400 text-center">
-                    {member.role}
+
+                  {/* ROLE FIX: Supports array OR string */}
+                  <p className="text-xs sm:text-sm text-gray-400 text-center leading-tight">
+                    {Array.isArray(member.role)
+                      ? member.role.map((line, idx) => (
+                          <span key={idx}>
+                            {line}
+                            <br />
+                          </span>
+                        ))
+                      : member.role}
                   </p>
                 </div>
               ))}
             </div>
+
           </div>
         ))}
       </div>
