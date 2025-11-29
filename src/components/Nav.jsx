@@ -19,12 +19,12 @@ export default function Navbar() {
   }, [lastScrollY]);
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "Theme", href: "/theme" },
-    { name: "About", href: "/about" },
-    { name: "Gallery", href: "/gallery" },
-    { name: "Team", href: "/team" },
-    { name: "Campus Ambassador", href: "/ca" },
+    { name: "HOME", href: "/" },
+    { name: "THEME", href: "/theme" },
+    { name: "ABOUT", href: "/about" },
+    { name: "GALLERY", href: "/gallery" },
+    { name: "TEAM", href: "/team" },
+    { name: "CAMPUS AMBASSADOR", href: "/ca" },
   ];
 
   return (

@@ -105,15 +105,15 @@ export default function PastSpeakers() {
 
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center gap-4 text-white px-2 sm:px-4">
-              <div className="w-[220px] aspect-square rounded-[20px] overflow-hidden border-4 border-red-700 shadow-lg sm:w-[180px]">
+              <div className="w-[220px] aspect-square rounded-[20px] overflow-hidden border-4 border-[#EB0028] shadow-lg sm:w-[180px]">
                 <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover" />
               </div>
 
-              <h1 className="text-3xl font-extrabold text-red-500 drop-shadow-md sm:text-2xl">
+              <h1 className="text-3xl font-extrabold text-[#EB0028] drop-shadow-md sm:text-2xl">
                 {speaker.name}
               </h1>
 
-              <p className="text-lg font-medium max-w-[90%] leading-relaxed text-white/90 sm:text-base sm:max-w-full">
+              <p className="text-lg font-medium max-w-[90%] leading-relaxed text-white/100 sm:text-base sm:max-w-full">
                 {speaker.description}
               </p>
 
