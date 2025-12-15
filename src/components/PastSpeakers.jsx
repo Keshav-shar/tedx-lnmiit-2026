@@ -99,9 +99,12 @@ export default function PastSpeakers() {
               flex flex-col items-center text-center
             "
           >
-            {/* Background */}
-            <div className="absolute inset-0 bg-[url('/images/bg-image.png')] bg-cover bg-center opacity-30"></div>
-            <div className="absolute inset-0 bg-gradient-to-b "></div>
+       {/* Background image */}
+<div className="absolute inset-0 bg-[url('/images/bg-image.png')] bg-cover bg-center"></div>
+
+{/* Neutral black overlay */}
+<div className="absolute inset-0 bg-black/60"></div>
+
 
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center gap-4 text-white px-2 sm:px-4">

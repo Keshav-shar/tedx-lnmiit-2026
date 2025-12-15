@@ -24,8 +24,8 @@ export default function CurrentSpeakers() {
   const autoplayPausedRef = useRef(false);
   const interactionTimeoutRef = useRef(null);
   const wheelStopTimerRef = useRef(null);
-  const AUTOPLAY_MS = 1500;
-  const RESUME_AFTER_MS = 1000;
+  const AUTOPLAY_MS = 4500;
+  const RESUME_AFTER_MS = 3500;
   const WHEEL_SENSITIVITY = 1;
 
   const centerCard = (index, setActiveCard = true) => {
@@ -179,7 +179,7 @@ export default function CurrentSpeakers() {
       const isActive = i === active;
       gsap.to(card, {
         scale: isActive ? 1.1 : 0.9,
-        duration: 0.45,
+        duration: 0.60,
         ease: "power3.out",
         filter: isActive ? "grayscale(0%) contrast(110%)" : "grayscale(100%) contrast(90%)",
       });
