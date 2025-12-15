@@ -13,9 +13,10 @@ export default function CA() {
           Campus Ambassador Program
         </p>
 
-        <div className="mt-10 bg-gradient-to-r from-red-600 via-red-700 to-red-600 text-white px-6 py-3 rounded-full shadow-[0_0_25px_#ff0000] font-semibold">
-          Spread Ideas That Matter!
+        <div className="mt-10 bg-red-700 text-white px-6 py-3 rounded-full font-semibold">
+       Spread Ideas That Matter!
         </div>
+
       </section>
 
       {/* ---------- WHY SECTION ---------- */}
@@ -62,9 +63,10 @@ export default function CA() {
         <h2 className="text-2xl sm:text-3xl font-semibold mb-6">
           Ready to Make an Impact?
         </h2>
-        <button className="bg-red-600 hover:bg-red-700 transition-all duration-300 text-white px-6 py-3 rounded-full font-semibold text-lg shadow-[0_0_25px_#ff000080] hover:shadow-[0_0_35px_#ff0000]">
-          Apply to be a Campus Ambassador
+        <button className="bg-red-600 hover:bg-red-700 transition-colors duration-300 text-white px-6 py-3 rounded-full font-semibold text-lg">
+         Apply to be a Campus Ambassador
         </button>
+
         <p className="mt-4 text-gray-400 text-sm">
           Fill out the application form, and we'll contact you with further
           details.
