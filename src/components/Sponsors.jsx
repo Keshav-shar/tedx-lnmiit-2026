@@ -49,8 +49,8 @@ export default function Sponsors() {
       {/* CURRENT PARTNERS */}
       <div className="text-center">
         <h1 className="text-5xl font-light mb-10">
-          <span className="text-gray-300">Current </span>
-          <span className="text-red-500 font-semibold">Partners</span>
+          <span className="text-white">Current </span>
+          <span className="text-[#EB0028]">Partners</span>
         </h1>
 
         <div className="flex flex-wrap justify-center gap-10">
@@ -74,9 +74,9 @@ export default function Sponsors() {
 
       {/* PREVIOUS PARTNERS */}
       <div className="w-full overflow-hidden">
-        <h1 className="text-5xl font-light mb-10 text-center">
-          <span className="text-gray-300">Previous </span>
-          <span className="text-red-500 font-semibold">Partners</span>
+        <h1 className="text-5xl  mb-10 text-center">
+          <span className="text-white">Previous </span>
+          <span className="text-[#EB0028]">Partners</span>
         </h1>
 
         <div className="relative w-full overflow-hidden">

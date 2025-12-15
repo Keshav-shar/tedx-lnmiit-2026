@@ -12,13 +12,13 @@ const About = () => {
     {
       id: 2,
       titleImage: "/images/ABOUT TED.png",
-      size: "h-[70px] md:h-[70px] lg:h-[70px]", // Size for ABOUT TED
+      size: "h-[60px] md:h-[60px] lg:h-[60px]", // Size for ABOUT TED
       text: `TED began in 1984 as a conference where Technology, Entertainment and Design converged, but today it spans a multitude of worldwide communities and initiatives exploring everything from science and business to education, arts and global issues. It is on a mission to discover and spread ideas that spark imagination, embrace possibility and catalyze impact.`,
     },
     {
       id: 3,
       titleImage: "/images/ABOUT TEDx.png",
-      size: "h-[70px] md:h-[70px] lg:h-[70px]", // Size for ABOUT TEDx
+      size: "h-[60px] md:h-[60px] lg:h-[60px]", // Size for ABOUT TEDx
       text: `In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks videos and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event.`,
     },
   ];
