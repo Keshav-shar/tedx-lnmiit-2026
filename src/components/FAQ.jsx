@@ -47,9 +47,9 @@ export default function FAQPage() {
                 </span>
               </h2>
               {openIndex === index ? (
-                <ChevronUp className="text-red-500" />
+                <ChevronUp className="text-[#EB0028]" />
               ) : (
-                <ChevronDown className="text-red-500" />
+                <ChevronDown className="text-[#EB0028]" />
               )}
             </div>
             {openIndex === index && (

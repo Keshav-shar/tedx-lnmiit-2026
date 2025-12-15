@@ -46,18 +46,18 @@ export default function Navbar() {
 
 
       {/* DESKTOP NAVIGATION */}
-      <nav className="hidden lg:flex items-center space-x-10 text-white text-base font-semibold">
+      <nav className="hidden lg:flex items-center space-x-10 text-white text-base ">
         {navItems.map((item) => (
           <a
             key={item.name}
             href={item.href}
             className="relative group tracking-wide"
           >
-            <span className="transition-all duration-200 group-hover:text-red-500">
+            <span className="transition-all duration-200 group-hover:text-[#EB0028]">
               {item.name}
             </span>
             {/* Underline animation */}
-            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#EB0028] transition-all duration-300 group-hover:w-full"></span>
           </a>
         ))}
       </nav>
@@ -65,7 +65,7 @@ export default function Navbar() {
       {/* RIGHT BUTTONS */}
       <div className="flex items-center gap-3 sm:gap-4 lg:gap-4">
     <button
-  className="bg-red-600 hover:bg-red-700 
+  className="bg-[#EB0028] hover:bg-red-700 
              transition duration-300 delay-100
              text-white 
              px-3 sm:px-4 md:px-5 lg:px-6 

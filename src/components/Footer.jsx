@@ -28,11 +28,11 @@ const Footer = () => {
 
       {/* Navigation Links */}
       <div className="flex flex-wrap justify-center gap-6 text-lg font-light mb-6 px-4 text-center relative z-10">
-        <a href="/" className="hover:text-red-500 transition">Home</a>
-        <a href="/speakers" className="hover:text-red-500 transition">Speakers</a>
-        <a href="/gallery" className="hover:text-red-500 transition">Gallery</a>
-        <a href="/sponsors" className="hover:text-red-500 transition">Sponsors</a>
-        <a href="/about" className="hover:text-red-500 transition">About</a>
+        <a href="/" className="hover:text-[#EB0028] transition">Home</a>
+        <a href="/speakers" className="hover:text-[#EB0028] transition">Speakers</a>
+        <a href="/gallery" className="hover:text-[#EB0028] transition">Gallery</a>
+        <a href="/sponsors" className="hover:text-[#EB0028] transition">Sponsors</a>
+        <a href="/about" className="hover:text-[#EB0028] transition">About</a>
       </div>
 
       {/* Social Icons */}
@@ -49,7 +49,7 @@ const Footer = () => {
           href="https://instagram.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center w-10 h-10 border border-white rounded-full hover:bg-red-600 transition"
+          className="flex items-center justify-center w-10 h-10 border border-white rounded-full hover:bg-[#EB0028] transition"
         >
           <i className="fab fa-instagram"></i>
         </a>
@@ -57,7 +57,7 @@ const Footer = () => {
           href="https://linkedin.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center w-10 h-10 border border-white rounded-full hover:bg-red-600 transition"
+          className="flex items-center justify-center w-10 h-10 border border-white rounded-full hover:bg-[#EB0028] transition"
         >
           <i className="fab fa-linkedin-in"></i>
         </a>
@@ -68,16 +68,16 @@ const Footer = () => {
 
       {/* Footer Text */}
       <div className="text-center text-sm md:text-base px-6 leading-relaxed relative z-10">
-        © 2026 <span className="text-red-500 font-semibold">TEDxLNMIIT</span>.
+        © 2026 <span className="text-[#EB0028] font-semibold">TEDxLNMIIT</span>.
         THIS INDEPENDENT TEDX EVENT IS OPERATED UNDER LICENSE FROM TED &nbsp;|&nbsp;
-        <a href="#terms" className="hover:text-red-500">Terms & Conditions</a> &nbsp;|&nbsp;
-        <a href="#accessibility" className="hover:text-red-500">Accessibility</a>
+        <a href="#terms" className="hover:text-[#EB0028]">Terms & Conditions</a> &nbsp;|&nbsp;
+        <a href="#accessibility" className="hover:text-[#EB0028]">Accessibility</a>
       </div>
 
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 bg-red-600 text-white w-12 h-12 rounded-full shadow-lg text-2xl flex items-center justify-center hover:bg-red-700 transition z-50"
+        className="fixed bottom-6 right-6 bg-[#EB0028] text-white w-12 h-12 rounded-full shadow-lg text-2xl flex items-center justify-center hover:bg-red-700 transition z-50"
       >
         ↑
       </button>

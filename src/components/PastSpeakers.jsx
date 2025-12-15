@@ -124,7 +124,7 @@ export default function PastSpeakers() {
                     href={speaker.youtube}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-red-500 hover:text-red-600 text-3xl transition-transform transform hover:scale-110"
+                    className="text-[#EB0028] hover:text-[#e50429] text-3xl transition-transform transform hover:scale-110"
                   >
                     <FaYoutube />
                   </a>

@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const teamData = [
   {
-    domain: "../images/videoediting.png",   
+    domain: "../graphics/FACULTY MENTOR.png",   
     members: [
       {
         name: "Dr. Narendra Kumar",
@@ -19,7 +19,7 @@ const teamData = [
   },
 
   {
-    domain: "../images/ORGANIZERS.png",
+    domain: "../graphics/ORGANIZERS.png",
     members: [
       { name: "Abdul Hadi", role: "Organizer", image: "/team/abdul.png", linkedin: "#" },
       { name: "Anshika Agarwal", role: "Organizer", image: "/team/anshika.png", linkedin: "#" },
@@ -29,7 +29,7 @@ const teamData = [
   },
 
   {
-    domain: "../images/DEVELOPMENT & CONTENT HEAD.png",
+    domain: "../graphics/DEVELOPMENT & CONTENT HEAD.png",
     members: [
       {
         name: "Keshav Sharma",
@@ -47,7 +47,7 @@ const teamData = [
   },
 
   {
-    domain: "../images/CREATIVE HEAD.png",
+    domain: "../graphics/CREATIVE HEAD.png",
     members: [
       { name: "Neha Raniwala", role: "Graphic Designing Head", image: "/team/abdul.png", linkedin: "#" },
       { name: "Utkrasht Gupta", role: "Graphic Designing Head", image: "/team/anshika.png", linkedin: "#" },
@@ -56,7 +56,7 @@ const teamData = [
   },
 
   {
-    domain: "../images/WEB DEVELOPMENT.png",
+    domain: "../graphics/WEB DEVELOPMENT.png",
     members: [
       {
         name: "Arnim Agarwal",
@@ -69,7 +69,7 @@ const teamData = [
   },
 
   {
-    domain: "../images/CONTENT WRITING.png",
+    domain: "../graphics/CONTENT WRITING.png",
     members: [
       { name: "krishangee Tayal", role: "Content Writer", image: "/team/krishangee.png", linkedin: "#" },
       { name: "Poorvi Jagga", role: "Content Writer", image: "/team/poorvi.png", linkedin: "#" },
@@ -80,7 +80,7 @@ const teamData = [
   },
 
   {
-    domain: "../images/SPEAKER OUTREACH.png",
+    domain: "../graphics/SPEAKER OUTREACH.png",
     members: [
       { name: "Aditya Jain", role: "Speaker Outreach", image: "/team/abdul.png", linkedin: "#" },
       { name: "Diksha Sakhi", role: "Speaker Outreach", image: "/team/anshika.png", linkedin: "#" },
@@ -89,7 +89,7 @@ const teamData = [
   },
 
   {
-    domain: "../images/GRAPHIC DESIGNING.png",
+    domain: "../graphics/GRAPHIC DESIGNING.png",
     members: [
       { name: "Aditya Narula", role: "Graphic Designer", image: "/team/abdul.png", linkedin: "#" },
       { name: "Vedha Sinkar", role: "Graphic Designer", image: "/team/anshika.png", linkedin: "#" },
@@ -101,7 +101,7 @@ const teamData = [
   },
 
   {
-    domain: "../images/EVENT MANAGEMENT.png",
+    domain: "../graphics/EVENT MANAGEMENT.png",
     members: [
       { name: "Kavya Jethani", role: "Event Management", image: "/team/abdul.png", linkedin: "#" },
       { name: "Krittika Agarwal", role: "Event Management", image: "/team/anshika.png", linkedin: "#" },
@@ -113,7 +113,7 @@ const teamData = [
   },
 
   {
-    domain: "../images/SPONSORSHIP.png",
+    domain: "../graphics/SPONSORSHIP.png",
     members: [
       { name: "Adwaiy Mahajan", role: "Sponsorship", image: "/team/abdul.png", linkedin: "#" },
       { name: "Krishna Khairnar", role: "Sponsorship", image: "/team/anshika.png", linkedin: "#" },
@@ -123,7 +123,7 @@ const teamData = [
   },
 
   {
-    domain: "../images/SOCIAL MEDIA.png",
+    domain: "../graphics/SOCIAL MEDIA.png",
     members: [
       { name: "Aayana Jain", role: "Social Media", image: "/team/aayana.png", linkedin: "#" },
       { name: "Kaustubh Gera", role: "Social Media", image: "/team/kaustubh.png", linkedin: "#" },
@@ -132,7 +132,7 @@ const teamData = [
 
 
   {
-    domain: "../images/videoediting.png",
+    domain: "../graphics/VIDEOEDITING.png",
     members: [
       { name: "K Arya Sekhar Das", role: "Organizer", image: "/team/karya.png", linkedin: "#" },
       { name: "Rutwik Naik", role: "Organizer", image: "/team/anshika.png", linkedin: "#" },
@@ -173,7 +173,7 @@ export default function Team() {
       ref={sectionRef}
       className="min-h-screen bg-black/30 text-white flex flex-col items-center py-20 px-4"
     >
-      <img className="h-15 w-auto -mt-4" src="../images/MEET OUR TEAM.png" alt="meet our team" />
+      <img className="h-15 w-auto -mt-8 mb-10" src="../graphics/MEET OUR TEAM.png" alt="meet our team" />
 
       <div className="flex flex-col gap-16 w-full max-w-6xl">
         {teamData.map((domain, index) => (
