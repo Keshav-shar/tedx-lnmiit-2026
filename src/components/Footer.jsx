@@ -46,7 +46,7 @@ const Footer = () => {
           <i className="fab fa-facebook-f"></i>
         </a>
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/tedxlnmiit?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-10 h-10 border border-white rounded-full hover:bg-[#EB0028] transition"
@@ -54,7 +54,7 @@ const Footer = () => {
           <i className="fab fa-instagram"></i>
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/company/tedxlnmiit/"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-10 h-10 border border-white rounded-full hover:bg-[#EB0028] transition"
