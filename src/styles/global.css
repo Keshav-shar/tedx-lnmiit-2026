@@ -10,20 +10,32 @@
   --font-primary: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Apply font globally */
-html {
+/* Apply font everywhere (including inputs, buttons) */
+html,
+body,
+button,
+input,
+textarea,
+select {
   font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   max-width: 100%;
   font-weight: 400; /* Poppins Regular */
+  background-color: black;
+  color: white;
 }
-
-/* Force all headings to Poppins Medium */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-primary);
   font-weight: 500; /* Poppins Medium */
+  letter-spacing: -0.01em;
 }
 .section-heading {
   text-transform: uppercase;

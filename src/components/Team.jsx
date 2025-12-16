@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const teamData = [
   {
-    domain: "../images/videoediting.png",   
+    domain: "../graphics/FACULTY MENTOR.png",   
     members: [
       {
         name: "Dr. Narendra Kumar",
@@ -192,7 +192,7 @@ export default function Team() {
                   className="team-card group relative flex flex-col items-center 
                     bg-neutral-900 rounded-2xl shadow-lg p-5 
                     w-[80%] xs:w-[70%] sm:w-[45%] md:w-[22%]
-                    transition-transform duration-250 hover:scale-95 hover:shadow-red-400/60"
+                    transition-transform duration-250 hover:scale-95 hover:shadow-[#eb0028]/50"
                 >
                   <div className="relative mb-4">
                     <img
