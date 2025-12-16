@@ -69,9 +69,7 @@ const Footer = () => {
       {/* Footer Text */}
       <div className="text-center text-sm md:text-base px-6 leading-relaxed relative z-10">
         © 2026 <span className="text-[#EB0028] font-semibold">TEDxLNMIIT</span>.
-        THIS INDEPENDENT TEDX EVENT IS OPERATED UNDER LICENSE FROM TED &nbsp;|&nbsp;
-        <a href="#terms" className="hover:text-[#EB0028]">Terms & Conditions</a> &nbsp;|&nbsp;
-        <a href="#accessibility" className="hover:text-[#EB0028]">Accessibility</a>
+        THIS INDEPENDENT TEDX EVENT IS OPERATED UNDER LICENSE FROM TED 
       </div>
 
       {/* Scroll to Top Button */}

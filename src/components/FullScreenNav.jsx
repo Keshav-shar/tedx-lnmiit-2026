@@ -23,11 +23,15 @@ export default function FullScreenNav() {
   }, [navOpen]);
 
   return (
-    <div className="fullscreennav fixed inset-0 bg-black text-white z-50 overflow-hidden" style={{ display: "none" }}>
+   <div
+  className="fullscreennav fixed inset-0 bg-black/10 backdrop-blur-xl text-white z-50 overflow-hidden"
+  style={{ display: "none" }}
+>
+
       {/* Staircase effect */}
       <div className="absolute top-0 left-0 w-full h-full flex">
         {[...Array(5)].map((_, i) => (
-          <div key={i} className="stair w-1/5 h-0 bg-black"></div>
+         <div key={i} className="stair w-1/5 h-0 bg-black/1"></div>
         ))}
       </div>
 

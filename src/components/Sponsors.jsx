@@ -105,7 +105,7 @@ export default function Sponsors() {
 
       {/* FOOTER SECTION */}
       <div className="text-center mt-16 max-w-3xl">
-        <h2 className="text-4xl font-semibold mb-4">
+        <h2 className="text-5xl font-semibold mb-4">
           Interested in partnership?
         </h2>
         <p className="text-gray-300 text-lg leading-relaxed mb-4">
@@ -114,7 +114,7 @@ export default function Sponsors() {
           Leverage innovative ideas and technology to empower education and
           foster innovation.
         </p>
-        <a href="#" className="text-blue-400 underline hover:text-blue-300">
+        <a href="#" className="text-red-600  hover:text-red-800">
           Know more
         </a>
       </div>
