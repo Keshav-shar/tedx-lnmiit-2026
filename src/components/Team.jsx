@@ -51,7 +51,7 @@ const teamData = [
   members: [
     {
       name: "Priyal Maheshwari",
-      role: "Development Head",
+      role: "Speaker Outreach Head",
       image: "/team/priyal.png",
       linkedin: "https://www.linkedin.com/in/priyal-maheshwari-001494284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
@@ -83,7 +83,7 @@ const teamData = [
         image: "/team/arnim3.png",
         linkedin: "https://www.linkedin.com/in/arnimaga",
       },
-      { name: "Priyanshi Jain", role: "Web Developer", image: "/team/priyanshi.png", linkedin: "#" },
+      { name: "Priyanshi Jain", role: "Web Developer", image: "/team/priyanshi.png", linkedin: "https://www.linkedin.com/in/priyanshi-jain-a300bb246/" },
     ],
   },
 
@@ -125,7 +125,7 @@ const teamData = [
       { name: "Kavya Jethani", role: "Event Management", image: "/team/kavya.png", linkedin: "https://www.linkedin.com/in/kavya-jethani-380629292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Krittika Agarwal", role: "Event Management", image: "/team/krittika.png", linkedin: "https://www.linkedin.com/in/kavya-jethani-380629292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Pranav Vashisth", role: "Event Management", image: "/team/pranav.png", linkedin: "https://www.linkedin.com/in/pranav-vashisth?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-      { name: "Devansh Kataria", role: "Event Management", image: "/team/devansh.png", linkedin: "https://www.linkedin.com/in/devansh-katariya-a639b4289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Devansh Katariya", role: "Event Management", image: "/team/devansh.png", linkedin: "https://www.linkedin.com/in/devansh-katariya-a639b4289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Dev Rastogi", role: "Event Management", image: "/team/dev.png", linkedin: "#" },
       { name: "Anshul Bansal", role: "Event Management", image: "/team/anshul.png", linkedin: "https://www.linkedin.com/in/anshulbansalxd?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
     ],
