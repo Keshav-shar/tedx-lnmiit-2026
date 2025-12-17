@@ -64,7 +64,7 @@ const Gallery = () => {
   })
 
   return (
-    <div className='lg:p-4 p-2 mb-[100vh]'>
+    <div className='lg:p-4 p-2 mb-[80vh]'>
       <div className=" pt-[15vw] w-full relative overflow-hidden">
   <h1
     className="
