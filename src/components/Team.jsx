@@ -96,10 +96,10 @@ const teamData = [
   {
     title: "Event Management",
     members: [
-      { name: "Kavya Jethani", role: "Event Management", image: "/team/kavya.png", linkedin: "https://www.linkedin.com/in/kavya-jethani-380629292" },
-      { name: "Krittika Agarwal", role: "Event Management", image: "/team/krittika.png", linkedin: "#" },
-      { name: "Pranav Vashisth", role: "Event Management", image: "/team/pranav.png", linkedin: "https://www.linkedin.com/in/pranav-vashisth" },
-      { name: "Devansh Kataria", role: "Event Management", image: "/team/devansh.png", linkedin: "#" },
+      { name: "Kavya Jethani", role: "Event Management", image: "/team/kavya.png", linkedin: "https://www.linkedin.com/in/kavya-jethani-380629292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Krittika Agarwal", role: "Event Management", image: "/team/krittika.png", linkedin: "https://www.linkedin.com/in/kavya-jethani-380629292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Pranav Vashisth", role: "Event Management", image: "/team/pranav.png", linkedin: "https://www.linkedin.com/in/pranav-vashisth?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Devansh Katariya", role: "Event Management", image: "/team/devansh.png", linkedin: "https://www.linkedin.com/in/devansh-katariya-a639b4289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Dev Rastogi", role: "Event Management", image: "/team/dev.png", linkedin: "#" },
       { name: "Anshul Bansal", role: "Event Management", image: "/team/anshul.png", linkedin: "https://www.linkedin.com/in/anshulbansalxd" },
     ],
