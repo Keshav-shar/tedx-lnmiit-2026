@@ -60,18 +60,29 @@ const Gallery = () => {
   })
 
   return (
-    <div className="lg:p-4 p-2 mb-[100vh]">
-      <div className="pt-[15vw] w-full relative overflow-hidden">
-        <h1
-          className="
-            text-white font-extrabold uppercase leading-none tracking-tight
-            text-[18vw] sm:text-[14vw] md:text-[12vw] lg:text-[10vw]
-            ml-6 sm:ml-10 md:ml-16
-          "
-        >
-          Gallery
-        </h1>
-      </div>
+    <div className='lg:p-4 p-2 mb-[70vh]'>
+      <div className=" pt-[15vw] w-full relative overflow-hidden">
+  <h1
+    className="
+      text-white
+      font-extrabold
+      uppercase
+      leading-none
+      tracking-tight
+
+      text-[18vw]
+      sm:text-[14vw]
+      md:text-[12vw]
+      lg:text-[10vw]
+
+      ml-6
+      sm:ml-10
+      md:ml-16
+    "
+  >
+    Gallery
+  </h1>
+</div>
 
       {/*  group/gallery controls global dimming */}
       <div className="lol group/gallery">
