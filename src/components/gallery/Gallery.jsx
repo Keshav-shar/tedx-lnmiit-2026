@@ -30,13 +30,10 @@ const Gallery = () => {
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(() => {
-    //  Desktop/Laptop animation 
     if (window.innerWidth >= 640) {
       gsap.from('.hero', {
         height: '100px',
-        stagger: {
-          amount: 0.4,
-        },
+        stagger: { amount: 0.4 },
         scrollTrigger: {
           trigger: '.lol',
           start: 'top 100%',
@@ -46,7 +43,6 @@ const Gallery = () => {
       })
     }
 
-    //  Mobile-only animation
     if (window.innerWidth < 640) {
       gsap.from('.hero', {
         opacity: 0,
@@ -64,35 +60,25 @@ const Gallery = () => {
   })
 
   return (
-    <div className='lg:p-4 p-2 mb-[100vh]'>
-      <div className=" pt-[15vw] w-full relative overflow-hidden">
-  <h1
-    className="
-      text-white
-      font-extrabold
-      uppercase
-      leading-none
-      tracking-tight
+    <div className="lg:p-4 p-2 mb-[100vh]">
+      <div className="pt-[15vw] w-full relative overflow-hidden">
+        <h1
+          className="
+            text-white font-extrabold uppercase leading-none tracking-tight
+            text-[18vw] sm:text-[14vw] md:text-[12vw] lg:text-[10vw]
+            ml-6 sm:ml-10 md:ml-16
+          "
+        >
+          Gallery
+        </h1>
+      </div>
 
-      text-[18vw]
-      sm:text-[14vw]
-      md:text-[12vw]
-      lg:text-[10vw]
-
-      ml-6
-      sm:ml-10
-      md:ml-16
-    "
-  >
-    Gallery
-  </h1>
-</div>
-
-      <div className='-lg:mt-20 lol'>
+      {/*  group/gallery controls global dimming */}
+      <div className="lol group/gallery">
         {gallery.map((elem, idx) => (
           <div
             key={idx}
-            className='hero w-full lg:h-[850px] mb-4 flex lg:flex-row flex-col lg:gap-4 gap-2'
+            className="hero w-full lg:h-[850px] mb-4 flex lg:flex-row flex-col lg:gap-4 gap-2"
           >
             <GalleryCard image1={elem.image1} image2={elem.image2} />
           </div>

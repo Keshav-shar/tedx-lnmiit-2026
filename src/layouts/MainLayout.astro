@@ -91,14 +91,14 @@ const { title = "Default Title", description = "Default Description" } =
               const remaining = Math.max(0, MIN_LOADER_TIME - elapsed);
 
               setTimeout(() => {
-                loader.style.transition = "opacity 700ms ease";
+                loader.style.transition = "opacity 500ms ease";
                 loader.style.opacity = "0";
 
                 setTimeout(() => {
                   loader.remove();
                   document.body.style.overflow = "";
                   revealPage();
-                }, 700);
+                }, 500);
               }, remaining);
             });
           } else {
