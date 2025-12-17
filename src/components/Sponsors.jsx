@@ -139,14 +139,18 @@ export default function Sponsors() {
           <span className="text-white">Interested in partnership?</span>
         </h1>
 
-        <p className="text-gray-300 text-medium leading-relaxed mb-1">
-          Collaborating with TEDxLNMIIT provides a unique opportunity to enhance
-          your organization's global network within the TED community.
-          Leverage innovative ideas and technology to empower education and
-          foster innovation.
-        </p>
+        <p className="max-w-2xl text-lg md:text-xl mt-8 leading-relaxed font-medium text-gray-200">
+  Collaborating with{" "}
+  <span className="text-[#EB0028] font-semibold">TEDxLNMIIT</span>{" "}
+  provides a unique opportunity to enhance your organization's global network
+  within the{" "}
+  <span className="text-white font-semibold">TED community</span>.
+  Leverage{" "}
+  <span className="text-red-500 font-semibold">innovative ideas</span>{" "}
+  and technology to empower education and foster innovation.
+</p>
 
-        <a href="#" className="text-[#EB0028] underline hover:text-[#ff0932]">
+        <a href="#" className="text-[#EB0028]  hover:text-[#ff0932]">
           Know more
         </a>
       </div>

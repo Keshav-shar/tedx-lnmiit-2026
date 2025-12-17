@@ -13,7 +13,7 @@ const teamData = [
         name: "Dr. Narendra Kumar",
         role: ["Faculty Mentor", "Licensee"],
         image: "/team/narendra.png",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/narendra-kumar-38692065?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       },
     ],
   },
@@ -57,7 +57,7 @@ const teamData = [
     title: "Web Development",
     members: [
       { name: "Arnim Agarwal", role: "Web Developer", image: "/team/arnim3.png", linkedin: "https://www.linkedin.com/in/arnimaga" },
-      { name: "Priyanshi Jain", role: "Web Developer", image: "/team/priyanshi.png", linkedin: "#" },
+      { name: "Priyanshi Jain", role: "Web Developer", image: "/team/priyanshi.png", linkedin: "https://www.linkedin.com/in/priyanshi-jain-a300bb246/" },
     ],
   },
 
@@ -87,7 +87,6 @@ const teamData = [
       { name: "Aditya Narula", role: "Graphic Designer", image: "/team/narula.png", linkedin: "https://www.linkedin.com/in/aditya-narula-b36057301" },
       { name: "Vedha Sinkar", role: "Graphic Designer", image: "/team/vedha.png", linkedin: "https://www.linkedin.com/in/vedha-sinkar-308b4131a" },
       { name: "Tanmay Sharma", role: "Graphic Designer", image: "/team/tanmay.png", linkedin: "https://www.linkedin.com/in/tanmay-sharma-2a84212b2" },
-      { name: "Shubhangi", role: "Graphic Designer", image: "/team/parv.png", linkedin: "#" },
       { name: "Somil Ajmera", role: "Graphic Designer", image: "/team/somil.png", linkedin: "https://www.linkedin.com/in/somil-ajmera-077a04356" },
       { name: "Aanya Agarwal", role: "Graphic Designer", image: "/team/aanya.png", linkedin: "https://www.linkedin.com/in/aanya-agarwal-86a841380" },
     ],
@@ -110,16 +109,16 @@ const teamData = [
     members: [
       { name: "Adwaiy Mahajan", role: "Sponsorship", image: "/team/adwaiy.png", linkedin: "https://www.linkedin.com/in/adwaiy-mahajan-107503212" },
       { name: "Krishna Khairnar", role: "Sponsorship", image: "/team/krishna.png", linkedin: "https://www.linkedin.com/in/krishna-khairnar-229291318" },
-      { name: "Manan Vaish", role: "Sponsorship", image: "/team/manan.png", linkedin: "#" },
-      { name: "Samar Goyal", role: "Sponsorship", image: "/team/samar.png", linkedin: "#" },
+      { name: "Manan Vaish", role: "Sponsorship", image: "/team/manan.png", linkedin: "https://www.linkedin.com/in/manan-vaish-0ba187313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Samar Goyal", role: "Sponsorship", image: "/team/samar.png", linkedin: "https://www.linkedin.com/in/samar-goyal-164383314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
     ],
   },
 
   {
     title: "Social Media & Hospitality",
     members: [
-      { name: "Aayana Jain", role: "Social Media", image: "/team/aayana.png", linkedin: "#" },
-      { name: "Kaustubh Gera", role: "Social Media", image: "/team/kaustubh.png", linkedin: "#" },
+      { name: "Aayana Jain", role: "Social Media", image: "/team/aayana.png", linkedin: "https://www.linkedin.com/in/aayana-jain-aa8902321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Kaustubh Gera", role: "Social Media", image: "/team/kaustubh.png", linkedin: "https://www.linkedin.com/in/kaustubh-gera-906094321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Diya Mathur", role: "Hospitality", image: "/team/diya.png", linkedin: "https://www.linkedin.com/in/diya-mathur-2b0074266" },
     ],
     

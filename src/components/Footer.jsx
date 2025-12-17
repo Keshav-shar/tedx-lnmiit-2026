@@ -28,7 +28,7 @@ const Footer = () => {
 
       {/* Navigation Links */}
       <div className="flex flex-wrap justify-center gap-6 text-lg font-light mb-6 px-4 text-center relative z-10">
-        <a href="/" className="hover:text-[#EB0028] transition">Home</a>
+       
         <a href="/speakers" className="hover:text-[#EB0028] transition">Speakers</a>
         <a href="/gallery" className="hover:text-[#EB0028] transition">Gallery</a>
         <a href="/sponsors" className="hover:text-[#EB0028] transition">Sponsors</a>
@@ -37,14 +37,7 @@ const Footer = () => {
 
       {/* Social Icons */}
       <div className="flex justify-center space-x-6 mb-8 relative z-10">
-        <a
-          href="https://facebook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center w-10 h-10 border border-white rounded-full hover:bg-red-600 transition"
-        >
-          <i className="fab fa-facebook-f"></i>
-        </a>
+       
         <a
           href="https://www.instagram.com/tedxlnmiit?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
           target="_blank"
