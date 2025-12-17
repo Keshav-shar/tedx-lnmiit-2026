@@ -45,6 +45,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 3rem;
   font-size: clamp(2.5rem, 6vw, 4rem);
 }
+
+.section-question {
+  @apply text-white tracking-tight leading-tight;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
 /* HTML: <div class="loader"></div> */
 .loader {
   height: 60px;

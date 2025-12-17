@@ -7,7 +7,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white pt-12 pb-24 md:pb-12 relative shadow-[0_-4px_20px_rgba(255,0,0,0.2)] overflow-hidden">
+    <footer className="bg-black text-white pt-12 pb-24 md:pb-12 relative  overflow-hidden">
       {/* 🌠 Shooting Stars Background */}
       <div className="absolute inset-0 z-0">
         <ShootingStars />

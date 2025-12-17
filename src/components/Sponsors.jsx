@@ -10,7 +10,7 @@ export default function Sponsors() {
     if (!scroll) return;
 
     let ctx = gsap.context(() => {
-      const totalWidth = scroll.scrollWidth / 2; // Half since we’ll duplicate
+      const totalWidth = scroll.scrollWidth / 2;
       gsap.to(scroll, {
         x: `-${totalWidth}px`,
         duration: 25,
@@ -41,15 +41,26 @@ export default function Sponsors() {
     { name: "Canara Bank", logo: "https://www.tedxlnmiit.in/assets/cb-C0LbaTS2.png" },
   ];
 
-  // Duplicate list for infinite effect
   const loopedPartners = [...previousPartners, ...previousPartners];
 
   return (
-    <section className=" text-white py-20 flex flex-col items-center gap-20 overflow-hidden">
+    <section className="text-white py-5 flex flex-col items-center gap-20 overflow-hidden">
+
       {/* CURRENT PARTNERS */}
       <div className="text-center">
-        <h1 className="text-5xl font-light mb-10">
-          <span className="text-white">Current </span>
+        <h1
+          className="
+            text-center
+            font-light
+            tracking-tight
+            leading-tight
+            max-w-[92vw]
+            mx-auto
+            py-5
+            text-[clamp(2.4rem,8vw,4.5rem)]
+          "
+        >
+          <span className="text-white">Current</span>{" "}
           <span className="text-[#EB0028]">Partners</span>
         </h1>
 
@@ -74,29 +85,37 @@ export default function Sponsors() {
 
       {/* PREVIOUS PARTNERS */}
       <div className="w-full overflow-hidden">
-        <h1 className="text-5xl  mb-10 text-center">
-          <span className="text-white">Previous </span>
+        <h1
+          className="
+            text-center
+            font-light
+            tracking-tight
+            leading-tight
+            max-w-[92vw]
+            mx-auto
+            py-5
+            text-[clamp(2.4rem,8vw,4.5rem)]
+          "
+        >
+          <span className="text-white">Previous</span>{" "}
           <span className="text-[#EB0028]">Partners</span>
         </h1>
 
         <div className="relative w-full overflow-hidden">
           <div
             ref={scrollRef}
-            className="flex gap-12 w-max whitespace-nowrap"
+            className="flex gap-3 w-max whitespace-nowrap"
           >
             {loopedPartners.map((partner, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl p-8 shadow-xl w-48 h-48 flex flex-col justify-center items-center"
+                className="bg-[#ffffff] rounded-2xl shadow-xl w-48 h-20 flex items-center justify-center"
               >
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="object-contain w-32 h-20 mb-2"
+                  className="object-contain w-32 h-18"
                 />
-                <p className="text-black text-center text-sm font-medium">
-                  {partner.name}
-                </p>
               </div>
             ))}
           </div>
@@ -105,16 +124,29 @@ export default function Sponsors() {
 
       {/* FOOTER SECTION */}
       <div className="text-center mt-16 max-w-3xl">
-        <h2 className="text-4xl font-semibold mb-4">
-          Interested in partnership?
-        </h2>
-        <p className="text-gray-300 text-lg leading-relaxed mb-4">
+        <h1
+          className="
+            text-center
+            font-light
+            tracking-tight
+            leading-tight
+            max-w-[92vw]
+            mx-auto
+            py-5
+            text-[clamp(2rem,6vw,3.2rem)]
+          "
+        >
+          <span className="text-white">Interested in partnership?</span>
+        </h1>
+
+        <p className="text-gray-300 text-medium leading-relaxed mb-1">
           Collaborating with TEDxLNMIIT provides a unique opportunity to enhance
           your organization's global network within the TED community.
           Leverage innovative ideas and technology to empower education and
           foster innovation.
         </p>
-        <a href="#" className="text-blue-400 underline hover:text-blue-300">
+
+        <a href="#" className="text-[#EB0028] underline hover:text-[#ff0932]">
           Know more
         </a>
       </div>

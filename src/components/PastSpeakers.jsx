@@ -53,7 +53,7 @@ export default function PastSpeakers() {
   }, [visibleSpeakers]);
 
   return (
-    <main className="relative w-full bg-black/50 text-white flex flex-col items-center py-[15vh]">
+    <main className="relative w-full bg-transparent text-white flex flex-col items-center py-[15vh]">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[3vw] gap-y-[15vh] place-items-center w-full px-4 sm:px-6 md:px-10">
         {visibleSpeakers.map((speaker, index) => (
           <div

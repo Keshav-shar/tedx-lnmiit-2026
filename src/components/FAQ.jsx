@@ -29,8 +29,22 @@ export default function FAQPage() {
 
   return (
     <div className="min-h-screen bg-black/20 text-white flex flex-col items-center px-6 py-24">
-      {/* Heading */}
-     <img class="h-10 w-auto mb-10" src="../images/FREQUENTLY ASKED QUESTIONS.png" alt="faq" />
+   <h1
+  class="
+    text-center
+    font-light
+    tracking-tight
+    leading-[1]
+    max-w-[92vw]
+    mx-auto
+    py-8
+
+    text-[clamp(2.4rem,7vw,4rem)]
+  "
+>
+  <span class="text-white">Frequently asked</span>{" "}
+  <span class="text-[#EB0028] ">Questions</span>
+</h1>
 
       {/* FAQ List */}
       <div className="w-full max-w-2xl space-y-4">

@@ -62,9 +62,22 @@ import SponsorsComponent from '../components/Sponsors.jsx';
 <!-- COUNTDOWN SECTION -->
 <section class="relative w-full   py-20 flex flex-col items-center text-center px-4">
   <!-- Heading -->
-  <h2 class="text-4xl md:text-6xl font-extrabold mb-10">
-    <img class=" w-1/2 mx-auto -mb-8" src="././images/Hello Explorer.png" alt="hello explorer">
-  </h2>
+ <h1
+  class="
+    text-center
+    font-light
+    tracking-tight
+    leading-[1]
+    max-w-[92vw]
+    mx-auto
+    py-5
+    text-[clamp(2.6rem,9vw,5.5rem)]
+  "
+>
+  <span class="text-[#EB0028]">Hello</span>{" "}
+  <span class="text-white">Explorer</span>
+</h1>
+
 
   <!-- Countdown Container -->
   <div class=" border border-red-600 px-6 py-8 md:px-12 md:py-10 rounded-2xl  backdrop-blur-sm w-full max-w-3xl mx-auto">
@@ -171,11 +184,24 @@ import SponsorsComponent from '../components/Sponsors.jsx';
 
 <SpeakersCarousel client:visible/>
 
-<img 
-  src="../images/PAST SPEAKERS.png" 
-  alt="Past Speakers"
-  class="mx-auto w-[60%] md:w-[40%] bg-black/80"
-/>
+<h1
+  class="
+    relative z-10
+    text-center
+    font-light
+    tracking-tight
+    leading-tight
+    max-w-[92vw]
+    mx-auto
+    py-0
+    -mb-8
+    text-[clamp(2.4rem,8vw,4.5rem)]
+  "
+>
+  <span class="text-gray-100">Past</span>{" "}
+  <span class="text-[#EB0028]">Speakers</span>
+</h1>
+
 
 <PastSpeakers client:visible/>
 

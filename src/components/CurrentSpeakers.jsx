@@ -207,7 +207,7 @@ export default function CurrentSpeakers() {
   };
 
   return (
-  <section className="w-full bg-black/40 text-white py-20">
+  <section className="w-full bg-transparent text-white py-20">
     <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-10">
 
       {/* CAROUSEL (Mobile first) */}
@@ -267,7 +267,21 @@ export default function CurrentSpeakers() {
 
       {/* BIO (Mobile below carousel) */}
       <div className="w-full lg:w-1/3 order-2 lg:order-none lg:sticky lg:top-28">
-        <img src="../images/SPEAKERS.png" alt="speakers" />
+       <h1
+          className="
+            text-center
+            font-light
+            tracking-tight
+            leading-tight
+            max-w-[92vw]
+            mx-auto
+            py-0
+            text-[clamp(2.4rem,8vw,4.5rem)]
+          "
+        >
+         
+          <span className="text-[#EB0028]">Speakers</span>
+        </h1>
 
         <div className="mt-8 text-center lg:text-left">
           <h3 className="text-2xl md:text-3xl font-bold">{SPEAKERS[active].name}</h3>

@@ -4,35 +4,42 @@ export default function Theme() {
   return (
     <div className="relative w-full min-h-screen bg-transparent overflow-hidden">
 
-  
+      {/* 🔹 FOREGROUND CONTENT */}
+      <div className="relative z-10 w-full text-white">
 
+        {/* 🌅 HERO SECTION */}
+        <section className="min-h-screen flex flex-col items-center justify-center px-4 text-center gap-8">
 
-      {/* 🔹 FOREGROUND CONTENT (z-10) */}
-      <div className="relative z-10 w-full text-white overflow-hidden">
-
-        {/* 🌅 Hero Section */}
-        <section className="min-h-screen flex flex-col items-center justify-center px-4 text-center">
-          <motion.img
-            src="../images/THEME PAGE.png"
-            alt="Forging the Future"
+          {/* Heading (REPLACES IMAGE) */}
+          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="w-[50%] md:w-[40%] mx-auto object-contain"
-          />
+            className="
+              flex items-baseline gap-6
+              font-light
+              tracking-tight
+              leading-[0.95]
+              text-[10vw] md:text-[7.5vw] lg:text-[6.5vw]
+            "
+          >
+            <span className="text-[#EB0028]">Theme</span>
+            <span className="text-white">Page</span>
+          </motion.h1>
 
+          {/* Sub-text */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
-            className="mt-6 text-gray-300 text-lg md:text-xl max-w-2xl leading-relaxed"
+            transition={{ delay: 0.8, duration: 1 }}
+            className="text-gray-300 text-lg md:text-xl max-w-2xl leading-relaxed"
           >
             Where innovation meets inspiration — a celebration of ideas that will
             define tomorrow.
           </motion.p>
         </section>
 
-        {/* 🧠 Description Section */}
+        {/* 🧠 DESCRIPTION SECTION */}
         <section className="w-full py-16 px-6 text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
