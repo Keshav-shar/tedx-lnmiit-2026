@@ -89,7 +89,7 @@ const Gallery = () => {
         {gallery.map((elem, idx) => (
           <div
             key={idx}
-            className="hero w-full lg:h-[850px] mb-4 flex lg:flex-row flex-col lg:gap-4 gap-2"
+            className="hero w-full lg:h-[700px] mb-4 flex lg:flex-row flex-col lg:gap-4 gap-2"
           >
             <GalleryCard image1={elem.image1} image2={elem.image2} />
           </div>
