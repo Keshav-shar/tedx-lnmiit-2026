@@ -2,11 +2,12 @@
 
 // component imports 
 import MainLayout from "../layouts/MainLayout.astro";
-
+import Ticket from "../components/Ticket.jsx";
 
 ---
 
 <MainLayout title="Tickets | TEDxLNMIIT" >
-    <p> hi from <span>Tickets</span></p>
+    
+    <Ticket client:visible />
 	
 </MainLayout>
