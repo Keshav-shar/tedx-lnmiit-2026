@@ -24,6 +24,7 @@ export default function CurrentSpeakers() {
   const autoplayPausedRef = useRef(false);
   const interactionTimeoutRef = useRef(null);
   const wheelStopTimerRef = useRef(null);
+
   const AUTOPLAY_MS = 4500;
   const RESUME_AFTER_MS = 3500;
   const WHEEL_SENSITIVITY = 1;
@@ -179,7 +180,7 @@ export default function CurrentSpeakers() {
       const isActive = i === active;
       gsap.to(card, {
         scale: isActive ? 1.1 : 0.9,
-        duration: 0.60,
+        duration: 0.6,
         ease: "power3.out",
         filter: isActive ? "grayscale(0%) contrast(110%)" : "grayscale(100%) contrast(90%)",
       });
@@ -206,114 +207,134 @@ export default function CurrentSpeakers() {
     });
   };
 
+
+
+
+
   return (
-  <section className="w-full bg-transparent text-white py-20">
-    <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-10">
-
-      {/* CAROUSEL (Mobile first) */}
-      <div className="relative w-full lg:w-2/3 order-1 lg:order-none">
-        <button
-  aria-label="previous"
-  className="absolute left-3 top-1/2 -translate-y-1/2 z-20 
-             flex items-center justify-center
-             w-12 h-12 rounded-full 
-             bg-white/15 backdrop-blur 
-             text-white text-2xl font-extrabold
-             shadow-[0_0_10px_rgba(255,0,0,0.4)]
-             hover:bg-white/25 hover:scale-110 
-             transition-all duration-200"
-  onClick={handlePrev}
->
-  ←
-</button>
-
-<button
-  aria-label="next"
-  className="absolute right-3 top-1/2 -translate-y-1/2 z-20 
-             flex items-center justify-center
-             w-12 h-12 rounded-full 
-             bg-white/15 backdrop-blur 
-             text-white text-2xl font-extrabold
-             shadow-[0_0_10px_rgba(255,0,0,0.4)]
-             hover:bg-white/25 hover:scale-110 
-             transition-all duration-200"
-  onClick={handleNext}
->
-  →
-</button>
 
 
-        <div
-          ref={trackRef}
-          className="flex overflow-x-auto scrollbar-none gap-12 py-12 px-4 md:px-20"
-          style={{ scrollbarWidth: "none" }} // Firefox
-        >
-          {SPEAKERS.map((spk, i) => (
-            <div
-              key={spk.id}
-              ref={(el) => (cards.current[i] = el)}
-              onClick={() => {
-                pauseAutoplay();
-                centerCard(i, true);
-                resumeAutoplayAfterIdle();
-              }}
-              className="min-w-[250px] md:min-w-[400px] h-[400px] md:h-[500px] rounded-2xl overflow-hidden cursor-pointer transition-all"
-            >
-              <img src={spk.image} alt={spk.name} className="w-full h-full object-cover" />
-            </div>
-          ))}
-        </div>
-      </div>
+    <section className="w-full bg-transparent text-white py-20">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-10">
 
-      {/* BIO (Mobile below carousel) */}
-      <div className="w-full lg:w-1/3 order-2 lg:order-none lg:sticky lg:top-28">
-       <h1
+
+
+        {/* MOBILE HEADING */}
+        <h1
           className="
-            text-center
-            font-light
-            tracking-tight
-            leading-tight
-            max-w-[92vw]
-            mx-auto
-            py-0
-            text-[clamp(2.4rem,8vw,4.5rem)]
-          "
-        >
-         
-          <span className="text-[#EB0028]">Speakers</span>
-        </h1>
+          block lg:hidden
+          text-center
+          font-light
+          tracking-tight
+          leading-tight
+          text-[clamp(3.5rem,12vw,5.5rem)]
+          mb-6
+        "
+       >
 
-        <div className="mt-8 text-center lg:text-left">
-          <h3 className="text-2xl md:text-3xl font-bold">{SPEAKERS[active].name}</h3>
-          <p className="text-[#EB0028] font-medium mt-1">{SPEAKERS[active].title}</p>
-          <p className="mt-4 text-gray-300 text-lg">{SPEAKERS[active].bio}</p>
+         <span className="text-[#EB0028]">Speakers</span>
 
-          <div className="mt-6 flex justify-center lg:justify-start gap-3">
-            {SPEAKERS[active].linkedin && (
-              <a
-                href={SPEAKERS[active].linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="border px-3 py-2 rounded-full hover:text-[#EB0028] transition"
-              >
-                <FaLinkedin />
-              </a>
-            )}
-            {SPEAKERS[active].instagram && (
-              <a
-                href={SPEAKERS[active].instagram}
-                target="_blank"
-                rel="noreferrer"
-                className="border px-3 py-2 rounded-full hover:text-[#EB0028] transition"
-              >
-                <FaInstagram />
-              </a>
-            )}
+       </h1>
+
+
+  {/* CAROUSEL */}
+    <div className="relative w-full lg:w-2/3 order-1 lg:order-none mb-6">
+       <button
+          aria-label="previous"
+          className="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/25 text-white text-2xl"
+          onClick={handlePrev}
+      >
+
+           ←
+
+      </button>
+
+  <button
+    aria-label="next"
+    className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/25 text-white text-2xl"
+    onClick={handleNext}
+  >
+    →
+  </button>
+
+  <div
+    ref={trackRef}
+    className="flex overflow-x-auto scrollbar-none gap-12 py-6 px-4 md:px-20"
+    style={{ scrollbarWidth: "none" }}
+  >
+    {SPEAKERS.map((spk, i) => (
+      <div
+        key={spk.id}
+        ref={(el) => (cards.current[i] = el)}
+        onClick={() => {
+          pauseAutoplay();
+          centerCard(i, true);
+          resumeAutoplayAfterIdle();
+        }}
+        className="
+          min-w-[250px]
+          h-[300px]
+          sm:min-w-[400px]
+          sm:h-[500px]
+          rounded-2xl
+          overflow-hidden
+          cursor-pointer
+          transition-all
+        "
+      >
+        <img
+          src={spk.image}
+          alt={spk.name}
+          className="w-full h-full object-cover"
+        />
+      </div>
+    ))}
+  </div>
+</div>
+
+
+
+
+
+  
+        {/* BIO */}
+        <div className="w-full lg:w-1/3 order-2 lg:order-none lg:sticky lg:top-28">
+
+          {/* DESKTOP HEADING */}
+          <h1
+            className="
+              hidden lg:block
+              font-light
+              tracking-tight
+              leading-tight
+              text-[clamp(2.4rem,6vw,4.5rem)]
+              mb-6
+            "
+          >
+            <span className="text-[#EB0028]">Speakers</span>
+          </h1>
+
+          <div className="mt-8 text-center lg:text-left">
+            <h3 className="text-2xl md:text-3xl font-bold">{SPEAKERS[active].name}</h3>
+            <p className="text-[#EB0028] font-medium mt-1">{SPEAKERS[active].title}</p>
+            <p className="mt-4 text-gray-300 text-lg">{SPEAKERS[active].bio}</p>
+
+            <div className="mt-6 flex justify-center lg:justify-start gap-3">
+              {SPEAKERS[active].linkedin && (
+                <a href={SPEAKERS[active].linkedin} target="_blank" rel="noreferrer" className="border px-3 py-2 rounded-full hover:text-[#EB0028] transition">
+                  <FaLinkedin />
+                </a>
+              )}
+              {SPEAKERS[active].instagram && (
+                <a href={SPEAKERS[active].instagram} target="_blank" rel="noreferrer" className="border px-3 py-2 rounded-full hover:text-[#EB0028] transition">
+                  <FaInstagram />
+                </a>
+              )}
+            </div>
           </div>
         </div>
-      </div>
 
-    </div>
-  </section>
-);
+      </div>
+    </section>
+  );
 }
