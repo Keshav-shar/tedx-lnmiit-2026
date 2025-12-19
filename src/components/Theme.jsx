@@ -1,108 +1,156 @@
-import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Theme() {
   return (
-    <div className="w-full min-h-screen text-white px-6">
+    <>
+      <MobileTheme />
+      <DesktopTheme />
+    </>
+  );
+}
 
-      {/* 🔹 MAIN HEADING */}
-      <section className="w-full flex justify-center pt-28 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-extrabold tracking-wide"
-        >
-          <span className="text-red-500">FORGING</span> THE FUTURE
-        </motion.h1>
-      </section>
+/* ===================== MOBILE — GSAP PARALLAX ===================== */
+function MobileTheme() {
+  return (
+    <section className="relative md:hidden bg-black/10 px-6 pt-24">
+<div className="sticky top-5 z-10 flex flex-col items-center">
+    
+    {/* Heading + image ka div */}
+    <h2 className="text-4xl text-[#FFFFF] font-semibold tracking-wide mb-8 text-center">
+      Our <span className="text-[#eb0028] ">Theme </span>
+    </h2>
 
-      {/* 🔹 INTRO */}
-      <section className="w-full flex justify-center mt-10 text-center">
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="max-w-2xl text-gray-300 text-lg md:text-xl leading-relaxed"
-        >
-          Where innovation meets inspiration — a celebration of ideas that
-          define tomorrow.
-        </motion.p>
-      </section>
+   
+    <img
+      src="../images/MainElement2.png"
+      alt="Hero element"
+      className="w-full max-w-[90%] object-contain"
+    />
 
-      {/* 🔹 THEME DESCRIPTION */}
-      <section className="w-full flex justify-center mt-14 text-center">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.8 }}
-          className="max-w-3xl text-gray-200 text-lg md:text-xl leading-relaxed"
-        >
-          <span className="font-semibold text-red-500">Forging the Future</span>{" "}
-          is about challenging conventions, amplifying unheard voices, and
-          shaping solutions that matter. It reflects the courage to rethink,
-          reimagine, and rebuild the world around us with intention and impact.
-        </motion.p>
-      </section>
+  </div>
 
-      {/* 🔹 THEME FLOW / JOURNEY */}
-      <section className="w-full flex justify-center mt-24">
-        <div className="max-w-3xl w-full space-y-10 text-center">
-          {[
-            "It begins with a question — what kind of future do we want?",
-            "It grows through ideas that disrupt, inspire, and challenge norms.",
-            "It strengthens when voices from different paths come together.",
-            "And it is forged when vision turns into meaningful action.",
-          ].map((text, index) => (
-            <motion.p
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="text-xl md:text-2xl text-gray-300 leading-relaxed"
-            >
-              {text}
-            </motion.p>
-          ))}
-        </div>
-      </section>
+     {/* Text ka div*/}
+      <div className="relative z-20 mt-[60vh] max-w-md mx-auto text-center bg-black/50 text-white">
+        
+    
+        <h2 className="text-2xl text-[#ffffff] font-semibold tracking-wide mb-12 underline">
+          Forging the  Future
+        </h2>
 
-      {/* 🔹 WHY THIS THEME */}
-      <section className="w-full flex justify-center mt-24 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="max-w-3xl"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Why This Theme?
-          </h2>
-          <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
-            Because the future isn’t something we wait for — it’s something we
-            actively shape. This theme invites thinkers, creators, and leaders
-            to share ideas that spark progress and inspire action beyond the
-            stage.
-          </p>
-        </motion.div>
-      </section>
+       
+        <p className="text-base leading-relaxed opacity-85">
+          Forging the future is not about prediction, but about intention.
+          Change is inherent to who we are, shaping our ability to evolve,
+          adapt, and create.
+        </p>
 
-      {/* 🔹 CLOSING STATEMENT */}
-      <section className="w-full flex justify-center mt-24 pb-32 text-center">
-        <motion.h3
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="text-3xl md:text-4xl font-bold"
-        >
-          The future is not predicted.
+        <p className="mt-6 text-base leading-relaxed opacity-85">
+          The future does not simply wait to be discovered. It takes shape
+          through questions that challenge the familiar and ideas that dare
+          to move beyond certainty.
+        </p>
+
+        <p className="mt-6 font-medium">
+          We are not passive observers of what lies ahead.
           <br />
-          <span className="text-red-500">It is forged.</span>
-        </motion.h3>
-      </section>
+          We are its architects.
+        </p>
+      </div>
 
-    </div>
+  
+      <div className="h-[80vh]" />
+
+    </section>
+  );
+}
+
+
+/* ===================== DESKTOP (SPLIT SCROLL) ===================== */
+
+function DesktopTheme() {
+  return (
+    <section className="hidden md:block bg-transparent px-24 py-10">
+
+    
+      <h2
+        className="
+          flex justify-center
+         
+          tracking-tight
+          leading-tight
+          max-w-[92vw]
+          mx-auto
+          mb-2
+          -mt-7
+          text-[clamp(2rem,6vw,4.5rem)]
+           
+        "
+      >
+        <span className=" font-medium ">Our </span>  <span className="text-[#eb0028] mx-4 font-medium">Theme</span>
+      </h2>
+
+      <div className="flex gap-16">
+
+        {/* LEFT  text */}
+        <div className="w-9/12">
+         <div className="bg-black/80 p-10 text-white text-lg leading-relaxed space-y-8
+                shadow-lg shadow-[#eb0028]/20">
+
+            
+            <h3 className="flex justify-center font-semibold tracking-wide">
+              <span className="text-[#eb0028] text-4xl">
+                Forging the Future
+              </span>
+            </h3>
+
+            <p>
+              Forging the future is not about prediction, but about intention.
+              Change is not something external that arrives with time; it is
+              inherent to who we are. The ability to evolve, to adapt, and to
+              create is woven into our very design, making progress not an
+              anomaly, but a natural consequence of human curiosity and effort.
+            </p>
+
+            <p>
+              The future does not simply wait to be discovered. It takes shape
+              through questions that challenge the familiar and ideas that dare
+              to move beyond certainty. Progress begins when we choose to shape
+              what comes next rather than merely adjust to what already exists.
+            </p>
+
+            <p>
+              To forge the future is to move from adaptation to creation. It is
+              the decision to act with purpose, to build with clarity, and to
+              accept that meaningful progress demands courage and persistence.
+              Challenges become crucibles, refining ideas into impact and vision
+              into reality.
+            </p>
+
+            <p className="font-medium pt-4">
+              We are not passive observers of what lies ahead.
+              <br />
+              We are its architects.
+            </p>
+
+          </div>
+        </div>
+
+        {/* RIGHT —image */}
+        <div className="w-6/12 -mt-15">
+          <div className="sticky top-24 h-[80vh] flex justify-end">
+            <img
+              src="../images/MainElement2.png"
+              alt="Theme visual"
+              className="h-full object-contain"
+            />
+          </div>
+        </div>
+
+      </div>
+    </section>
   );
 }
