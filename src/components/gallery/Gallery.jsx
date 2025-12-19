@@ -6,24 +6,72 @@ import GalleryCard from './GalleryCard.jsx'
 const Gallery = () => {
   const gallery = [
     {
-      image1: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284831/_P3A7565_m4vaab.jpg',
-      image2: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/f_auto/v1734284830/IMG_1122_mwrzac.heic',
+      image1: '/Gallery/img1.JPG',
+      image2: '/Gallery/img2.jpg',
     },
     {
-      image1: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/f_auto/v1734284828/IMG_4682_yi556w.heic',
-      image2: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284832/IMG20240112225947_g0q4vd.jpg',
+      image1: '/Gallery/img3.jpg',
+      image2: '/Gallery/img4.webp',
     },
     {
-      image1: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284835/IMG20240113144545_hvayzz.jpg',
-      image2: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734287102/_DSC0512_q0lej7.jpg',
+      image1: '/Gallery/img5.png',
+      image2: '/Gallery/img22.webp',
     },
     {
-      image1: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284835/IMG20240113175013_zbofr5.jpg',
-      image2: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/f_auto/v1734284830/IMG_1227_y52t89.heic',
+      image1: '/Gallery/img8.png',
+      image2: '/Gallery/img38.png',
     },
     {
-      image1: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284836/IMG20240113165706_ndioaf.jpg',
-      image2: 'https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284836/IMG20240113124622_ncigry.jpg',
+      image1: '/Gallery/img9.png',
+      image2: '/Gallery/img10.jpg',
+    },
+    {
+      image1: '/Gallery/img11.jpg',
+      image2: '/Gallery/img12.png',
+    },
+    {
+      image1: '/Gallery/img13.png',
+      image2: '/Gallery/img14.png',
+    },
+    {
+      image1: '/Gallery/img15.png',
+      image2: '/Gallery/img16.JPG',
+    },
+     {
+      image1: '/Gallery/img17.JPG',
+      image2: '/Gallery/img18.JPG',
+    },
+     {
+      image1: '/Gallery/img19.png',
+      image2: '/Gallery/img21.png',
+    },
+    {
+      image1: '/Gallery/img23.JPG',
+      image2: '/Gallery/img24.png',
+    },
+    {
+      image1: '/Gallery/img27.png',
+      image2: '/Gallery/img28.png',
+    },
+    {
+      image1: '/Gallery/img29.JPG',
+      image2: '/Gallery/img30.png',
+    },
+    {
+      image1: '/Gallery/img31.png',
+      image2: '/Gallery/img32.png',
+    },
+    {
+      image1: '/Gallery/img33.JPG',
+      image2: '/Gallery/img34b.png',
+    },
+    {
+      image1: '/Gallery/img36.png',
+      image2: '/Gallery/img35.JPG',
+    },
+    {
+      image1: '/Gallery/img39.JPG',
+      image2: '/Gallery/img40.png',
     },
   ]
 

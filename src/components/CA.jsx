@@ -82,9 +82,21 @@ export default function CA() {
           Ready to Make an Impact?
         </h2>
 
-        <button className="bg-[#EB0028] hover:bg-red-700 transition-all duration-300 text-white px-6 py-3 rounded-full text-lg">
-          Apply to be a Campus Ambassador
-        </button>
+        <button
+  className="
+    bg-[#EB0028] hover:bg-red-700
+    transition-all duration-300
+    text-white
+    px-4 sm:px-5 md:px-6
+    py-2 sm:py-2.5
+    rounded-full
+    text-sm sm:text-base md:text-lg
+    whitespace-nowrap
+  "
+>
+  Apply to be a Campus Ambassador
+</button>
+
 
         <p className="mt-4 text-gray-400 text-sm">
           Fill out the application form, and we'll contact you with further details.
