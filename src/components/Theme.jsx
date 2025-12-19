@@ -124,6 +124,31 @@ function DesktopTheme() {
               into reality.
             </p>
 
+            <p>
+              Forging the future is both a challenge and a celebration, a trial of vision, courage, and
+endurance. It calls upon us not merely to imagine what’s next, but to bend the basics,
+with intent, with conviction, with heart. Together, we stand as architects of possibility,
+shaping ideas into reality and transforming ambition into action. Every spark of
+innovation becomes an ember in the grand forge of humanity, a reminder that the future
+is not awaited, but crafted, one brilliant idea at a time.
+<br/>
+As we hammer the metal into form, we cease to be passengers of fate, we rather take
+the control in our own hands. It is much like the abstract masterpiece worth billions,
+born from what first seemed like chaotic strokes on the canvas of our journey. In
+merging culture with modernization, insight with networks, we embark upon a
+boundless voyage, toward horizons not yet named, but already calling.
+
+            </p>
+            <p>
+              Forging isn’t glamorous, it’s demanding. It is sweat, struggle, and steadfast faith in the
+unseen. It is the conviction that human ingenuity and compassion together can achieve
+what technology alone cannot. It means building not just faster machines, but fairer
+systems.
+Not just wealth, but wisdom.
+Not just progress, but purpose.
+
+            </p>
+
             <p className="font-medium pt-4">
               We are not passive observers of what lies ahead.
               <br />
