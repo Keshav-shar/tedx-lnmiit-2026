@@ -4,60 +4,18 @@ import SpeakersCarousel from '../components/CurrentSpeakers.jsx';
 import PastSpeakers from "../components/PastSpeakers.jsx";
 import FAQPage from "../components/FAQ.jsx";
 import SponsorsComponent from '../components/Sponsors.jsx';
+import MainLayout from "../layouts/MainLayout.astro";
+import LandingPage from "../components/LandingPage.jsx";
+---
+
 ---
 
 <MainLayout title="TEDxLNMIIT">
-  <!-- HERO SECTION -->
-<section 
-  class="relative flex  items-center justify-center 
-          min-h-[calc(100vh-80px)] overflow-hidden 
-         pt-6 px-4"
->
+ 
 
-  <!-- BACKGROUND TEXT — Mobile only -->
-  <div 
-    class="absolute inset-0 flex flex-col items-center justify-center 
-           sm:hidden text-center pointer-events-none select-none"
-  >
-    <p class="text-[18vw] font-extrabold leading-[0.8] 
-              text-red-900/30 tracking-tight">
-      FORGING
-    </p>
-
-    <p class="text-[6vw] font-bold text-red-900/20 -mt-4 tracking-widest">
-      THE
-    </p>
-
-    <p class="text-[18vw] font-extrabold leading-[0.8] 
-              text-gray-400/20 tracking-tight -mt-4">
-      FUTURE
-    </p>
-  </div>
+<LandingPage client:load />
 
 
-  <!-- Title Image (Laptop only) -->
-  <div class="hidden sm:flex justify-center items-center mb-6">
-    <img 
-      src="/graphics/bg-Forging5.png"
-      alt="Forging the Future"
-      loading="lazy"
-      class="max-w-[70vw] md:max-w-[45vw] h-auto object-contain 
-             "
-    />
-  </div>
-
-  <!-- Sculpture Image (Both mobile + desktop) -->
-  <img 
-    src="/images/MainElement2.png"  
-    alt="TEDx LNMIIT Hero" 
-    loading="lazy"
-    class="object-contain w-[85vw] sm:w-auto 
-           max-h-[65vh] sm:max-h-[80vh]
-           transition-opacity duration-500 opacity-0 relative z-10"
-    onload="this.style.opacity='1'"
-  />
-
-</section>
 
 <!-- COUNTDOWN SECTION -->
 <section class="relative w-full   py-20 flex flex-col items-center text-center px-4">
