@@ -1,103 +1,148 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import ScrollSmoother from "gsap/ScrollSmoother";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function LandingPage() {
-
+  
   useGSAP(() => {
 
-    const tl = gsap.timeline({
-     scrollTrigger :{
-      trigger: ".landing" ,
-      markers: true,
-      start: "0% 0%",
-      end: "50% 0%",
-      scrub: true,
-      pin:true,
-      anticipatePin:1
-      
-    }
-  }
-  );
+    ScrollTrigger.matchMedia({
 
-  tl.from(".img", {
-   opacity: 0,
-   duration: 3,
-   ease: "power3.out",
- });
+      /* ===============================
+         DESKTOP (>= 640px)
+         UNTOUCHED
+      =============================== */
+      "(min-width: 640px)": () => {
 
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".landing",
+            start: "0% 0%",
+            end: "120% 30%",
+            scrub: true,
+            pin: true,
+            scroller: document.body,
+            pinReparent: true,
+            anticipatePin: 1,
+          },
+        });
 
- tl.fromTo(
-  ".forging",
-  { x: -500, opacity: 0 },
-  { x: -250, opacity: 1, duration: 3 , ease: "power3.out" }
-),"1";
+        tl.fromTo(".forging",
+          { x: -400, opacity: 0 },
+          { x: -250, opacity: 1, duration: 6, ease: "power3.out" },
+          "1"
+        );
 
-tl.fromTo(
-  ".future",
-  { x: 800, opacity: 0 },
-  { x: -280, opacity: 1, duration: 3 , ease: "power3.out" }
-),"1";
+        tl.fromTo(".the",
+          { x: 200, opacity: 0 },
+          { x: -220, opacity: 1, duration: 6, ease: "power3.out" },
+          "1"
+        );
 
-tl.fromTo(
-  ".the",
-  { x: 0, opacity: 0 },
-  { x: -300, opacity: 1, duration: 3 , ease: "power3.out" }
-),"1";
+        tl.fromTo(".future",
+          { x: 400, opacity: 0 },
+          { x: -250, opacity: 1, duration: 6, ease: "power3.out" },
+          "1"
+        );
 
+        tl.to(".img",
+          { x: 300, duration: 6, scale: 0.8, ease: "power3.out" },
+          "1"
+        );
+      },
 
-     tl.to(".img", {
-      x: 100,
-      duration: 3,
-      scale: 1.,
-      ease: "power3.out",
+      /* ===============================
+         MOBILE (< 640px)
+         THE + FUTURE FROM SAME SIDE
+      =============================== */
+      "(max-width: 639px)": () => {
+
+        // Initial states
+        gsap.set(".img", {
+          left: "50%",
+          top: "50%",
+          xPercent: -50,
+          yPercent: -50,
+        });
+
+        gsap.set(".forging", { x: "-120vw" });
+        gsap.set(".future", { x: "120vw" });
+        gsap.set(".the", { x: "120vw", opacity: 1 });
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".landing",
+            start: "top top",
+            end: "+=500",
+            scrub: true,
+            pin: true,
+            pinReparent: true,
+            anticipatePin: 1,
+          },
+        });
+
+        // FORGING → left → center
+        tl.to(".forging", {
+          x: 0,
+          duration: 4,
+          ease: "power3.out",
+        }, 0);
+
+        // THE → right → center (above FUTURE)
+        tl.to(".the", {
+          x: 0,
+          duration: 4,
+          ease: "power3.out",
+        }, 0);
+
+        // FUTURE → right → center
+        tl.to(".future", {
+          x: 0,
+          duration: 4,
+          ease: "power3.out",
+        }, 0);
+      },
     });
 
-    tl.from(".forging", {
-      x: -400,
-      opacity: 0,
-      duration: 3,
-      ease: "power3.out",
-    } , "1");
-
-  });
+    return () => ScrollTrigger.getAll().forEach(t => t.kill());
+  }, []);
 
   return (
-    <section
-      id="hero"
-      className=" landing relative h-[200vh] overflow-hidden bg-black px-4"
-    >
-      {/* DESKTOP TEXT */}
-      <div className="hidden sm:block absolute inset-0 pointer-events-none z-20">
-        <p
-          className="forging absolute left-1/2 -translate-x-1/2
-                     text-[10vw] font-extrabold text-[#EB0028]"
-          style={{ top: "18vh" }}
-        >
-          FORGING
-        </p>
+    <section className="landing h-screen bg-radial from-black from-10% to-transparent relative overflow-hidden">
+      <div className="mx-auto flex h-full max-w-7xl items-center justify-center px-12">
 
-        <p
-          className="the absolute left-1/2 -translate-x-1/2
-                     text-[2.5vw] font-bold text-white "
-          style={{ top: "46vh" }}
-        >
-          THE
-        </p>
+        {/* TEXT */}
+        <div className="relative font-bebas flex flex-col items-center gap-6 pointer-events-none z-20">
 
-        <p
-          className="future absolute left-1/2 -translate-x-1/2
-                     text-[10vw] font-extrabold text-white"
-          style={{ top: "58vh" }}
-        >
-          FUTURE
-        </p>
+          {/* FORGING */}
+          <p className="forging tracking-wide font-bebas text-[#eb0028] text-[22vw] sm:text-[16vw] font-extrabold leading-none">
+            FORGING
+          </p>
+
+          {/* THE + FUTURE (VERTICAL STACK) */}
+          <div className="flex flex-col items-center leading-none">
+            <p className="the font-bebas text-white text-[12vw] sm:text-[8vw] font-extrabold tracking-wide mb-6">
+              THE
+            </p>
+
+            <p className="future font-bebas tracking-wide text-white text-[22vw] sm:text-[16vw] font-extrabold">
+              FUTURE
+            </p>
+          </div>
+
+        </div>
+
+        {/* IMAGE */}
+        <img
+          src="/images/MainRed3d.png"
+          alt="TEDx LNMIIT Hero"
+          loading="lazy"
+          className="img max-h-[90vh] object-contain absolute z-10"
+        />
       </div>
-
-      {/* HERO IMAGE */}
-       <img src="/images/MainRed3d.png" alt="TEDx LNMIIT Hero" loading="lazy" className="img absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 object-contain max-h-[65vh] z-10" />
     </section>
   );
 }
