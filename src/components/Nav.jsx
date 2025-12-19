@@ -24,7 +24,7 @@ export default function Navbar() {
     { name: "ABOUT", href: "/about" },
     { name: "GALLERY", href: "/gallery" },
     { name: "TEAM", href: "/team" },
-    { name: "CAMPUS AMBASSADOR", href: "/ca" },
+    { name: "CAMPUS AMBASSADOR", href: "/campus ambassador" },
   ];
 
   return (

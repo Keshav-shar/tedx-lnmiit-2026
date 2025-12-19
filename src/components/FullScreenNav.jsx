@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { useContext } from 'react';
 import { NavbarContext } from '../context/NavContext';
 
-const menuLinks = ["Home", "Theme", "About", "Gallery", "Team","CA"];
+const menuLinks = ["Home", "Theme", "About", "Gallery", "Team","Campus Ambassador"];
 
 export default function FullScreenNav() {
   const { navOpen, setNavOpen } = useContext(NavbarContext);
@@ -41,7 +41,14 @@ export default function FullScreenNav() {
           <a
             href={text === "Home" ? "/" : `/${text.toLowerCase()}`}
             key={i}
-            className="menu-link opacity-0 rotate-x-90 text-4xl font-semibold uppercase"
+            className="menu-link
+        opacity-0
+        rotate-x-90
+        text-center
+        whitespace-nowrap
+        text-2xl sm:text-3xl md:text-4xl
+        font-semibold
+        uppercase"
           >
             {text}
           </a>
