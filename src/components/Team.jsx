@@ -21,8 +21,8 @@ const teamData = [
   {
     title: "Organizers",
     members: [
-      { name: "Abdul Hadi", role: "Organizer", image: "/team/abdul.png", linkedin: "https://www.linkedin.com/in/abdul-hadi-siddiqui-145850295" },
-      { name: "Anshika Agarwal", role: "Organizer", image: "/team/anshika.png", linkedin: "https://www.linkedin.com/in/anshika-agrawal3379" },
+      { name: "Abdul Hadi Siddiqui", role: "Organizer", image: "/team/abdul.png", linkedin: "https://www.linkedin.com/in/abdul-hadi-siddiqui-145850295" },
+      { name: "Anshika Agrawal", role: "Organizer", image: "/team/anshika.png", linkedin: "https://www.linkedin.com/in/anshika-agrawal3379" },
       { name: "Vihaan Malik", role: "Organizer", image: "/team/vihaan.png", linkedin: "https://www.linkedin.com/in/vihaan-malik" },
       { name: "Parv Khandelwal", role: "Organizer", image: "/team/parv.png", linkedin: "https://www.linkedin.com/in/parv-khandelwal-918562281" },
     ],
@@ -39,8 +39,8 @@ const teamData = [
   {
     title: "Sponsorship & Hospitality head",
     members: [
-      { name: "Priyal Maheshwari", role: "Hospitality Head", image: "/team/priyal.png", linkedin: "https://www.linkedin.com/in/priyal-maheshwari-001494284" },
       { name: "Naman Agarwal", role: "Sponsorship Head", image: "/team/naman.png", linkedin: "https://www.linkedin.com/in/naman-agarwal-53b26030b" },
+      { name: "Priyal Maheshwari", role: "Hospitality Head", image: "/team/priyal.png", linkedin: "https://www.linkedin.com/in/priyal-maheshwari-001494284" }
     ],
   },
 
