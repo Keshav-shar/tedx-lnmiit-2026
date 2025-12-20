@@ -71,7 +71,7 @@ const Gallery = () => {
     },
     {
       image1: '/Gallery/img39.JPG',
-      image2: '/Gallery/img40.png',
+      image2: '/Gallery/img42.png',
     },
   ]
 
@@ -123,9 +123,9 @@ const Gallery = () => {
       md:text-[12vw]
       lg:text-[10vw]
 
-      ml-6
+      ml-10
       sm:ml-10
-      md:ml-16
+      md:ml-5
     "
   >
     Gallery
@@ -137,7 +137,7 @@ const Gallery = () => {
         {gallery.map((elem, idx) => (
           <div
             key={idx}
-            className="hero w-full lg:h-[700px] mb-4 flex lg:flex-row flex-col lg:gap-4 gap-2"
+            className="hero w-full lg:h-[650px] mb-4 flex lg:flex-row flex-col lg:gap-4 gap-2"
           >
             <GalleryCard image1={elem.image1} image2={elem.image2} />
           </div>
