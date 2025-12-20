@@ -151,7 +151,7 @@ export default function Sponsors() {
 </p>
 
         <a
- href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:c1dba4e0-506c-46e9-aa19-ece7f47732a3"   // replace later with your actual PDF link
+ href="/Brochure/Partnership_Brochure_TEDxLNMIIT2026.pdf"   // replace later with your actual PDF link
   target="_blank"
   rel="noopener noreferrer"
   className="

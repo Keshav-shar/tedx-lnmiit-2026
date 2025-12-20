@@ -78,7 +78,7 @@ const teamData = [
     title: "Content Writing",
     members: [
       { name: "Garvit Garg", role: "Content Writer", image: "/team/garvit.png", linkedin: "#" },
-      { name: "krishangee Tayal", role: "Content Writer", image: "/team/krishangee.png", linkedin: "https://www.linkedin.com/in/krishangee-tayal-96a861242" },
+      { name: "Krishangee Tayal", role: "Content Writer", image: "/team/krishangee.png", linkedin: "https://www.linkedin.com/in/krishangee-tayal-96a861242" },
       { name: "Madhura Vyas", role: "Content Writer", image: "/team/madhura.png", linkedin: "#" },
       { name: "Poorvi Jagga", role: "Content Writer", image: "/team/poorvi.png", linkedin: "https://www.linkedin.com/in/poorvi-jagga-ba6b9b341" },
       { name: "Praneel Dev", role: "Content Writer", image: "/team/praneel.png", linkedin: "https://www.linkedin.com/in/praneel-dev-3b9754321" },
