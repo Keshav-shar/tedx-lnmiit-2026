@@ -91,8 +91,8 @@ function DesktopTheme() {
 
         {/* LEFT  text */}
         <div className="w-9/12">
-         <div className="bg-black/80 p-10 text-white text-lg leading-relaxed space-y-8
-                shadow-lg shadow-[#eb0028]/20">
+         <div className=" p-10 text-white text-lg leading-relaxed space-y-8
+                shadow-lg">
 
             
             <h3 className="flex justify-center font-semibold tracking-wide">

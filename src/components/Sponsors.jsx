@@ -150,9 +150,24 @@ export default function Sponsors() {
   and technology to empower education and foster innovation.
 </p>
 
-        <a href="#" className="text-[#EB0028]  hover:text-[#ff0932]">
-          Know more
-        </a>
+        <a
+ // href=""   // replace later with your actual PDF link
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    inline-flex items-center justify-center
+    px-6 py-3
+    bg-[#EB0028] text-white font-medium
+    rounded-full
+    transition-all duration-300 ease-out
+    hover:bg-[#ff0932]
+    hover:-translate-y-0.5
+    active:translate-y-0
+  "
+>
+  Know more
+</a>
+
       </div>
     </section>
   );
