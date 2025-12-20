@@ -32,29 +32,38 @@ const Footer = () => {
         <a href="/speakers" className="hover:text-[#EB0028] transition">Speakers</a>
         <a href="/gallery" className="hover:text-[#EB0028] transition">Gallery</a>
         <a href="/sponsors" className="hover:text-[#EB0028] transition">Sponsors</a>
-        <a href="/about" className="hover:text-[#EB0028] transition">About</a>
       </div>
 
       {/* Social Icons */}
       <div className="flex justify-center space-x-6 mb-8 relative z-10">
-       
-        <a
-          href="https://www.instagram.com/tedxlnmiit?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center w-10 h-10 border border-white rounded-full hover:bg-[#EB0028] transition"
-        >
-          <i className="fab fa-instagram"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/company/tedxlnmiit/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center w-10 h-10 border border-white rounded-full hover:bg-[#EB0028] transition"
-        >
-          <i className="fab fa-linkedin-in"></i>
-        </a>
-      </div>
+           <a
+             href="https://www.instagram.com/tedxlnmiit?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+             target="_blank"
+             rel="noopener noreferrer"
+             className="flex items-center justify-center w-10 h-10 border border-white rounded-full hover:bg-[#EB0028] transition"
+           >
+             <i className="fab fa-instagram"></i>
+           </a>
+         
+           <a
+             href="https://www.linkedin.com/company/tedxlnmiit/"
+             target="_blank"
+             rel="noopener noreferrer"
+             className="flex items-center justify-center w-10 h-10 border border-white rounded-full hover:bg-[#EB0028] transition"
+           >
+             <i className="fab fa-linkedin-in"></i>
+           </a>
+
+           <a
+             href="https://www.youtube.com/@TEDxLNMIIT"
+             target="_blank"
+             rel="noopener noreferrer"
+             className="flex items-center justify-center w-10 h-10 border border-white rounded-full hover:bg-[#EB0028] transition"
+           >
+             <i className="fab fa-youtube"></i>
+           </a>
+        </div>
+
 
       {/* Divider */}
       <div className="border-t border-gray-700 w-3/4 mx-auto mb-6 relative z-10"></div>
