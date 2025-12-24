@@ -20,7 +20,7 @@ function MobileTheme() {
 
    
     <img
-      src="../images/MainElement2.png"
+      src="../images/noBorderMain.png"
       alt="Hero element"
       className="w-full max-w-[90%] object-contain"
     />
