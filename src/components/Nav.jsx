@@ -38,7 +38,7 @@ export default function Navbar() {
       {/* LEFT SECTION */}
      <a href="/" className="flex flex-col items-start">
   <img
-    src="/images/logo-white2.png"
+    src="/images/logo-white2.webp"
     alt="TEDx LNMIIT Logo"
     className="h-15 lg:h-15 w-auto object-contain cursor-pointer"
   />

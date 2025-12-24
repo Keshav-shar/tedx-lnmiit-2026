@@ -6,72 +6,72 @@ import GalleryCard from './GalleryCard.jsx'
 const Gallery = () => {
   const gallery = [
     {
-      image1: '/Gallery/img1.JPG',
-      image2: '/Gallery/img2.jpg',
+      image1: '/Gallery/img1.webp',
+      image2: '/Gallery/img2.webp',
     },
     {
-      image1: '/Gallery/img3.jpg',
+      image1: '/Gallery/img3.webp',
       image2: '/Gallery/img4.webp',
     },
     {
-      image1: '/Gallery/img5.png',
+      image1: '/Gallery/img5.webp',
       image2: '/Gallery/img22.webp',
     },
     {
-      image1: '/Gallery/img8.png',
-      image2: '/Gallery/img38.png',
+      image1: '/Gallery/img8.webp',
+      image2: '/Gallery/img38.webp',
     },
     {
-      image1: '/Gallery/img9.png',
-      image2: '/Gallery/img10.jpg',
+      image1: '/Gallery/img9.webp',
+      image2: '/Gallery/img10.webp',
     },
     {
-      image1: '/Gallery/img11.jpg',
-      image2: '/Gallery/img12.png',
+      image1: '/Gallery/img11.webp',
+      image2: '/Gallery/img12.webp',
     },
     {
-      image1: '/Gallery/img13.png',
-      image2: '/Gallery/img14.png',
+      image1: '/Gallery/img13.webp',
+      image2: '/Gallery/img14.webp',
     },
     {
-      image1: '/Gallery/img15.png',
-      image2: '/Gallery/img16.JPG',
+      image1: '/Gallery/img15.webp',
+      image2: '/Gallery/img16.webp',
     },
      {
-      image1: '/Gallery/img17.JPG',
-      image2: '/Gallery/img18.JPG',
+      image1: '/Gallery/img17.webp',
+      image2: '/Gallery/img18.webp',
     },
      {
-      image1: '/Gallery/img19.png',
-      image2: '/Gallery/img21.png',
+      image1: '/Gallery/img19.webp',
+      image2: '/Gallery/img21.webp',
     },
     {
-      image1: '/Gallery/img23.JPG',
-      image2: '/Gallery/img24.png',
+      image1: '/Gallery/img23.webp',
+      image2: '/Gallery/img24.webp',
     },
     {
-      image1: '/Gallery/img27.png',
-      image2: '/Gallery/img28.png',
+      image1: '/Gallery/img27.webp',
+      image2: '/Gallery/img28.webp',
     },
     {
-      image1: '/Gallery/img29.JPG',
-      image2: '/Gallery/img30.png',
+      image1: '/Gallery/img29.webp',
+      image2: '/Gallery/img30.webp',
     },
     {
-      image1: '/Gallery/img31.png',
-      image2: '/Gallery/img32.png',
+      image1: '/Gallery/img31.webp',
+      image2: '/Gallery/img32.webp',
     },
     {
-      image1: '/Gallery/img33.JPG',
-      image2: '/Gallery/img34b.png',
+      image1: '/Gallery/img33.webp',
+      image2: '/Gallery/img34b.webp',
     },
     {
-      image1: '/Gallery/img36.png',
-      image2: '/Gallery/img35.JPG',
+      image1: '/Gallery/img36.webp',
+      image2: '/Gallery/img35.webp',
     },
     {
-      image1: '/Gallery/img39.JPG',
-      image2: '/Gallery/img42.png',
+      image1: '/Gallery/img39.webp',
+      image2: '/Gallery/img42.webp',
     },
   ]
 
