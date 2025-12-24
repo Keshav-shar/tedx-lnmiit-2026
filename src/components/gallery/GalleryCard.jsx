@@ -1,5 +1,3 @@
-import React from 'react'
-
 const GalleryCard = ({ image1, image2 }) => {
   return (
     <>
@@ -11,11 +9,7 @@ const GalleryCard = ({ image1, image2 }) => {
           overflow-hidden
           transition-all duration-500
           rounded-none hover:rounded-[70px]
-
-          /* default dim */
           brightness-90
-
-          /* when ANY card hovered, dim this */
           group-hover/gallery:brightness-55
 
           /* when THIS card hovered, brighten */
@@ -26,7 +20,7 @@ const GalleryCard = ({ image1, image2 }) => {
         <img
           className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.03]"
           src={image1}
-          alt=""
+          alt="Gallery Image"
         />
       </div>
 
@@ -38,7 +32,6 @@ const GalleryCard = ({ image1, image2 }) => {
           overflow-hidden
           transition-all duration-500
           rounded-none hover:rounded-[70px]
-
           brightness-90
           group-hover/gallery:brightness-75
           hover:!brightness-110
@@ -48,7 +41,7 @@ const GalleryCard = ({ image1, image2 }) => {
         <img
           className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.03]"
           src={image2}
-          alt=""
+          alt="Gallery Image"
         />
       </div>
     </>

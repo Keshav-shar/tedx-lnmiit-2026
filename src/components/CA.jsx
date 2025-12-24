@@ -4,7 +4,7 @@ export default function CA() {
   return (
     <main className="text-white min-h-screen flex flex-col items-center space-y-24">
 
-  {/* ---------- HEADER ---------- */}
+  {/*HEADER*/}
   <section className="text-center pt-20 pb-12 px-4 space-y-6 w-full">
     <h1 className="text-4xl sm:text-6xl font-bold">
       <span className="text-[#EB0028]">TEDx</span>LNMIIT{" "}
@@ -35,7 +35,7 @@ export default function CA() {
     </div>
   </section>
 
-  {/* ---------- WHY SECTION ---------- */}
+  {/*WHY SECTION*/}
   <section className="w-full max-w-6xl text-center px-4 space-y-10 pb-24">
     <h2 className="text-2xl sm:text-4xl text-white">
       Why Become a Campus Ambassador?
@@ -76,7 +76,7 @@ export default function CA() {
     </div>
   </section>
 
-      {/* ---------- CTA ---------- */}
+      {/* Form */}
       <section className="text-center mb-24">
         <h2 className="text-2xl sm:text-3xl font-semibold mb-6">
           Ready to Make an Impact?
@@ -103,7 +103,7 @@ export default function CA() {
         </p>
       </section>
 
-      {/* ---------- COMMUNITY ---------- */}
+      {/*  COMMUNITY */}
       <section className="w-full max-w-5xl text-center px-4 pb-24">
         <h2 className="text-2xl sm:text-3xl font-semibold mb-10">
           Join Our Inspiring Community

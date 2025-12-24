@@ -25,9 +25,9 @@ export default function CurrentSpeakers() {
   const interactionTimeoutRef = useRef(null);
   const wheelStopTimerRef = useRef(null);
 
-  const AUTOPLAY_MS = 4500;
+  const AUTOPLAY_MS = 4000;
   const RESUME_AFTER_MS = 3500;
-  const WHEEL_SENSITIVITY = 1;
+  const WHEEL_SENSITIVITY = 1.2;
 
   const centerCard = (index, setActiveCard = true) => {
     const track = trackRef.current;
