@@ -23,22 +23,22 @@ export default function Sponsors() {
   }, []);
 
   const currentPartners = [
-    { name: "VRJ Productions", logo: "https://www.tedxlnmiit.in/assets/vrj-DWhpatzn.png" },
-    { name: "The Waffle Charm", logo: "https://www.tedxlnmiit.in/assets/waffle-Dx47cejU.png" },
-    { name: "The Fern Residency", logo: "https://www.tedxlnmiit.in/assets/fern-DKRF2PPM.jpg" },
-    { name: "Canara Bank", logo: "https://www.tedxlnmiit.in/assets/cb-C0LbaTS2.png" },
+    { name: "VRJ Productions", logo: "" },
+    { name: "The Waffle Charm", logo: "" },
+    { name: "The Fern Residency", logo: "" },
+    { name: "Canara Bank", logo: "" },
   ];
 
   const previousPartners = [
-    { name: "Petite Patisserie", logo: "https://www.tedxlnmiit.in/assets/BP-DFiBk8y2.png" },
-    { name: "Kalam IAS Academy", logo: "https://www.tedxlnmiit.in/assets/EP-EnyPpFcG.png" },
-    { name: "Sarovar Hotels", logo: "https://www.tedxlnmiit.in/assets/HP-CVKn_lHs.png" },
-    { name: "Regal Offset", logo: "https://www.tedxlnmiit.in/assets/PP-B-Kdf_as.png" },
-    { name: "Union Bank", logo: "https://www.tedxlnmiit.in/assets/UB-CvFSxgC7.png" },
-    { name: "The Waffle Charm", logo: "https://www.tedxlnmiit.in/assets/waffle-Dx47cejU.png" },
-    { name: "VRJ Productions", logo: "https://www.tedxlnmiit.in/assets/vrj-DWhpatzn.png" },
-    { name: "The Fern Residency", logo: "https://www.tedxlnmiit.in/assets/fern-DKRF2PPM.jpg" },
-    { name: "Canara Bank", logo: "https://www.tedxlnmiit.in/assets/cb-C0LbaTS2.png" },
+    { name: "Petite Patisserie", logo: "/PrevPartners/petite.webp" },
+    { name: "Kalam IAS Academy", logo: "/PrevPartners/kalam.webp" },
+    { name: "Sarovar Hotels", logo: "/PrevPartners/sarovar.webp" },
+    { name: "Regal Offset", logo: "/PrevPartners/regal.webp" },
+    { name: "Union Bank", logo: "/PrevPartners/unionn.webp" },
+    { name: "The Waffle Charm", logo: "/PrevPartners/Waffle.webp" },
+    { name: "VRJ Productions", logo: "/PrevPartners/VRJ2.webp" },
+    { name: "The Fern Residency", logo: "/PrevPartners/fern.webp" },
+    { name: "Canara Bank", logo: "/PrevPartners/canaraa.webp" },
   ];
 
   const loopedPartners = [...previousPartners, ...previousPartners];

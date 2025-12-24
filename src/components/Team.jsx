@@ -12,7 +12,7 @@ const teamData = [
       {
         name: "Dr. Narendra Kumar",
         role: ["Faculty Mentor", "Licensee"],
-        image: "/team/narendra.png",
+        image: "/team/narendra.webp",
         linkedin: "https://www.linkedin.com/in/narendra-kumar-38692065?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       },
     ],
@@ -21,10 +21,10 @@ const teamData = [
   {
     title: "Organizers",
     members: [
-      { name: "Abdul Hadi Siddiqui", role: "Organizer", image: "/team/abdul.png", linkedin: "https://www.linkedin.com/in/abdul-hadi-siddiqui-145850295" },
-      { name: "Anshika Agrawal", role: "Organizer", image: "/team/anshika.png", linkedin: "https://www.linkedin.com/in/anshika-agrawal3379" },
-      { name: "Parv Khandelwal", role: "Organizer", image: "/team/parv.png", linkedin: "https://www.linkedin.com/in/parv-khandelwal-918562281" },
-      { name: "Vihaan Malik", role: "Organizer", image: "/team/vihaan.png", linkedin: "https://www.linkedin.com/in/vihaan-malik" },
+      { name: "Abdul Hadi Siddiqui", role: "Organizer", image: "/team/abdul.webp", linkedin: "https://www.linkedin.com/in/abdul-hadi-siddiqui-145850295" },
+      { name: "Anshika Agrawal", role: "Organizer", image: "/team/anshika.webp", linkedin: "https://www.linkedin.com/in/anshika-agrawal3379" },
+      { name: "Parv Khandelwal", role: "Organizer", image: "/team/parv.webp", linkedin: "https://www.linkedin.com/in/parv-khandelwal-918562281" },
+      { name: "Vihaan Malik", role: "Organizer", image: "/team/vihaan.webp", linkedin: "https://www.linkedin.com/in/vihaan-malik" },
       
     ],
   },
@@ -32,117 +32,117 @@ const teamData = [
   {
     title: "Development Head",
     members: [
-      { name: "Keshav Sharma", role: "Development Head", image: "/team/keshav.png", linkedin: "https://www.linkedin.com/in/keshav-sharma-0aa02627b" },
+      { name: "Keshav Sharma", role: "Development Head", image: "/team/keshav.webp", linkedin: "https://www.linkedin.com/in/keshav-sharma-0aa02627b" },
     ],
   },
 
    {
     title: "Event Management Head",
     members: [
-      { name: "Nirmal Patel", role: "Event Management Head", image: "/team/nirmal.png", linkedin: "https://www.linkedin.com/in/nirmal-patel-0a8868267" },
+      { name: "Nirmal Patel", role: "Event Management Head", image: "/team/nirmal.webp", linkedin: "https://www.linkedin.com/in/nirmal-patel-0a8868267" },
     ],
   },
 
   {
     title: "Sponsorship Head",
     members: [
-      { name: "Naman Agarwal", role: "Sponsorship Head", image: "/team/naman.png", linkedin: "https://www.linkedin.com/in/naman-agarwal-53b26030b" },
+      { name: "Naman Agarwal", role: "Sponsorship Head", image: "/team/naman.webp", linkedin: "https://www.linkedin.com/in/naman-agarwal-53b26030b" },
     ],
   },
 
    {
     title: "Hospitality head",
     members: [
-      { name: "Priyal Maheshwari", role: "Hospitality Head", image: "/team/priyal.png", linkedin: "https://www.linkedin.com/in/priyal-maheshwari-001494284" }
+      { name: "Priyal Maheshwari", role: "Hospitality Head", image: "/team/priyal.webp", linkedin: "https://www.linkedin.com/in/priyal-maheshwari-001494284" }
     ],
   },
 
   {
     title: "Creative Head",
     members: [
-      { name: "Neha Raniwala", role: "Graphic Designing Head", image: "/team/neha.png", linkedin: "https://www.linkedin.com/in/neha-raniwala" },
-      { name: "Utkrasht Gupta", role: "Graphic Designing Head", image: "/team/utkrasht.png", linkedin: "https://www.linkedin.com/in/utkrasht-gupta-903317205" },
-      { name: "Yash Jain", role: "Video Editing Head", image: "/team/yash.png", linkedin: "https://www.linkedin.com/in/yash-jain-agkj11" },
+      { name: "Neha Raniwala", role: "Graphic Designing Head", image: "/team/neha.webp", linkedin: "https://www.linkedin.com/in/neha-raniwala" },
+      { name: "Utkrasht Gupta", role: "Graphic Designing Head", image: "/team/utkrasht.webp", linkedin: "https://www.linkedin.com/in/utkrasht-gupta-903317205" },
+      { name: "Yash Jain", role: "Video Editing Head", image: "/team/yash.webp", linkedin: "https://www.linkedin.com/in/yash-jain-agkj11" },
     ],
   },
 
   {
     title: "Web Development",
     members: [
-      { name: "Arnim Agarwal", role: "Web Developer", image: "/team/arnim3.png", linkedin: "https://www.linkedin.com/in/arnimaga" },
-      { name: "Priyanshi Jain", role: "Web Developer", image: "/team/priyanshi.png", linkedin: "https://www.linkedin.com/in/priyanshi-jain-a300bb246/" },
+      { name: "Arnim Agarwal", role: "Web Developer", image: "/team/arnim3.webp", linkedin: "https://www.linkedin.com/in/arnimaga" },
+      { name: "Priyanshi Jain", role: "Web Developer", image: "/team/priyanshi.webp", linkedin: "https://www.linkedin.com/in/priyanshi-jain-a300bb246/" },
     ],
   },
 
   {
     title: "Content Writing",
     members: [
-      { name: "Garvit Garg", role: "Content Writer", image: "/team/garvit.png", linkedin: "#" },
-      { name: "Krishangee Tayal", role: "Content Writer", image: "/team/krishangee.png", linkedin: "https://www.linkedin.com/in/krishangee-tayal-96a861242" },
-      { name: "Madhura Vyas", role: "Content Writer", image: "/team/madhura.png", linkedin: "#" },
-      { name: "Poorvi Jagga", role: "Content Writer", image: "/team/poorvi.png", linkedin: "https://www.linkedin.com/in/poorvi-jagga-ba6b9b341" },
-      { name: "Praneel Dev", role: "Content Writer", image: "/team/praneel.png", linkedin: "https://www.linkedin.com/in/praneel-dev-3b9754321" },
+      { name: "Garvit Garg", role: "Content Writer", image: "/team/garvit.webp", linkedin: "#" },
+      { name: "Krishangee Tayal", role: "Content Writer", image: "/team/krishangee.webp", linkedin: "https://www.linkedin.com/in/krishangee-tayal-96a861242" },
+      { name: "Madhura Vyas", role: "Content Writer", image: "/team/madhura.webp", linkedin: "#" },
+      { name: "Poorvi Jagga", role: "Content Writer", image: "/team/poorvi.webp", linkedin: "https://www.linkedin.com/in/poorvi-jagga-ba6b9b341" },
+      { name: "Praneel Dev", role: "Content Writer", image: "/team/praneel.webp", linkedin: "https://www.linkedin.com/in/praneel-dev-3b9754321" },
     ],
   },
 
   {
     title: "Speaker Outreach",
     members: [
-      { name: "Aditya Jain", role: "Speaker Outreach", image: "/team/adi.png", linkedin: "https://www.linkedin.com/in/aditya-jain-790743322" },
-      { name: "Diksha Sakhi", role: "Speaker Outreach", image: "/team/diksha.png", linkedin: "https://www.linkedin.com/in/diksha-sakhi-a60b62334" },
-      { name: "Diya Mathur", role: "Speaker Outreach", image: "/team/diya.png", linkedin: "https://www.linkedin.com/in/diya-mathur-2b0074266" },
-      { name: "Raghav Khandelwal", role: "Speaker Outreach", image: "/team/raghav.png", linkedin: "https://www.linkedin.com/in/raghav-khandelwal-b8b7012a4" },
+      { name: "Aditya Jain", role: "Speaker Outreach", image: "/team/adi.webp", linkedin: "https://www.linkedin.com/in/aditya-jain-790743322" },
+      { name: "Diksha Sakhi", role: "Speaker Outreach", image: "/team/diksha.webp", linkedin: "https://www.linkedin.com/in/diksha-sakhi-a60b62334" },
+      { name: "Diya Mathur", role: "Speaker Outreach", image: "/team/diya.webp", linkedin: "https://www.linkedin.com/in/diya-mathur-2b0074266" },
+      { name: "Raghav Khandelwal", role: "Speaker Outreach", image: "/team/raghav.webp", linkedin: "https://www.linkedin.com/in/raghav-khandelwal-b8b7012a4" },
     ],
   },
 
   {
     title: "Graphic Designing",
     members: [
-       { name: "Aanya Agarwal", role: "Graphic Designer", image: "/team/aanya.png", linkedin: "https://www.linkedin.com/in/aanya-agarwal-86a841380" },
-      { name: "Aditya Narula", role: "Graphic Designer", image: "/team/narula.png", linkedin: "https://www.linkedin.com/in/aditya-narula-b36057301" },
-      { name: "Somil Ajmera", role: "Graphic Designer", image: "/team/somil.png", linkedin: "https://www.linkedin.com/in/somil-ajmera-077a04356" },
-      { name: "Tanmay Sharma", role: "Graphic Designer", image: "/team/tanmay.png", linkedin: "https://www.linkedin.com/in/tanmay-sharma-2a84212b2" },
-      { name: "Vedha Sinkar", role: "Graphic Designer", image: "/team/vedha.png", linkedin: "https://www.linkedin.com/in/vedha-sinkar-308b4131a" },
+       { name: "Aanya Agarwal", role: "Graphic Designer", image: "/team/aanya.webp", linkedin: "https://www.linkedin.com/in/aanya-agarwal-86a841380" },
+      { name: "Aditya Narula", role: "Graphic Designer", image: "/team/narula.webp", linkedin: "https://www.linkedin.com/in/aditya-narula-b36057301" },
+      { name: "Somil Ajmera", role: "Graphic Designer", image: "/team/somil.webp", linkedin: "https://www.linkedin.com/in/somil-ajmera-077a04356" },
+      { name: "Tanmay Sharma", role: "Graphic Designer", image: "/team/tanmay.webp", linkedin: "https://www.linkedin.com/in/tanmay-sharma-2a84212b2" },
+      { name: "Vedha Sinkar", role: "Graphic Designer", image: "/team/vedha.webp", linkedin: "https://www.linkedin.com/in/vedha-sinkar-308b4131a" },
     ],
   },
 
   {
     title: "Event Management",
     members: [
-      { name: "Anshul Bansal", role: "Event Management", image: "/team/anshul.png", linkedin: "https://www.linkedin.com/in/anshulbansalxd" },
-      { name: "Dev Rastogi", role: "Event Management", image: "/team/dev.png", linkedin: "#" },
-       { name: "Devansh Katariya", role: "Event Management", image: "/team/devansh.png", linkedin: "https://www.linkedin.com/in/devansh-katariya-a639b4289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-      { name: "Kavya Jethani", role: "Event Management", image: "/team/kavya.png", linkedin: "https://www.linkedin.com/in/kavya-jethani-380629292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-      { name: "Krittika Agarwal", role: "Event Management", image: "/team/krittika.png", linkedin: "https://www.linkedin.com/in/kavya-jethani-380629292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-      { name: "Pranav Vashisth", role: "Event Management", image: "/team/pranav.png", linkedin: "https://www.linkedin.com/in/pranav-vashisth?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Anshul Bansal", role: "Event Management", image: "/team/anshul.webp", linkedin: "https://www.linkedin.com/in/anshulbansalxd" },
+      { name: "Dev Rastogi", role: "Event Management", image: "/team/dev.webp", linkedin: "#" },
+       { name: "Devansh Katariya", role: "Event Management", image: "/team/devansh.webp", linkedin: "https://www.linkedin.com/in/devansh-katariya-a639b4289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Kavya Jethani", role: "Event Management", image: "/team/kavya.webp", linkedin: "https://www.linkedin.com/in/kavya-jethani-380629292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Krittika Agarwal", role: "Event Management", image: "/team/krittika.webp", linkedin: "https://www.linkedin.com/in/kavya-jethani-380629292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Pranav Vashisth", role: "Event Management", image: "/team/pranav.webp", linkedin: "https://www.linkedin.com/in/pranav-vashisth?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
     ],
   },
 
   {
     title: "Sponsorship",
     members: [
-      { name: "Adwaiy Mahajan", role: "Sponsorship", image: "/team/adwaiy.png", linkedin: "https://www.linkedin.com/in/adwaiy-mahajan-107503212" },
-      { name: "Krishna Khairnar", role: "Sponsorship", image: "/team/krishna.png", linkedin: "https://www.linkedin.com/in/krishna-khairnar-229291318" },
-      { name: "Manan Vaish", role: "Sponsorship", image: "/team/manan.png", linkedin: "https://www.linkedin.com/in/manan-vaish-0ba187313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-      { name: "Samar Goyal", role: "Sponsorship", image: "/team/samar.png", linkedin: "https://www.linkedin.com/in/samar-goyal-164383314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Adwaiy Mahajan", role: "Sponsorship", image: "/team/adwaiy.webp", linkedin: "https://www.linkedin.com/in/adwaiy-mahajan-107503212" },
+      { name: "Krishna Khairnar", role: "Sponsorship", image: "/team/krishna.webp", linkedin: "https://www.linkedin.com/in/krishna-khairnar-229291318" },
+      { name: "Manan Vaish", role: "Sponsorship", image: "/team/manan.webp", linkedin: "https://www.linkedin.com/in/manan-vaish-0ba187313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Samar Goyal", role: "Sponsorship", image: "/team/samar.webp", linkedin: "https://www.linkedin.com/in/samar-goyal-164383314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
     ],
   },
 
   {
     title: "Social Media",
     members: [
-      { name: "Aayana Jain", role: "Social Media", image: "/team/aayana.png", linkedin: "https://www.linkedin.com/in/aayana-jain-aa8902321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-      { name: "Kaustubh Gera", role: "Social Media", image: "/team/kaustubh.png", linkedin: "https://www.linkedin.com/in/kaustubh-gera-906094321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Aayana Jain", role: "Social Media", image: "/team/aayana.webp", linkedin: "https://www.linkedin.com/in/aayana-jain-aa8902321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Kaustubh Gera", role: "Social Media", image: "/team/kaustubh.webp", linkedin: "https://www.linkedin.com/in/kaustubh-gera-906094321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
     ],
   },
 
   {
     title: "Video Editing",
     members: [
-      { name: "K Arya Shekhar Das", role: "Video Editor", image: "/team/karya.png", linkedin: "https://www.linkedin.com/in/intelligentears" },
-      { name: "Roodraksh Agrawal", role: "Video Editor", image: "/team/roodraksh.png", linkedin: "https://www.linkedin.com/in/roodraksh-agrawal-6a91a232b" },
-      { name: "Rutwik Naik", role: "Video Editor", image: "/team/rutwik.png", linkedin: "https://www.linkedin.com/in/rutwik-naik-0526b8340" },
-      { name: "Somik Jain", role: "Video Editor", image: "/team/somik.png", linkedin: "https://www.linkedin.com/in/somik-jain-3a5933316" },
+      { name: "K Arya Shekhar Das", role: "Video Editor", image: "/team/karya.webp", linkedin: "https://www.linkedin.com/in/intelligentears" },
+      { name: "Roodraksh Agrawal", role: "Video Editor", image: "/team/roodraksh.webp", linkedin: "https://www.linkedin.com/in/roodraksh-agrawal-6a91a232b" },
+      { name: "Rutwik Naik", role: "Video Editor", image: "/team/rutwik.webp", linkedin: "https://www.linkedin.com/in/rutwik-naik-0526b8340" },
+      { name: "Somik Jain", role: "Video Editor", image: "/team/somik.webp", linkedin: "https://www.linkedin.com/in/somik-jain-3a5933316" },
     ],
   },
 ];
