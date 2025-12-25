@@ -91,8 +91,7 @@ function DesktopTheme() {
 
         {/* LEFT  text */}
         <div className="w-9/12">
-         <div className=" p-10 text-white text-lg leading-relaxed space-y-8
-                shadow-lg">
+         <div className=" p-10 text-white text-lg leading-relaxed space-y-8">
 
             
             <h3 className="flex justify-center font-semibold tracking-wide">
@@ -100,7 +99,7 @@ function DesktopTheme() {
                 Forging the Future
               </span>
             </h3>
-
+            <div className="shimmer-text text-lg leading-relaxed space-y-8">
             <p>
               Forging the future is not about prediction, but about intention.
               Change is not something external that arrives with time; it is
@@ -131,7 +130,8 @@ with intent, with conviction, with heart. Together, we stand as architects of po
 shaping ideas into reality and transforming ambition into action. Every spark of
 innovation becomes an ember in the grand forge of humanity, a reminder that the future
 is not awaited, but crafted, one brilliant idea at a time.
-<br/>
+</p>
+<p>
 As we hammer the metal into form, we cease to be passengers of fate, we rather take
 the control in our own hands. It is much like the abstract masterpiece worth billions,
 born from what first seemed like chaotic strokes on the canvas of our journey. In
@@ -154,7 +154,7 @@ Not just progress, but purpose.
               <br />
               We are its architects.
             </p>
-
+            </div>
           </div>
         </div>
 
