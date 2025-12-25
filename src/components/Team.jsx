@@ -77,9 +77,9 @@ const teamData = [
   {
     title: "Content Writing",
     members: [
-      { name: "Garvit Garg", role: "Content Writer", image: "/team/garvit.webp", linkedin: "#" },
+      { name: "Garvit Garg", role: "Content Writer", image: "/team/garvit.webp", linkedin: "https://www.linkedin.com/in/garvit-garg-7185bb381?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Krishangee Tayal", role: "Content Writer", image: "/team/krishangee.webp", linkedin: "https://www.linkedin.com/in/krishangee-tayal-96a861242" },
-      { name: "Madhura Vyas", role: "Content Writer", image: "/team/madhura.webp", linkedin: "#" },
+      { name: "Madhura Vyas", role: "Content Writer", image: "/team/madhura.webp", linkedin: "https://www.linkedin.com/in/madhura-vyas-730310388?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Poorvi Jagga", role: "Content Writer", image: "/team/poorvi.webp", linkedin: "https://www.linkedin.com/in/poorvi-jagga-ba6b9b341" },
       { name: "Praneel Dev", role: "Content Writer", image: "/team/praneel.webp", linkedin: "https://www.linkedin.com/in/praneel-dev-3b9754321" },
     ],
@@ -113,7 +113,7 @@ const teamData = [
       { name: "Dev Rastogi", role: "Event Management", image: "/team/dev.webp", linkedin: "#" },
        { name: "Devansh Katariya", role: "Event Management", image: "/team/devansh.webp", linkedin: "https://www.linkedin.com/in/devansh-katariya-a639b4289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Kavya Jethani", role: "Event Management", image: "/team/kavya.webp", linkedin: "https://www.linkedin.com/in/kavya-jethani-380629292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-      { name: "Krittika Agarwal", role: "Event Management", image: "/team/krittika.webp", linkedin: "https://www.linkedin.com/in/kavya-jethani-380629292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Krittika Agarwal", role: "Event Management", image: "/team/krittika.webp", linkedin: "https://www.linkedin.com/in/krittika-agrawal-716b17228?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Pranav Vashisth", role: "Event Management", image: "/team/pranav.webp", linkedin: "https://www.linkedin.com/in/pranav-vashisth?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
     ],
   },

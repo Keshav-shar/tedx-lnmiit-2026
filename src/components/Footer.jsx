@@ -30,7 +30,7 @@ const Footer = () => {
       {/* Navigation Links */}
       <div className="flex flex-wrap justify-center gap-6 text-lg font-light mb-6 px-4 text-center relative z-10">
        
-        <a href="/speakers" className="hover:text-[#EB0028] transition">Speakers</a>
+        <a href="/team" className="hover:text-[#EB0028] transition">Team</a>
         <a href="/gallery" className="hover:text-[#EB0028] transition">Gallery</a>
         <a href="/sponsors" className="hover:text-[#EB0028] transition">Sponsors</a>
       </div>

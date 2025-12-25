@@ -51,7 +51,7 @@ const Gallery = () => {
     },
     {
       image1: '/Gallery/img27.webp',
-      image2: '/Gallery/img28.webp',
+      image2: '/Gallery/img28b.webp',
     },
     {
       image1: '/Gallery/img29.webp',
@@ -63,7 +63,7 @@ const Gallery = () => {
     },
     {
       image1: '/Gallery/img33.webp',
-      image2: '/Gallery/img34b.webp',
+      image2: '/Gallery/img34d.webp',
     },
     {
       image1: '/Gallery/img36.webp',
@@ -71,7 +71,7 @@ const Gallery = () => {
     },
     {
       image1: '/Gallery/img39.webp',
-      image2: '/Gallery/img42.webp',
+      image2: '/Gallery/img444.webp',
     },
   ]
 
