@@ -23,9 +23,9 @@ export default function Sponsors() {
   }, []);
 
   const currentPartners = [
-    { name: "VRJ Productions", logo: "" },
+    { name: "The YAKKS", logo: "/CurrentPartners/YAKKS.webp" },
     { name: "The Waffle Charm", logo: "" },
-    { name: "The Fern Residency", logo: "" },
+    { name: "The Fern Residency", logo: "/CurrentPartners/fern.webp" },
     { name: "Canara Bank", logo: "" },
   ];
 

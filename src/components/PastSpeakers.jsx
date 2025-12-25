@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaYoutube, FaInstagram,FaLinkedin } from "react-icons/fa";
 import PixelCard from "./PixelCard";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -18,7 +18,7 @@ export default function PastSpeakers() {
     { id: 5, name: "Chinmay Gaur", image: "/images/image5.webp", description: "Indian Classical flutist and composer, blending tradition and modernity. His TEDx talk focuses on the transcendental power of music, showing how it bridges cultural and emotional divides", youtube: "https://youtu.be/KyLREMG86r0?si=ltKFggjT3QB82UqO", instagram: "https://www.instagram.com/igaur_chinmay/" },
     { id: 6, name: "Dr. Ajay Data", image: "/images/image3.webp", description: "Managing Director of Data Group of Industries,visionary entrepreneur who introduced the internet to Rajasthan.As founder of Data XGen Technologies, he developed the world's first linguistic email solution, driving global digital inclusion.", youtube: "https://youtu.be/JfBAk9jj--0?si=zxpNOvTTxz3shQOU", instagram: "https://www.instagram.com/ajaydata?igsh=ZGg2bmxhMzA4ZHNu" },
    { id: 7, name: "Krishnan Sunderarajan", image: "/images/krishna.webp", description: "Founder of LOKA, India's first Metaverse app, Krishnan bridges technology and human experience. His Shark Tank success highlights his forward-thinking insights into the future of digital interaction.", youtube: "https://youtu.be/Z9zx3kWLP6c?si=EfKANslHbtSFKjNd", instagram: "https://www.instagram.com/krish_meister?igsh=dnp4dzNmeG9yZjJs" },
-    { id: 8, name: "Dr. Lopa Mudraa", image: "/images/image4.webp", description: "Security Evangelist with over two decades of expertise in Information Security.Recognized as a 4x Global 100 Chief Information Security Officer awardee.", youtube: "https://youtu.be/To9sxO9W_Kw?si=v7GvKJygJM71JsQ0"},
+    { id: 8, name: "Dr. Lopa Mudraa", image: "/images/image4.webp", description: "Security Evangelist with over two decades of expertise in Information Security.Recognized as a 4x Global 100 Chief Information Security Officer awardee.", youtube: "https://youtu.be/To9sxO9W_Kw?si=v7GvKJygJM71JsQ0",linkedin:"https://www.linkedin.com/in/drlopamudraabasuu?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"},
     { id: 9, name: "Dr. Kamna Chhibber", image: "/images/image2.webp", description: "Head of Mental Health at Fortis Healthcare, is a renowned clinical psychologist with over 15 years of experience specializing in Cognitive Behaviour Therapy, relationships, trauma, and abuse.", youtube: "https://youtu.be/n0me_a9Amnk?si=z1uwpYOGEZlwguZM", instagram: "https://www.instagram.com/fortismentalhealth?igsh=MW5qa25hdW05aWhiNw==" },
     { id: 10, name: "Aabha Hanjura", image: "/images/image6.webp", description: "She is a celebrated Indian singer-songwriter and founder of the band Sufistication. Having carved a unique niche in music by seamlessly blending Kashmiri folk, Sufi, and contemporary pop, she has earned nationwide acclaim in her journey.", youtube: "https://youtu.be/omzsDD9-Ur8?si=goIx0wTfNZePIXh3", instagram: "https://www.instagram.com/aabhahanjura?igsh=MXB1YnphcWVqaXVpNQ==" },
     { id: 11, name: "Chetna Balhara", image: "/images/chetna.webp", description: "Chetna Balhara is a renowned Indian poet and Instagram influencer known for her heartfelt poetry on love, heartbreak, and everyday struggles. Famous for lines like “Bawal hai ke chore”,her relatable work has captivated audiences. With a strong social media presence and powerful performances.", youtube: "https://youtu.be/357IYm05oQU?si=N5EyhDZmzMzKmn42", instagram: "https://www.instagram.com/chetnabalharaofficial?igsh=bTRmODJoMWx3cWJz" },
@@ -101,6 +101,11 @@ export default function PastSpeakers() {
                 {speaker.instagram && (
                   <a href={speaker.instagram} target="_blank" rel="noopener noreferrer" className="text-red-600 text-3xl hover:scale-110 transition-transform">
                     <FaInstagram />
+                  </a>
+                )}
+                {speaker.linkedin && (
+                  <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="text-red-600 text-3xl hover:scale-110 transition-transform">
+                    <FaLinkedin />
                   </a>
                 )}
               </div>
