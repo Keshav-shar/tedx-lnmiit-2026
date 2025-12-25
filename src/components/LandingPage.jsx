@@ -12,8 +12,7 @@ export default function LandingPage() {
     ScrollTrigger.matchMedia({
 
       /* ===============================
-         DESKTOP (>= 640px)
-         UNTOUCHED
+         DESKTOP 
       =============================== */
       "(min-width: 640px)": () => {
 
@@ -38,7 +37,7 @@ export default function LandingPage() {
 
         tl.fromTo(".the",
           { x: 200, opacity: 0 },
-          { x: -220, opacity: 1, duration: 6, ease: "power3.out" },
+          { x: -250, opacity: 1, duration: 6, ease: "power3.out" },
           "1"
         );
 
@@ -55,8 +54,7 @@ export default function LandingPage() {
       },
 
       /* ===============================
-         MOBILE (< 640px)
-         THE + FUTURE FROM SAME SIDE
+         MOBILE 
       =============================== */
       "(max-width: 639px)": () => {
 
@@ -111,7 +109,7 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <section className="landing h-screen bg-radial from-black from-10% to-transparent relative overflow-hidden">
+    <section className="landing h-screen bg-radial from-black from-1% to-transparent relative overflow-hidden">
       <div className="mx-auto flex h-full max-w-7xl items-center justify-center px-12">
 
         {/* TEXT */}
