@@ -20,7 +20,7 @@ function MobileTheme() {
 
    
     <img
-      src="../images/MainElement2.webp"
+      src="../graphics/noborder.webp"
       alt="Hero element"
       className="w-full max-w-[90%] object-contain"
     />
@@ -162,7 +162,7 @@ Not just progress, but purpose.
         <div className="w-6/12 -mt-15">
           <div className="sticky top-24 h-[80vh] flex justify-end">
             <img
-              src="../images/MainElement2.webp"
+              src="../graphics/noborder.webp"
               alt="Theme visual"
               className="h-full object-contain"
             />
