@@ -110,7 +110,7 @@ const teamData = [
     title: "Event Management",
     members: [
       { name: "Anshul Bansal", role: "Event Management", image: "/team/anshul.webp", linkedin: "https://www.linkedin.com/in/anshulbansalxd" },
-      { name: "Dev Rastogi", role: "Event Management", image: "/team/dev.webp", linkedin: "#" },
+      { name: "Dev Rastogi", role: "Event Management", image: "/team/dev.webp", linkedin: "https://www.linkedin.com/in/dev-rastogi-a9799230a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
        { name: "Devansh Katariya", role: "Event Management", image: "/team/devansh.webp", linkedin: "https://www.linkedin.com/in/devansh-katariya-a639b4289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Kavya Jethani", role: "Event Management", image: "/team/kavya.webp", linkedin: "https://www.linkedin.com/in/kavya-jethani-380629292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Krittika Agarwal", role: "Event Management", image: "/team/krittika.webp", linkedin: "https://www.linkedin.com/in/krittika-agrawal-716b17228?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
