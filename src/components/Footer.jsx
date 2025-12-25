@@ -17,7 +17,7 @@ const Footer = () => {
       {/* Logo */}
       <div className="flex flex-col items-center mb-6 relative z-10">
         <img
-          src="/images/logo-white.png"
+          src="/images/logo-white.webp"
           alt="TEDx Logo"
           className="h-12 md:h-16 object-contain"
         />

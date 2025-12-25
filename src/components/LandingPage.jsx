@@ -135,7 +135,7 @@ export default function LandingPage() {
 
         {/* IMAGE */}
         <img
-          src="/images/MainRed3d.png"
+          src="/images/MainRed3d.webp"
           alt="TEDx LNMIIT Hero"
           loading="lazy"
           className="img max-h-[90vh] object-contain absolute z-10"
