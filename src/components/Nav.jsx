@@ -65,7 +65,7 @@ export default function Navbar() {
       {/* RIGHT BUTTONS */}
       <div className="flex items-center gap-3 sm:gap-4 lg:gap-4">
     <a
-  // href="/tickets"
+   href="/tickets"
   className="inline-block bg-[#EB0028] hover:bg-red-600 
              transition duration-300 delay-100
              text-white 
