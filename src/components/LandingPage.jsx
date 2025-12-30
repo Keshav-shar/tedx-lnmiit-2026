@@ -1,5 +1,5 @@
-import {gsap} from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import ScrollSmoother from "gsap/ScrollSmoother";
 
@@ -11,16 +11,13 @@ export default function LandingPage() {
 
     ScrollTrigger.matchMedia({
 
-      /* ===============================
-         DESKTOP 
-      =============================== */
       "(min-width: 640px)": () => {
 
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: ".landing",
             start: "0% 0%",
-            end: "120% 30%",
+            end: "250% 30%", 
             scrub: true,
             pin: true,
             scroller: document.body,
@@ -29,27 +26,55 @@ export default function LandingPage() {
           },
         });
 
+       
+        tl.fromTo(
+          ".idea-left",
+          { opacity: 0, x: -50 },
+          { opacity: 1, x: 0, duration: 6, ease: "power2.out" },
+          "0.5"
+        );
+
+        tl.fromTo(
+          ".idea-right",
+          { opacity: 0, x: 50 },
+          { opacity: 1, x: 0, duration: 6, ease: "power2.out" },
+          "0.5"
+        );
+
+        tl.to(
+          ".idea-left",
+          { y: -400, opacity: 0, duration: 8, ease: "power2.inOut" },
+          "2"
+        );
+
+        tl.to(
+          ".idea-right",
+          { y: 400, opacity: 0, duration: 8, ease: "power2.inOut" },
+          "2"
+        );
+
+        
         tl.fromTo(".forging",
-          { x: -400, opacity: 0 },
-          { x: -250, opacity: 1, duration: 6, ease: "power3.out" },
-          "1"
+          { x: -1000, opacity: 0 },
+          { x: -250, opacity: 1, duration: 15, ease: "power3.out" },
+          "5"
         );
 
         tl.fromTo(".the",
-          { x: 200, opacity: 0 },
-          { x: -250, opacity: 1, duration: 6, ease: "power3.out" },
-          "1"
+          { x: 800, opacity: 0 },
+          { x: -250, opacity: 1, duration: 15, ease: "power3.out" },
+          "5"
         );
 
         tl.fromTo(".future",
-          { x: 400, opacity: 0 },
-          { x: -250, opacity: 1, duration: 6, ease: "power3.out" },
-          "1"
+          { x: 1000, opacity: 0 },
+          { x: -250, opacity: 1, duration: 15, ease: "power3.out" },
+          "5"
         );
 
         tl.to(".img",
-          { x: 300, duration: 6, scale: 0.8, ease: "power3.out" },
-          "1"
+          { x: 300, duration: 15, scale: 0.8, ease: "power3.out" },
+          "5"
         );
       },
 
@@ -58,12 +83,12 @@ export default function LandingPage() {
       =============================== */
       "(max-width: 639px)": () => {
 
-        // Initial states
         gsap.set(".img", {
           left: "50%",
           top: "50%",
           xPercent: -50,
           yPercent: -50,
+          y: -10
         });
 
         gsap.set(".forging", { x: "-120vw" });
@@ -82,26 +107,9 @@ export default function LandingPage() {
           },
         });
 
-        // FORGING → left → center
-        tl.to(".forging", {
-          x: 0,
-          duration: 4,
-          ease: "power3.out",
-        }, 0);
-
-        // THE → right → center (above FUTURE)
-        tl.to(".the", {
-          x: 0,
-          duration: 4,
-          ease: "power3.out",
-        }, 0);
-
-        // FUTURE → right → center
-        tl.to(".future", {
-          x: 0,
-          duration: 4,
-          ease: "power3.out",
-        }, 0);
+        tl.to(".forging", { x: 0, duration: 4, ease: "power3.out" }, 0);
+        tl.to(".the", { x: 0, duration: 4, ease: "power3.out" }, 0);
+        tl.to(".future", { x: 0, duration: 4, ease: "power3.out" }, 0);
       },
     });
 
@@ -109,35 +117,45 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <section className="landing h-screen bg-radial from-black from-1% to-transparent relative overflow-hidden">
-      <div className="mx-auto flex h-full max-w-7xl items-center justify-center px-12">
+    <section className="landing h-[105vh] bg-radial from-black from-1% to-transparent relative overflow-hidden">
+      <div className="mx-auto flex h-full max-w-7xl items-center justify-center px-12 relative">
 
-        {/* TEXT */}
+        <div className="idea-left font-semibold hidden sm:flex absolute left-30 h-[30vh] text-white text-3xl text-center leading-relaxed items-center">
+  <span>
+    Every Innovation <br />
+    began as a <span className="text-[#eb0028]">fragile idea</span>
+  </span>
+</div>
+
+
+        <div className=" -mt-1 font-semibold idea-right hidden sm:flex absolute right-30 h-[30vh] text-white text-3xl text-center leading-relaxed items-center">
+  <span>
+    Until someone <br />
+    <span className="text-[#eb0028]">forged it</span> into reality
+  </span>
+</div>
+
+
+      
         <div className="relative font-bebas flex flex-col items-center gap-6 pointer-events-none z-20">
-
-          {/* FORGING */}
-          <p className="forging tracking-wide font-bebas text-[#eb0028] text-[22vw] sm:text-[16vw] font-extrabold leading-none">
+          <p className="forging tracking-wide text-[#eb0028] text-[22vw] sm:text-[16vw] font-extrabold leading-none">
             FORGING
           </p>
 
-          {/* THE + FUTURE (VERTICAL STACK) */}
           <div className="flex flex-col items-center leading-none">
             <p className="the font-bebas text-white text-[12vw] sm:text-[8vw] font-extrabold tracking-wide mb-6">
               THE
             </p>
-
             <p className="future font-bebas tracking-wide text-white text-[22vw] sm:text-[16vw] font-extrabold">
               FUTURE
             </p>
           </div>
-
         </div>
 
-        {/* IMAGE */}
+       
         <img
           src="/images/MainRed3d.webp"
           alt="TEDx LNMIIT Hero"
-          loading="lazy"
           className="img max-h-[90vh] object-contain absolute z-10"
         />
       </div>
