@@ -58,7 +58,7 @@ const Tickets = () => {
       </h3>
 
       {/* Experience Highlights */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 text-gray-200">
+      <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 mt-6 text-gray-200">
         <p>✔ Access to all TEDx talks & storytelling sessions</p>
         <p>✔ Meaningful networking with change-makers</p>
         <p>✔ Curated meals & refreshments</p>
