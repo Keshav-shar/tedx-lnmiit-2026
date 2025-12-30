@@ -82,8 +82,11 @@ export default function CA() {
           Ready to Make an Impact?
         </h2>
 
-        <button
-  className="
+       <a
+  href="https://docs.google.com/forms/d/e/1FAIpQLSeFPBfER8aBnslNWhklkOpZ_LdHbtWpTjQ6bHOM4PjEGMg3ow/viewform?usp=publish-editor"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="
     bg-[#EB0028] hover:bg-red-700
     transition-all duration-300
     text-white
@@ -92,10 +95,12 @@ export default function CA() {
     rounded-full
     text-sm sm:text-base md:text-lg
     whitespace-nowrap
+    inline-block
   "
 >
   Apply to be a Campus Ambassador
-</button>
+</a>
+
 
 
         <p className="mt-4 text-gray-400 text-sm">

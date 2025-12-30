@@ -1,3 +1,6 @@
+import { FaMicrophone, FaUsers, FaGift, FaVideo, FaHandshake, FaSmile } from "react-icons/fa";
+
+
 const Tickets = () => {
   return (
     <main className="text-white min-h-screen">
@@ -5,15 +8,13 @@ const Tickets = () => {
       {/* ---------- HERO ---------- */}
       <section className="text-center pt-20 pb-16 px-4 space-y-6">
         <h1 className="text-6xl sm:text-6xl md:text-7xl font-bold">
-  <span className="text-[#EB0028]">TEDx</span>LNMIIT
-</h1>
-
+          <span className="text-[#EB0028]">TEDx</span>LNMIIT
+        </h1>
 
         <p className="text-gray-300 text-lg">
           Date: 11<sup>th</sup> January 2026 | LNMIIT, Jaipur
         </p>
 
-        {/* CTA Ribbon */}
         <div className="mx-auto mt-10">
           <div className="py-4 text-lg font-semibold bg-gradient-to-r from-black via-[#EB0028] to-black">
             Book Your Ticket Now
@@ -22,122 +23,168 @@ const Tickets = () => {
       </section>
 
       {/* ---------- EXPERIENCE ---------- */}
-      <section className="text-center py-5 px-4">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-light">
-  Choose Your <span className="text-[#EB0028] font-medium">Experience</span>
-</h2>
+   <section className="text-center py-8 px-4">
+  <h2 className="text-4xl sm:text-5xl md:text-6xl font-light">
+    Join The <span className="text-[#EB0028] font-medium">TEDx Experience</span>
+  </h2>
 
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
+  <p className="text-gray-300 max-w-2xl mx-auto mt-3">
+    Be part of an inspiring day filled with ideas, innovation, conversations and powerful stories.
+  </p>
 
-          {/* LNMIIT */}
-          <div className="relative border border-red-600 rounded-3xl p-8 bg-black shadow-[0_0_40px_rgba(235,0,40,0.35)]">
-            <h3 className="text-2xl font-semibold mb-6">LNMIIT Students / Staff</h3>
+  <div className="mt-12 max-w-3xl mx-auto">
 
-            <ul className="text-gray-300 space-y-3 text-left mb-8">
-              <li>• Access to all TEDxLNMIIT talks and workshops</li>
-              <li>• Interaction sessions with speakers</li>
-              <li>• Delicious meal and refreshments</li>
-              <li>• Exclusive TEDxLNMIIT experience</li>
-              <li>• Complimentary goodies</li>
-            </ul>
+    <div className="border border-red-500 rounded-3xl bg-gradient-to-b from-black via-[#0b0b0b] to-black shadow-[0_0_45px_rgba(235,0,40,0.35)] p-10">
 
-            <div className="border-t border-gray-700 pt-6 text-center">
-              <p className="text-3xl font-bold text-[#EB0028] mb-4">₹799</p>
+      {/* Ticket Ribbon */}
+      <div className="mx-auto w-fit mt-2">
+ <span
+  className="px-3 sm:px-4 py-1 
+  text-[10px] sm:text-[12px] font-semibold tracking-wide
+  uppercase text-[#EB0028]
+  border border-[#EB0028]/70
+  rounded-md bg-black/40 
+  whitespace-nowrap"
+>
+  Limited Early Bird Pass — Limited Seats
+</span>
 
-              <div className="flex justify-center mb-4">
-                <div className="w-40 h-40 bg-white" />
-              </div>
+</div>
 
-              <p className="text-sm text-gray-400">
-                OR use UPI ID:{" "}
-                <span className="text-[#EB0028]">thelnmi5108900553@sbi</span>
-              </p>
 
-              <button className="mt-6 px-8 py-3 bg-[#EB0028] rounded-full font-semibold hover:scale-105 transition">
-                Buy Now
-              </button>
-            </div>
-          </div>
 
-          {/* General */}
-          <div className="relative border border-red-600 rounded-3xl p-8 bg-black shadow-[0_0_40px_rgba(235,0,40,0.35)]">
-            <h3 className="text-2xl font-semibold mb-6">General Admission</h3>
 
-            <ul className="text-gray-300 space-y-3 text-left mb-8">
-              <li>• Access to all TEDxLNMIIT talks and workshops</li>
-              <li>• LNMIIT campus experience and exposure</li>
-              <li>• Interaction sessions with speakers</li>
-              <li>• Delicious meal and refreshments</li>
-              <li>• Complimentary goodies</li>
-            </ul>
+      <h3 className="text-2xl font-semibold mt-6">
+        TEDxLNMIIT 2026 Pass
+      </h3>
 
-            <div className="border-t border-gray-700 pt-6 text-center">
-              <p className="text-3xl font-bold text-[#EB0028] mb-4">₹999</p>
+      {/* Experience Highlights */}
+    <div className="w-full flex justify-center">
+  <div className="grid grid-cols-1 gap-4 mt-6 text-gray-200 text-left max-w-md mx-auto">
+    <p>✔ Access to all TEDx talks & storytelling sessions</p>
+    <p>✔ Meaningful networking with change-makers</p>
+    <p>✔ Curated meals & refreshments</p>
+    <p>✔ Official TEDx experience & environment</p>
+    <p>✔ Exclusive attendee goodies & badge</p>
+    <p>✔ A day of inspiration & transformative ideas</p>
+  </div>
+</div>
 
-              <div className="flex justify-center mb-4">
-                <div className="w-40 h-40 bg-white" />
-              </div>
 
-              <p className="text-sm text-gray-400">
-                OR use UPI ID:{" "}
-                <span className="text-[#EB0028]">thelnmi5108900553@sbi</span>
-              </p>
+      {/* Price Section */}
+      <div className="border-t border-gray-700 pt-8 mt-8">
+        <p className="text-gray-400 text-sm">Original Price</p>
+        <p className="text-2xl font-semibold line-through text-gray-500">₹449</p>
 
-              <button className="mt-6 px-8 py-3 bg-[#EB0028] rounded-full font-semibold hover:scale-105 transition">
-                Buy Now
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+        <p className="text-red-600 mt-2 text-sm font-medium">
+          Early Bird Offer
+        </p>
 
-      {/* ---------- WHY ATTEND ---------- */}
-      <section className="py-10 px-4 text-center">
-        <h2 className="text-3xl font-semibold mb-12">
-          Why Attend TEDxLNMIIT?
-        </h2>
+        <p className="text-5xl font-bold text-[#EB0028] mt-1">
+          ₹399
+        </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {[
-            "Inspiring Talks",
-            "Networking",
-            "Exclusive Goodies",
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="bg-[#121212] rounded-xl p-8"
-            >
-              <h3 className="text-xl font-medium mb-2">{item}</h3>
-              <p className="text-gray-400 text-sm">
-                Engage with thought-provoking ideas
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+        <p className="text-gray-400 text-sm mt-2">
+          Save ₹50 — Limited Time Discount
+        </p>
 
-      {/* ---------- EVENT HIGHLIGHTS ---------- */}
-      <section className="py-10 px-4 text-center">
-        <h2 className="text-3xl font-semibold mb-12">
-          Event Highlights
-        </h2>
+        {/* Registration Options */}
+<div className="mt-8">
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {[
-            "Keynote Speakers",
-            "Interactive Sessions",
-            "Networking Events",
-            "Fun Activities",
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="bg-[#121212] rounded-xl py-6"
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
+  <p className="text-gray-300 text-sm mb-4">
+    Choose your registration category
+  </p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+    {/* LNMIIT Students & Staff */}
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSfVT5bCJh4Mh6QsOgL2Ma2dqaS4fIsfS_QPqmALqZuJXJBsRQ/viewform?usp=publish-editor"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block w-full px-6 py-3 rounded-full
+                 font-semibold text-sm
+                 bg-[#111] border border-[#EB0028]
+                 hover:bg-[#1a1a1a] hover:border-red-600
+                 transition text-white"
+    >
+      🎓 LNMIIT Students & Staff
+    </a>
+
+    {/* General Audience */}
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLScY12g68K73uFWW3GMK5ktGyCNj3vjCnvEmCjtgIiOoU3eXAQ/viewform?usp=publish-editor"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block w-full px-6 py-3 rounded-full
+                 font-semibold text-sm
+                bg-[#111] border border-[#EB0028]
+                 hover:bg-[#1a1a1a] hover:border-red-600
+                 transition text-white"
+    >
+      🌍 General Audience
+    </a>
+
+  </div>
+
+</div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    {/* ---------- WHY ATTEND ---------- */}
+<section className="py-10 px-4 text-center">
+  <h2 className="text-3xl font-semibold mb-12">
+    Why Attend TEDxLNMIIT?
+  </h2>
+
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+    {[
+      { icon: <FaMicrophone className="text-red-500 text-2xl" />, title: "Inspiring Talks", text: "Engage with thought-provoking ideas" },
+      { icon: <FaUsers className="text-red-500 text-2xl" />, title: "Networking", text: "Connect with like-minded individuals" },
+      { icon: <FaGift className="text-red-500 text-2xl" />, title: "Exclusive Goodies", text: "Take home memorable souvenirs" },
+    ].map((item, i) => (
+      <div key={i} className="bg-[#121212] rounded-xl p-8">
+        <div className="flex justify-center mb-3">{item.icon}</div>
+        <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
+        <p className="text-gray-400 text-sm">{item.text}</p>
+      </div>
+    ))}
+
+  </div>
+</section>
+
+
+{/* ---------- EVENT HIGHLIGHTS ---------- */}
+<section className="py-10 px-4 text-center">
+  <h2 className="text-3xl font-semibold mb-12">
+    Event Highlights
+  </h2>
+
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+
+    {[
+      { icon: <FaMicrophone className="text-red-500 text-2xl" />, label: "Keynote Speakers" },
+      { icon: <FaVideo className="text-red-500 text-2xl" />, label: "Interactive Sessions" },
+      { icon: <FaHandshake className="text-red-500 text-2xl" />, label: "Networking Events" },
+      { icon: <FaSmile className="text-red-500 text-2xl" />, label: "Fun Activities" },
+    ].map((item, i) => (
+      <div key={i} className="bg-[#121212] rounded-xl py-6 flex flex-col items-center gap-2">
+        {item.icon}
+        <span className="font-medium">{item.label}</span>
+      </div>
+    ))}
+
+  </div>
+</section>
+
 
     </main>
   )

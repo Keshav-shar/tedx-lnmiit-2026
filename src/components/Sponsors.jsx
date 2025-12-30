@@ -34,8 +34,8 @@ export default function Sponsors() {
     { name: "Regal Offset", logo: "/PrevPartners/regal.webp" },
     { name: "Union Bank", logo: "/PrevPartners/unionn.webp" },
     { name: "The Waffle Charm", logo: "/PrevPartners/Waffle.webp" },
-    { name: "VRJ Productions", logo: "/PrevPartners/VRJ2.webp" },
-    { name: "The Fern Residency", logo: "/PrevPartners/fern.webp" },
+    { name: "VRJ Productions", logo: "/PrevPartners/image.webp" },
+    { name: "The Fern Residency", logo: "/CurrentPartners/fern.webp" },
     { name: "Canara Bank", logo: "/PrevPartners/canaraa.webp" },
   ];
 
