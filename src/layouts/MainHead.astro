@@ -1,5 +1,9 @@
 ---
-const { title, description } = Astro.props;
+const {
+  title = "TEDx LNMIIT",
+  description = "Official TEDx LNMIIT event website",
+  canonical = Astro.url.href,
+} = Astro.props;
 ---
 
 <head>
@@ -14,9 +18,13 @@ const { title, description } = Astro.props;
 
   <link rel="icon" type="image/webp" href="/favicon2.webp" />
 
-  <title>{title}</title>
-  <meta name="description" content={description} />
-
+<meta charset="UTF-8" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="googlebot" content="index, follow" />
+<meta name="bingbot" content="index, follow" />
   <!-- 🔥 Google Fonts: Poppins (primary) + Bebas Neue (accent) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
