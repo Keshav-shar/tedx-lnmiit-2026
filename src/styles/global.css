@@ -120,3 +120,12 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-mask-position: -150% 50%;
   }
 }
+#smooth-wrapper {
+  width: 100%;
+}
+
+#smooth-content {
+  will-change: transform;
+}
+
+

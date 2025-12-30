@@ -30,19 +30,19 @@ export default function LandingPage() {
         });
 
         tl.fromTo(".forging",
-          { x: -400, opacity: 0 },
+          { x: -900, opacity: 0 },
           { x: -250, opacity: 1, duration: 6, ease: "power3.out" },
           "1"
         );
 
         tl.fromTo(".the",
-          { x: 200, opacity: 0 },
+          { x: 700, opacity: 0 },
           { x: -250, opacity: 1, duration: 6, ease: "power3.out" },
           "1"
         );
 
         tl.fromTo(".future",
-          { x: 400, opacity: 0 },
+          { x: 800, opacity: 0 },
           { x: -250, opacity: 1, duration: 6, ease: "power3.out" },
           "1"
         );
@@ -64,6 +64,7 @@ export default function LandingPage() {
           top: "50%",
           xPercent: -50,
           yPercent: -50,
+          y: -10
         });
 
         gsap.set(".forging", { x: "-120vw" });
@@ -111,10 +112,10 @@ export default function LandingPage() {
   return (
     <section className="landing h-screen bg-radial from-black from-1% to-transparent relative overflow-hidden">
       <div className="mx-auto flex h-full max-w-7xl items-center justify-center px-12">
-
+         
         {/* TEXT */}
         <div className="relative font-bebas flex flex-col items-center gap-6 pointer-events-none z-20">
-
+          
           {/* FORGING */}
           <p className="forging tracking-wide font-bebas text-[#eb0028] text-[22vw] sm:text-[16vw] font-extrabold leading-none">
             FORGING
@@ -137,7 +138,6 @@ export default function LandingPage() {
         <img
           src="/images/MainRed3d.webp"
           alt="TEDx LNMIIT Hero"
-          loading="lazy"
           className="img max-h-[90vh] object-contain absolute z-10"
         />
       </div>

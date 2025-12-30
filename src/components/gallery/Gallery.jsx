@@ -113,19 +113,10 @@ const Gallery = () => {
   <h1
     className="
       text-white
-      font-extrabold
-      uppercase
-      leading-none
-      tracking-tight
-
-      text-[18vw]
-      sm:text-[14vw]
-      md:text-[12vw]
-      lg:text-[10vw]
-
-      ml-10
-      sm:ml-10
-      md:ml-5
+  font-extrabold  
+  text-[9vw]
+  text-center
+  -mt-20
     "
   >
     Gallery

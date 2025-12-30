@@ -20,7 +20,7 @@ function MobileTheme() {
 
    
     <img
-      src="../graphics/noborder.webp"
+      src="../graphics/noBorderMain.webp"
       alt="Hero element"
       className="w-full max-w-[90%] object-contain"
     />
@@ -136,7 +136,7 @@ function DesktopTheme() {
                 Forging the Future
               </span>
             </h3>
-            <div className="shimmer-text text-lg leading-relaxed space-y-8">
+            <div className="shimmer-text text-lg text-center leading-relaxed space-y-8">
             <p>
               Forging the future is not about prediction, but about intention.
               Change is not something external that arrives with time; it is
