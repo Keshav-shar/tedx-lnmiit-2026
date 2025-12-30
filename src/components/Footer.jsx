@@ -89,7 +89,7 @@ const Footer = () => {
             </h3>
 
             <ul className="text-sm text-gray-300 space-y-1">
-              <li>Abdul Hadi Siddhiqui — +91 81072 10700</li>
+              <li>Abdul Hadi Siddiqui — +91 81072 10700</li>
               <li>Anshika Agrawal — +91 88262 56810</li>
               <li>Parv Khandelwal — +91 83065 95368</li>
               <li>Vihaan Malik — +91 84458 93879</li>
