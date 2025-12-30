@@ -9,9 +9,10 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
+  output: "static",
+  site: "https://yourdomain.com",
   vite: {
     plugins: [tailwindcss()]
   },
-
   integrations: [icon(), react()]
 });
