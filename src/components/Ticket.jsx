@@ -58,7 +58,7 @@ const Tickets = () => {
       </h3>
 
       {/* Experience Highlights */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 text-gray-200">
+      <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 mt-6 text-gray-200">
         <p>✔ Access to all TEDx talks & storytelling sessions</p>
         <p>✔ Meaningful networking with change-makers</p>
         <p>✔ Curated meals & refreshments</p>
@@ -84,17 +84,47 @@ const Tickets = () => {
           Save ₹50 — Limited Time Discount
         </p>
 
-        <a
-  href=""
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mt-8 inline-block px-12 py-3 
-             bg-[#EB0028] rounded-full font-semibold
-             transition transform
-             hover:scale-105 hover:bg-[#d10022]"
->
-  Get Your Pass
-</a>
+        {/* Registration Options */}
+<div className="mt-8">
+
+  <p className="text-gray-300 text-sm mb-4">
+    Choose your registration category
+  </p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+    {/* LNMIIT Students & Staff */}
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSfVT5bCJh4Mh6QsOgL2Ma2dqaS4fIsfS_QPqmALqZuJXJBsRQ/viewform?usp=publish-editor"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block w-full px-6 py-3 rounded-full
+                 font-semibold text-sm
+                 bg-[#111] border border-[#EB0028]
+                 hover:bg-[#1a1a1a] hover:border-red-600
+                 transition text-white"
+    >
+      🎓 LNMIIT Students & Staff
+    </a>
+
+    {/* General Audience */}
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLScY12g68K73uFWW3GMK5ktGyCNj3vjCnvEmCjtgIiOoU3eXAQ/viewform?usp=publish-editor"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block w-full px-6 py-3 rounded-full
+                 font-semibold text-sm
+                bg-[#111] border border-[#EB0028]
+                 hover:bg-[#1a1a1a] hover:border-red-600
+                 transition text-white"
+    >
+      🌍 General Audience
+    </a>
+
+  </div>
+
+</div>
+
 
       </div>
     </div>
