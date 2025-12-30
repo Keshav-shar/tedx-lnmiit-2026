@@ -38,16 +38,17 @@ const Tickets = () => {
 
       {/* Ticket Ribbon */}
       <div className="mx-auto w-fit mt-2">
-  <span
-    className="px-3 sm:px-4 py-1 
-    text-[10px] sm:text-[12px] font-semibold tracking-wide
-    uppercase text-[#EB0028]
-    border border-[#EB0028]/70
-    rounded-md bg-black/40 
-    whitespace-nowrap"
-  >
-    Limited Early Bird Pass — Few Seats Left
-  </span>
+ <span
+  className="px-3 sm:px-4 py-1 
+  text-[10px] sm:text-[12px] font-semibold tracking-wide
+  uppercase text-[#EB0028]
+  border border-[#EB0028]/70
+  rounded-md bg-black/40 
+  whitespace-nowrap"
+>
+  Limited Early Bird Pass — Limited Seats
+</span>
+
 </div>
 
 
@@ -58,14 +59,17 @@ const Tickets = () => {
       </h3>
 
       {/* Experience Highlights */}
-      <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 mt-6 text-gray-200">
-        <p>✔ Access to all TEDx talks & storytelling sessions</p>
-        <p>✔ Meaningful networking with change-makers</p>
-        <p>✔ Curated meals & refreshments</p>
-        <p>✔ Official TEDx experience & environment</p>
-        <p>✔ Exclusive attendee goodies & badge</p>
-        <p>✔ A day of inspiration & transformative ideas</p>
-      </div>
+    <div className="w-full flex justify-center">
+  <div className="grid grid-cols-1 gap-4 mt-6 text-gray-200 text-left max-w-md mx-auto">
+    <p>✔ Access to all TEDx talks & storytelling sessions</p>
+    <p>✔ Meaningful networking with change-makers</p>
+    <p>✔ Curated meals & refreshments</p>
+    <p>✔ Official TEDx experience & environment</p>
+    <p>✔ Exclusive attendee goodies & badge</p>
+    <p>✔ A day of inspiration & transformative ideas</p>
+  </div>
+</div>
+
 
       {/* Price Section */}
       <div className="border-t border-gray-700 pt-8 mt-8">

@@ -61,7 +61,7 @@ export default function PastSpeakers() {
             ref={(el) => (cardsRef.current[index] = el)}
             className="
               speaker-card sticky top-[15vh] relative
-              w-[75vw] sm:w-[60vw] md:w-[32vw] lg:w-[28vw]
+              w-[88vw] sm:w-[60vw] md:w-[32vw] lg:w-[28vw]
               max-w-[400px] min-w-[260px]
               py-[10vh] px-4
               rounded-[25px] overflow-hidden
@@ -88,7 +88,13 @@ export default function PastSpeakers() {
                 {speaker.name}
               </h1>
 
-              <p className="text-lg font-medium max-w-[90%] leading-relaxed sm:text-base sm:max-w-full">
+              <p className="
+  text-[14px] sm:text-base 
+  font-medium 
+  max-w-[95%] sm:max-w-full 
+  leading-relaxed
+">
+
                 {speaker.description}
               </p>
 
