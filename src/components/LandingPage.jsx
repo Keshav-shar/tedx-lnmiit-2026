@@ -26,7 +26,6 @@ export default function LandingPage() {
           },
         });
 
-       
         tl.fromTo(
           ".idea-left",
           { opacity: 0, x: -50 },
@@ -53,7 +52,6 @@ export default function LandingPage() {
           "2"
         );
 
-        
         tl.fromTo(".forging",
           { x: -1000, opacity: 0 },
           { x: -250, opacity: 1, duration: 15, ease: "power3.out" },
@@ -73,6 +71,12 @@ export default function LandingPage() {
         );
 
         tl.to(".img",
+          { x: 300, duration: 15, scale: 0.8, ease: "power3.out" },
+          "5"
+        );
+
+        
+        tl.to(".hero-gradient",
           { x: 300, duration: 15, scale: 0.8, ease: "power3.out" },
           "5"
         );
@@ -117,26 +121,26 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <section className="landing h-[105vh] bg-radial from-black from-1% to-transparent relative overflow-hidden">
+    <section className="landing h-[105vh] relative overflow-hidden">
       <div className="mx-auto flex h-full max-w-7xl items-center justify-center px-12 relative">
 
-        <div className="idea-left font-semibold hidden sm:flex absolute left-30 h-[30vh] text-white text-3xl text-center leading-relaxed items-center">
-  <span>
-    Every Innovation <br />
-    began as a <span className="text-[#eb0028]">fragile idea</span>
-  </span>
-</div>
+       
+        <div className="idea-left font-semibold hidden sm:flex absolute left-30 h-[30vh] text-white text-3xl text-center z-20 leading-relaxed items-center">
+          <span>
+            Every Innovation <br />
+            began as a <span className="text-[#eb0028]">fragile idea</span>
+          </span>
+        </div>
 
+       
+        <div className="-mt-1 z-20 font-semibold idea-right hidden sm:flex absolute right-30 h-[30vh] text-white text-3xl text-center leading-relaxed items-center">
+          <span>
+            Until someone <br />
+            <span className="text-[#eb0028]">forged it</span> into reality
+          </span>
+        </div>
 
-        <div className=" -mt-1 font-semibold idea-right hidden sm:flex absolute right-30 h-[30vh] text-white text-3xl text-center leading-relaxed items-center">
-  <span>
-    Until someone <br />
-    <span className="text-[#eb0028]">forged it</span> into reality
-  </span>
-</div>
-
-
-      
+       
         <div className="relative font-bebas flex flex-col items-center gap-6 pointer-events-none z-20">
           <p className="forging tracking-wide text-[#eb0028] text-[22vw] sm:text-[16vw] font-extrabold leading-none">
             FORGING
@@ -152,7 +156,20 @@ export default function LandingPage() {
           </div>
         </div>
 
-       
+        
+        <div
+          className="
+            hero-gradient
+            absolute
+            z-0
+            w-[900px]
+            h-[900px]
+            rounded-full
+            bg-radial from-black from-1% to-transparent
+          "
+        />
+
+        
         <img
           src="/images/MainRed3d.webp"
           alt="TEDx LNMIIT Hero"
