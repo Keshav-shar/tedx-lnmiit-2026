@@ -4,12 +4,39 @@ import SpeakersCarousel from '../components/CurrentSpeakers.jsx';
 import PastSpeakers from "../components/PastSpeakers.jsx";
 import FAQPage from "../components/FAQ.jsx";
 import SponsorsComponent from '../components/Sponsors.jsx';
-import MainHead from "../layouts/MainHead.astro";
 import LandingPage from "../components/LandingPage.jsx";
 ---
 
-<MainLayout title="Home Page | TEDxLNMIIT " description="Welcome to the official TEDxLNMIIT 2026 website. Discover inspiring talks, innovative ideas revolving our current theme 'Forging the Future', and vibrant community events as we prepare for an unforgettable experience at LNMIIT. Join us in spreading ideas worth sharing!">
- 
+<MainLayout title="Home Page | TEDxLNMIIT " description="Welcome to the official TEDxLNMIIT 2026 website. Discover inspiring talks, innovative ideas revolving our current theme 'Forging the Future', and vibrant community events as we prepare for an unforgettable experience at LNMIIT. Join us in spreading ideas worth sharing!"  >
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "TEDx LNMIIT 2026",
+  "startDate": "2026-01-11T10:00",
+  "endDate": "2026-01-11T18:00",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": {
+    "@type": "Place",
+    "name": "LNMIIT Jaipur",
+    "address": {
+      "@type": "The LNM Institute of Information Technology, Rupa ki Nangal, Post-Sumel via -302031, Jamdoli, Jaipur, Rajasthan 302031",
+      "addressLocality": "Jaipur",
+      "addressRegion": "Rajasthan",
+      "addressCountry": "IN"
+    }
+  },
+  "image": ["https://tedxlnmiit.in/images/logo-white2.webp"],
+  "description": "Official TEDx LNMIIT event featuring speakers, innovators and creators.",
+  "organizer": {
+    "@type": "Organization",
+    "name": "TEDxLNMIIT",
+    "url": "https://tedxlnmiit.in"
+  }
+}
+</script>
+
 
 <LandingPage client:load />
 
