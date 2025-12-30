@@ -22,22 +22,22 @@ export default function Sponsors() {
     return () => ctx.revert();
   }, []);
 
-  const currentPartners = [
-    { name: "The YAKKS", logo: "/CurrentPartners/YAKKS.webp" },
-    { name: "The Fern Residency", logo: "/CurrentPartners/fern.webp" },
-  ];
+const currentPartners = [
+  { name: "The YAKKS", logo: "/CurrentPartners/YAKKS.webp", link: "https://www.instagram.com/yakks.media?igsh=MXc5NWlkcHp5emVhdA==" },
+  { name: "The Fern Residency", logo: "/CurrentPartners/fern.webp", link: "https://www.instagram.com/the_fern_residency_jaipur?igsh=anNkeHgwangzMGYz" },
+];
 
-  const previousPartners = [
-    { name: "Petite Patisserie", logo: "/PrevPartners/petite.webp" },
-    { name: "Kalam IAS Academy", logo: "/PrevPartners/kalam.webp" },
-    { name: "Sarovar Hotels", logo: "/PrevPartners/sarovar.webp" },
-    { name: "Regal Offset", logo: "/PrevPartners/regal.webp" },
-    { name: "Union Bank", logo: "/PrevPartners/unionn.webp" },
-    { name: "The Waffle Charm", logo: "/PrevPartners/Waffle.webp" },
-    { name: "VRJ Productions", logo: "/PrevPartners/image.webp" },
-    { name: "The Fern Residency", logo: "/CurrentPartners/fern.webp" },
-    { name: "Canara Bank", logo: "/PrevPartners/canaraa.webp" },
-  ];
+const previousPartners = [
+  { name: "Petite Patisserie", logo: "/PrevPartners/petite.webp", link: "https://www.instagram.com/petitepatisserie_jaipur?igsh=Mml3MjZwaTh4ZXY=" },
+  { name: "Kalam IAS Academy", logo: "/PrevPartners/kalam.webp", link: "https://www.instagram.com/kalam.ias.academy?igsh=MzJiYWx5dTd0NGpx" },
+  { name: "Sarovar Hotels", logo: "/PrevPartners/sarovar.webp", link: "https://www.instagram.com/sarovar_hotels?igsh=MWxyMnZiZ2FocHQ3MQ==" },
+  { name: "Regal Offset", logo: "/PrevPartners/regal.webp" },
+  { name: "Union Bank", logo: "/PrevPartners/unionn.webp", link: "https://www.instagram.com/unionbankinsta?igsh=MXV0bmI5cGhzbnRuZA==" },
+  { name: "The Waffle Charm", logo: "/PrevPartners/Waffle.webp", link: "https://www.instagram.com/thewafflecharm?igsh=MWV1eTZlNTk3b3ZvcQ==" },
+  { name: "VRJ Productions", logo: "/PrevPartners/image.webp", link: "https://www.instagram.com/vrjproductions?igsh=cGw2NWxwZzV6OTV3" },
+  { name: "The Fern Residency", logo: "/CurrentPartners/fern.webp", link: "https://www.instagram.com/the_fern_residency_jaipur?igsh=anNkeHgwangzMGYz" },
+  { name: "Canara Bank", logo: "/PrevPartners/canaraa.webp", link: "https://www.instagram.com/canarabankinsta?igsh=eTRxdHJpMzNvbzho" },
+];
 
   const loopedPartners = [...previousPartners, ...previousPartners];
 
@@ -64,20 +64,23 @@ export default function Sponsors() {
 
         <div className="flex flex-wrap justify-center gap-10">
           {currentPartners.map((partner, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-2xl p-8 shadow-xl hover:scale-105 transition-transform w-56 h-56 flex flex-col justify-center items-center"
-            >
-              <img
-                src={partner.logo}
-                alt={partner.name}
-                className="object-contain w-40 h-28 mb-2"
-              />
-              <p className="text-black font-medium text-center text-sm">
-                {partner.name}
-              </p>
-            </div>
-          ))}
+            <a
+    key={i}
+    href={partner.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-white rounded-2xl p-8 shadow-xl hover:scale-105 transition-transform w-56 h-56 flex flex-col justify-center items-center"
+  >
+    <img
+      src={partner.logo}
+      alt={partner.name}
+      className="object-contain w-40 h-28 mb-2"
+    />
+    <p className="text-black font-medium text-center text-sm">
+      {partner.name}
+    </p>
+  </a>
+))}
         </div>
       </div>
 
@@ -105,17 +108,20 @@ export default function Sponsors() {
             className="flex gap-3 w-max whitespace-nowrap"
           >
             {loopedPartners.map((partner, i) => (
-              <div
-                key={i}
-                className="bg-[#ffffff] rounded-2xl shadow-xl w-48 h-20 flex items-center justify-center"
-              >
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="object-contain w-32 h-18"
-                />
-              </div>
-            ))}
+             <a
+    key={i}
+    href={partner.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-white rounded-2xl shadow-xl w-48 h-20 flex items-center justify-center"
+  >
+    <img
+      src={partner.logo}
+      alt={partner.name}
+      className="object-contain w-32 h-18"
+    />
+  </a>
+))}
           </div>
         </div>
       </div>
@@ -148,8 +154,8 @@ export default function Sponsors() {
   and technology to empower education and foster innovation.
 </p>
 
-        <a
- href="/Brochure/Partnership_Brochure_TEDxLNMIIT2026.pdf"   // replace later with your actual PDF link
+       <a
+  href="/Brochure/Partnership_Brochure_TEDxLNMIIT2026.pdf"
   target="_blank"
   rel="noopener noreferrer"
   className="
@@ -161,10 +167,12 @@ export default function Sponsors() {
     hover:bg-[#ff0932]
     hover:-translate-y-0.5
     active:translate-y-0
+    mt-3
   "
 >
   Know more
 </a>
+
 
       </div>
     </section>
