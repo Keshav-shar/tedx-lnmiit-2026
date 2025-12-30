@@ -74,7 +74,7 @@ const Tickets = () => {
       {/* Price Section */}
       <div className="border-t border-gray-700 pt-8 mt-8">
         <p className="text-gray-400 text-sm">Original Price</p>
-        <p className="text-2xl font-semibold line-through text-gray-500">₹449</p>
+        <p className="text-2xl font-semibold line-through text-gray-500">₹499</p>
 
         <p className="text-red-600 mt-2 text-sm font-medium">
           Early Bird Offer
@@ -85,7 +85,7 @@ const Tickets = () => {
         </p>
 
         <p className="text-gray-400 text-sm mt-2">
-          Save ₹50 — Limited Time Discount
+          Save ₹100 — Limited Time Discount
         </p>
 
         {/* Registration Options */}

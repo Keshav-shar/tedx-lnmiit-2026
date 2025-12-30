@@ -111,7 +111,6 @@ const teamData = [
     members: [
       { name: "Anshul Bansal", role: "Event Management", image: "/team/anshul.webp", linkedin: "https://www.linkedin.com/in/anshulbansalxd" },
       { name: "Dev Rastogi", role: "Event Management", image: "/team/dev.webp", linkedin: "https://www.linkedin.com/in/dev-rastogi-a9799230a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-       { name: "Devansh Katariya", role: "Event Management", image: "/team/devansh.webp", linkedin: "https://www.linkedin.com/in/devansh-katariya-a639b4289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Kavya Jethani", role: "Event Management", image: "/team/kavya.webp", linkedin: "https://www.linkedin.com/in/kavya-jethani-380629292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Krittika Agarwal", role: "Event Management", image: "/team/krittika.webp", linkedin: "https://www.linkedin.com/in/krittika-agrawal-716b17228?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Pranav Vashisth", role: "Event Management", image: "/team/pranav.webp", linkedin: "https://www.linkedin.com/in/pranav-vashisth?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
@@ -122,6 +121,7 @@ const teamData = [
     title: "Sponsorship",
     members: [
       { name: "Adwaiy Mahajan", role: "Sponsorship", image: "/team/adwaiy.webp", linkedin: "https://www.linkedin.com/in/adwaiy-mahajan-107503212" },
+      { name: "Devansh Katariya", role: "Sponsorship", image: "/team/devansh.webp", linkedin: "https://www.linkedin.com/in/devansh-katariya-a639b4289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Krishna Khairnar", role: "Sponsorship", image: "/team/krishna.webp", linkedin: "https://www.linkedin.com/in/krishna-khairnar-229291318" },
       { name: "Manan Vaish", role: "Sponsorship", image: "/team/manan.webp", linkedin: "https://www.linkedin.com/in/manan-vaish-0ba187313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Samar Goyal", role: "Sponsorship", image: "/team/samar.webp", linkedin: "https://www.linkedin.com/in/samar-goyal-164383314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
@@ -226,7 +226,7 @@ export default function Team() {
                      bg-neutral-900 rounded-2xl shadow-lg p-5 
                      w-[80%] xs:w-[70%] sm:w-[45%]
                      ${
-                       group.title === "Event Management" || group.title === "Graphic Designing" || group.title === "Content Writing"
+                       group.title === "Event Management" || group.title === "Graphic Designing" || group.title === "Content Writing" || group.title === "Sponsorship"
                          ? "md:w-[23%]"   // 3 cards per row
                          : "md:w-[22%]"   // 4 cards per row
                      }
