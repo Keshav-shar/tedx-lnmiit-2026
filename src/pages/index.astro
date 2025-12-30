@@ -136,19 +136,27 @@ import LandingPage from "../components/LandingPage.jsx";
     letter-spacing: 1px;
   }
 
-  /* Responsive adjustments */
-  @media (max-width: 640px) {
-    .count-number {
-      font-size: 1.5rem;
-    }
-    .count-label {
-      font-size: 0.7rem;
-    }
-    .count-box {
-      padding: 0.8rem 0.6rem;
-      border-radius: 0.75rem;
-    }
+ /* 📱 Better compact mobile layout */
+@media (max-width: 640px) {
+
+  .count-box {
+    padding: 0.35rem 0.35rem;   /* 🔹 much smaller inner spacing */
+    min-width: 42px;            /* 🔹 narrower box width */
+    border-radius: 0.55rem;
   }
+
+  .count-number {
+    font-size: 1.1rem;          /* balanced size for compact box */
+  }
+
+  .count-label {
+    margin-top: 0.1rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.4px;
+  }
+}
+
+
 </style>
 
 
