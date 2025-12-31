@@ -143,7 +143,7 @@ const previousPartners = [
           <span className="text-white">Interested in partnership?</span>
         </h1>
 
-        <p className="max-w-2xl text-lg md:text-xl mt-8 leading-relaxed font-medium text-gray-200">
+        <p className="max-w-2xl text-lg md:text-xl mt-4 leading-relaxed font-medium text-gray-200">
   Collaborating with{" "}
   <span className="text-[#EB0028] font-semibold">TEDxLNMIIT</span>{" "}
   provides a unique opportunity to enhance your organization's global network
@@ -154,7 +154,7 @@ const previousPartners = [
   and technology to empower education and foster innovation.
 </p>
 
-       <a
+<a
   href="/Brochure/Partnership_Brochure_TEDxLNMIIT2026.pdf"
   target="_blank"
   rel="noopener noreferrer"
@@ -167,11 +167,12 @@ const previousPartners = [
     hover:bg-[#ff0932]
     hover:-translate-y-0.5
     active:translate-y-0
-    mt-3
+    mt-8      /* increased spacing */
   "
 >
   Know more
 </a>
+
 
 
       </div>
