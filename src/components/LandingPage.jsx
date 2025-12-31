@@ -26,58 +26,49 @@ export default function LandingPage() {
           },
         });
 
-        tl.fromTo(
-          ".idea-left",
-          { opacity: 0, x: -50 },
-          { opacity: 1, x: 0, duration: 6, ease: "power2.out" },
-          "0.5"
-        );
+      
+gsap.set(".idea-left", { opacity: 1, x: 0 });
+gsap.set(".idea-right", { opacity: 1, x: 0 });
 
-        tl.fromTo(
-          ".idea-right",
-          { opacity: 0, x: 50 },
-          { opacity: 1, x: 0, duration: 6, ease: "power2.out" },
-          "0.5"
-        );
 
         tl.to(
           ".idea-left",
-          { y: -400, opacity: 0, duration: 8, ease: "power2.inOut" },
+          { y: -400, opacity: 0, duration: 6, ease: "power2.inOut" },
           "2"
         );
 
         tl.to(
           ".idea-right",
-          { y: 400, opacity: 0, duration: 8, ease: "power2.inOut" },
+          { y: 400, opacity: 0, duration: 6, ease: "power2.inOut" },
           "2"
         );
 
         tl.fromTo(".forging",
           { x: -1000, opacity: 0 },
-          { x: -250, opacity: 1, duration: 15, ease: "power3.out" },
+          { x: -250, opacity: 1, duration: 12, ease: "power3.out" },
           "5"
         );
 
         tl.fromTo(".the",
           { x: 800, opacity: 0 },
-          { x: -250, opacity: 1, duration: 15, ease: "power3.out" },
+          { x: -250, opacity: 1, duration: 12, ease: "power3.out" },
           "5"
         );
 
         tl.fromTo(".future",
           { x: 1000, opacity: 0 },
-          { x: -250, opacity: 1, duration: 15, ease: "power3.out" },
+          { x: -250, opacity: 1, duration: 12, ease: "power3.out" },
           "5"
         );
 
         tl.to(".img",
-          { x: 300, duration: 15, scale: 0.8, ease: "power3.out" },
+          { x: 300, duration: 12, scale: 0.8, ease: "power3.out" },
           "5"
         );
 
         
         tl.to(".hero-gradient",
-          { x: 300, duration: 15, scale: 0.8, ease: "power3.out" },
+          { x: 300, duration: 12, scale: 0.8, ease: "power3.out" },
           "5"
         );
       },
