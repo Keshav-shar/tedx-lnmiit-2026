@@ -104,11 +104,13 @@ import LandingPage from "../components/LandingPage.jsx";
 
   <!-- DESKTOP -->
   <iframe
-    class="hidden md:block w-full aspect-video"
-    src="https://www.youtube.com/embed/GPAKzQ3uwXQ?autoplay=1&mute=1&controls=1&rel=0"
-    allow="autoplay; encrypted-media; fullscreen"
-    allowfullscreen
-  ></iframe>
+  id="promo-video"
+  class="hidden md:block w-full aspect-video"
+  src="https://www.youtube.com/embed/GPAKzQ3uwXQ?mute=1&controls=1&rel=0"
+  data-autoplay="https://www.youtube.com/embed/GPAKzQ3uwXQ?autoplay=1&mute=1&controls=1&rel=0"
+  allow="autoplay; encrypted-media; fullscreen"
+  allowfullscreen
+></iframe>
 
   <!-- MOBILE -->
   <a
@@ -259,4 +261,27 @@ import LandingPage from "../components/LandingPage.jsx";
     update();
     const interval = setInterval(update, 1000);
   })();
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("promo-video");
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const url = video.dataset.autoplay;
+            if (url) video.setAttribute("src", url);
+            observer.unobserve(video);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(video);
+  });
 </script>
