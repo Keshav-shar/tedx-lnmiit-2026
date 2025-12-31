@@ -128,6 +128,15 @@ const Footer = () => {
         >
           <i className="fab fa-instagram"></i>
         </a>
+        <a
+          href="https://youtube.com/@tedxlnmiit?si=mx-meHE_h7gg4xUc"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-8 h-8 flex items-center justify-center
+          border border-white rounded-md hover:bg-white hover:text-black transition"
+        >
+          <i className="fab fa-youtube"></i>
+        </a>
       </div>
     </footer>
   );
