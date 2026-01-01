@@ -139,7 +139,7 @@ const teamData = [
   {
     title: "Video Editing",
     members: [
-      { name: "K Arya Shekhar Das", role: "Video Editor", image: "/team/karya.webp", linkedin: "https://www.linkedin.com/in/intelligentears" },
+      { name: "K Arya Sekhar Das", role: "Video Editor", image: "/team/karya.webp", linkedin: "https://www.linkedin.com/in/intelligentears" },
       { name: "Roodraksh Agrawal", role: "Video Editor", image: "/team/roodraksh.webp", linkedin: "https://www.linkedin.com/in/roodraksh-agrawal-6a91a232b" },
       { name: "Rutwik Naik", role: "Video Editor", image: "/team/rutwik.webp", linkedin: "https://www.linkedin.com/in/rutwik-naik-0526b8340" },
       { name: "Somik Jain", role: "Video Editor", image: "/team/somik.webp", linkedin: "https://www.linkedin.com/in/somik-jain-3a5933316" },
