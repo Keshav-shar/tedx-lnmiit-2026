@@ -14,7 +14,7 @@ export default function PastSpeakers() {
     {
       id: 1,
       name: "Dr. Tanu Jain",
-      slug: "dr-tanu-jain",
+      drive:true,
       image: "/images/image0.webp",
       description:
         "Former IAS officer and DRDO Assistant Director, Dr. Jain advocates for education and UPSC reforms. Her multifaceted career exemplifies her dedication to creating impact beyond conventional roles.",
@@ -207,7 +207,12 @@ export default function PastSpeakers() {
               <div className="flex items-center justify-center gap-6 mt-8 pointer-events-auto">
                 {speaker.youtube && (
                   <a
-                    href={`/talks/${speaker.slug}`}
+  
+  href={speaker.drive ? speaker.youtube : `/talks/${speaker.slug}`}
+  target={speaker.drive ? "_blank" : undefined}
+  rel={speaker.drive ? "noopener noreferrer" : undefined}
+
+
                     className="text-red-600 text-3xl -mt-8 hover:scale-110 transition-transform"
                   >
                     <FaYoutube />
