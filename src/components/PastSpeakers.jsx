@@ -14,6 +14,7 @@ export default function PastSpeakers() {
     {
       id: 1,
       name: "Dr. Tanu Jain",
+      slug: "dr-tanu-jain",
       image: "/images/image0.webp",
       description:
         "Former IAS officer and DRDO Assistant Director, Dr. Jain advocates for education and UPSC reforms. Her multifaceted career exemplifies her dedication to creating impact beyond conventional roles.",
@@ -25,6 +26,7 @@ export default function PastSpeakers() {
     {
       id: 2,
       name: "Gunjan Saini",
+      slug: "gunjan-saini",
       image: "/images/image01.webp",
       description:
         "Poet, writer, and founder of Let’s Talk, Gunjan Saini fosters emotional well-being through shared stories. Her work bridges emotional gaps and promotes mental health through vulnerability and connection.",
@@ -35,6 +37,7 @@ export default function PastSpeakers() {
     {
       id: 3,
       name: "Preksha Kaparwan",
+      slug: "preksha-kaparwan",
       image: "/images/image1.webp",
       description:
         "Entrepreneur and storyteller, Preksha Kaparwan is Co-Founder and CMO of Alphaa AI. She works to democratize data access using AI and NLP, empowering users to interact with data intuitively and confidently.",
@@ -44,6 +47,7 @@ export default function PastSpeakers() {
     {
       id: 4,
       name: "Deepak Pareek",
+      slug: "deepak-pareek",
       image: "/images/deepak.webp",
       description:
         "Co-founder of Iceberg Creations and an IMPACT 30 Under 30 honoree, Deepak Pareek is a dynamic content creator. His work spans platforms, driving innovation through engaging digital storytelling.",
@@ -53,6 +57,7 @@ export default function PastSpeakers() {
     {
       id: 5,
       name: "Chinmay Gaur",
+      slug: "chinmay-gaur",
       image: "/images/image5.webp",
       description:
         "Indian classical flutist and composer, Chinmay Gaur blends tradition with modern expression. His TEDx talk explores music’s transcendental power and its ability to connect cultures and emotions.",
@@ -62,6 +67,7 @@ export default function PastSpeakers() {
     {
       id: 6,
       name: "Dr. Ajay Data",
+      slug: "dr-ajay-data",
       image: "/images/image3.webp",
       description:
         "Visionary entrepreneur and Managing Director of Data Group of Industries, Dr. Ajay Data introduced the internet to Rajasthan and pioneered the world’s first linguistic email, driving digital inclusion.",
@@ -71,6 +77,7 @@ export default function PastSpeakers() {
     {
       id: 7,
       name: "Krishnan Sunderarajan",
+      slug: "krishnan-sunderarajan",
       image: "/images/krishna.webp",
       description:
         "Founder of LOKA, India’s first Metaverse app, Krishnan Sunderarajan bridges technology and human experience. His Shark Tank journey reflects his vision for future digital interaction.",
@@ -81,6 +88,7 @@ export default function PastSpeakers() {
     {
       id: 8,
       name: "Dr. Lopa Mudraa",
+      slug: "dr-lopa-mudraa",
       image: "/images/image4.webp",
       description:
         "Information Security Evangelist with over two decades of experience, Dr. Lopa Mudraa is a 4× Global 100 CISO awardee. She is recognized for her leadership in cybersecurity and digital resilience.",
@@ -90,6 +98,7 @@ export default function PastSpeakers() {
     {
       id: 9,
       name: "Dr. Kamna Chhibber",
+      slug: "dr-kamna-chhibber",
       image: "/images/image2.webp",
       description:
         "Head of Mental Health at Fortis Healthcare, Dr. Kamna Chhibber is a clinical psychologist with 15+ years of experience, specializing in CBT, trauma, relationships, and emotional well-being.",
@@ -100,6 +109,7 @@ export default function PastSpeakers() {
     {
       id: 10,
       name: "Aabha Hanjura",
+      slug: "aabha-hanjura",
       image: "/images/image6.webp",
       description:
         "Singer-songwriter and founder of the band Sufistication, Aabha Hanjura blends Kashmiri folk with Sufi and contemporary pop. Her music has earned nationwide recognition and cultural resonance.",
@@ -110,6 +120,7 @@ export default function PastSpeakers() {
     {
       id: 11,
       name: "Chetna Balhara",
+      slug: "chetna-balhara",
       image: "/images/chetna.webp",
       description:
         "Poet and digital creator, Chetna Balhara is known for heartfelt poetry on love and everyday struggles. Her relatable words and performances have built a strong and devoted audience.",
@@ -120,6 +131,7 @@ export default function PastSpeakers() {
     {
       id: 12,
       name: "Shelly Jyoti",
+      slug: "shelly-jyoti",
       image: "/images/image7.webp",
       description:
         "Contemporary artist, designer, and poet, Shelly Jyoti explores Gandhi’s principles through art. She collaborates with Ajrakh artisans, blending traditional textiles with modern social narratives.",
@@ -188,22 +200,14 @@ export default function PastSpeakers() {
                 {speaker.name}
               </h1>
 
-              <p className="
-  text-[14px] sm:text-base 
-  font-medium 
-  max-w-[95%] sm:max-w-full 
-  leading-relaxed
-">
-
+              <p className="text-[14px] sm:text-base font-medium max-w-[95%] sm:max-w-full leading-relaxed">
                 {speaker.description}
               </p>
 
               <div className="flex items-center justify-center gap-6 mt-8 pointer-events-auto">
                 {speaker.youtube && (
                   <a
-                    href={speaker.youtube}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={`/talks/${speaker.slug}`}
                     className="text-red-600 text-3xl -mt-8 hover:scale-110 transition-transform"
                   >
                     <FaYoutube />

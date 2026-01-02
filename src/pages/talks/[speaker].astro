@@ -1,0 +1,50 @@
+---
+export const prerender = false;
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const talks = {
+  "dr-tanu-jain": { name: "Dr. Tanu Jain", embedId: "7Qsg9A-mjgk", description: "TEDx LNMIIT talk by Dr. Tanu Jain" },
+  "gunjan-saini": { name: "Gunjan Saini", embedId: "7Qsg9A-mjgk", description: "TEDx LNMIIT talk by Gunjan Saini" },
+  "preksha-kaparwan": { name: "Preksha Kaparwan", embedId: "rVfCN04AEmg", description: "TEDx LNMIIT talk by Preksha Kaparwan" },
+  "deepak-pareek": { name: "Deepak Pareek", embedId: "vkIZJ0-hkQY", description: "TEDx LNMIIT talk by Deepak Pareek" },
+  "chinmay-gaur": { name: "Chinmay Gaur", embedId: "KyLREMG86r0", description: "TEDx LNMIIT talk by Chinmay Gaur" },
+  "dr-ajay-data": { name: "Dr. Ajay Data", embedId: "JfBAk9jj--0", description: "TEDx LNMIIT talk by Dr. Ajay Data" },
+  "krishnan-sunderarajan": { name: "Krishnan Sunderarajan", embedId: "Z9zx3kWLP6c", description: "TEDx LNMIIT talk by Krishnan Sunderarajan" },
+  "dr-lopa-mudraa": { name: "Dr. Lopa Mudraa", embedId: "To9sxO9W_Kw", description: "TEDx LNMIIT talk by Dr. Lopa Mudraa" },
+  "dr-kamna-chhibber": { name: "Dr. Kamna Chhibber", embedId: "n0me_a9Amnk", description: "TEDx LNMIIT talk by Dr. Kamna Chhibber" },
+  "aabha-hanjura": { name: "Aabha Hanjura", embedId: "omzsDD9-Ur8", description: "TEDx LNMIIT talk by Aabha Hanjura" },
+  "chetna-balhara": { name: "Chetna Balhara", embedId: "357IYm05oQU", description: "TEDx LNMIIT talk by Chetna Balhara" },
+  "shelly-jyoti": { name: "Shelly Jyoti", embedId: "Vu_gdUgJAzk", description: "TEDx LNMIIT talk by Shelly Jyoti" },
+};
+
+const { speaker } = Astro.params;
+const talk = talks[speaker];
+if (!talk) return Astro.redirect("/");
+
+const embedUrl = `https://www.youtube.com/embed/${talk.embedId}?autoplay=1&mute=1&rel=0`;
+---
+
+<MainLayout title={`${talk.name} | TEDx LNMIIT`} description={talk.description}>
+  <section class="min-h-screen flex flex-col items-center justify-center px-4 py-20">
+    <h1 class="text-3xl md:text-4xl font-light text-[#EB0028] mb-8 text-center">
+      {talk.name}
+    </h1>
+
+    <iframe
+      class="w-full max-w-5xl aspect-video rounded-2xl border border-red-600"
+      src={embedUrl}
+      allow="autoplay; encrypted-media; fullscreen"
+      allowfullscreen
+    ></iframe>
+  </section>
+
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": talk.name,
+      "description": talk.description,
+      "embedUrl": embedUrl
+    })}
+  </script>
+</MainLayout>
