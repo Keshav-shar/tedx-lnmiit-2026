@@ -51,11 +51,13 @@ const Footer = () => {
           </h3>
 
           <iframe
-            className="w-full max-w-xs h-32 mx-auto rounded-md"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.1450217707263!2d75.9225248!3d26.8645566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db6ce449d2633%3A0x4ae26e80d05d20c1!2sThe%20LNM%20Institute%20Of%20Information%20Technology%20(LNMIIT)%2C%20Jaipur!5e0!3m2!1sen!2sin!4v1738255123456!5m2!1sen!2sin"
-            loading="lazy"
-            title="Location Map"
-          ></iframe>
+  className="w-full max-w-xs h-32 mx-auto rounded-md"
+  src="https://www.google.com/maps?q=The+LNM+Institute+of+Information+Technology+Jaipur&output=embed"
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  title="LNMIIT Location Map"
+></iframe>
+
 
           <p className="text-sm leading-snug text-gray-300">
             Rupa ki Nangal, Post-Sumel,<br />

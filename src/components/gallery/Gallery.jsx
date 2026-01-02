@@ -116,7 +116,7 @@ const Gallery = () => {
   font-extrabold  
   text-[9vw]
   text-center
-  -mt-20
+  -mt-10
     "
   >
     Gallery
