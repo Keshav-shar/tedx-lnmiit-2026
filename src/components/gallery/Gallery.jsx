@@ -110,17 +110,18 @@ const Gallery = () => {
   return (
     <div className='lg:p-4 p-2 mb-[70vh]'>
       <div className=" pt-[15vw] w-full relative overflow-hidden">
-  <h1
-    className="
-      text-white
-  font-extrabold  
-  text-[9vw]
-  text-center
-  -mt-10
-    "
-  >
-    Gallery
-  </h1>
+ <h1
+  className="
+    text-white
+    font-extrabold
+    text-[11vw]
+    sm:text-[9vw]  
+    text-center
+    lg:-mt-20 mt-2
+  "
+>
+  Gallery
+</h1>
 </div>
 
       {/*  group/gallery controls global dimming */}

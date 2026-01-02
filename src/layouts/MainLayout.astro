@@ -18,20 +18,16 @@ const { title = "Default Title", description = "Default Description" } =
   />
 
   <!-- Google Analytics -->
-  <script is:inline>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(...args) {
-    window.dataLayer.push(args);
-  }
-  window.gtag = gtag;
-</script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VMRFWPCG0X"></script>
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMRFWPCG0X"></script>
 <script is:inline>
-  window.gtag('js', new Date());
-  window.gtag('config', 'G-VMRFWPCG0X');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VMRFWPCG0X', {
+    send_page_view: true
+  });
 </script>
+
 
 </head>
   <body class="bg-black text-white overflow-x-hidden min-h-screen relative">

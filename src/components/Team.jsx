@@ -15,6 +15,12 @@ const teamData = [
         image: "/team/narendra.webp",
         linkedin: "https://www.linkedin.com/in/narendra-kumar-38692065?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       },
+      {
+        name: "Dr. Payel Pal",
+        role: ["Faculty Mentor"],
+        image: "/team/mentor2.webp",
+        linkedin: "https://www.linkedin.com/in/dr-payel-pal-89593413/",
+      },
     ],
   },
 
@@ -139,7 +145,7 @@ const teamData = [
   {
     title: "Video Editing",
     members: [
-      { name: "K Arya Shekhar Das", role: "Video Editor", image: "/team/karya.webp", linkedin: "https://www.linkedin.com/in/intelligentears" },
+      { name: "K Arya Sekhar Das", role: "Video Editor", image: "/team/karya.webp", linkedin: "https://www.linkedin.com/in/intelligentears" },
       { name: "Roodraksh Agrawal", role: "Video Editor", image: "/team/roodraksh.webp", linkedin: "https://www.linkedin.com/in/roodraksh-agrawal-6a91a232b" },
       { name: "Rutwik Naik", role: "Video Editor", image: "/team/rutwik.webp", linkedin: "https://www.linkedin.com/in/rutwik-naik-0526b8340" },
       { name: "Somik Jain", role: "Video Editor", image: "/team/somik.webp", linkedin: "https://www.linkedin.com/in/somik-jain-3a5933316" },

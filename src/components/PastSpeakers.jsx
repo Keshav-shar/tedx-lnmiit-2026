@@ -37,7 +37,7 @@ export default function PastSpeakers() {
       name: "Preksha Kaparwan",
       image: "/images/image1.webp",
       description:
-        "Entrepreneur and storyteller, Preksha Kaparwan is Co-Founder and CMO of Alphaa AI. She works to democratize data access using AI and NLP, empowering users to interact with data intuitively.",
+        "Entrepreneur and storyteller, Preksha Kaparwan is Co-Founder and CMO of Alphaa AI. She works to democratize data access using AI and NLP, empowering users to interact with data intuitively and confidently.",
       youtube: "https://youtu.be/rVfCN04AEmg?si=yrDxIiQb7OPN5uhA",
       instagram: "https://www.instagram.com/bossymiss?igsh=YnRlcHVzMDlqeGc1",
     },
@@ -64,7 +64,7 @@ export default function PastSpeakers() {
       name: "Dr. Ajay Data",
       image: "/images/image3.webp",
       description:
-        "Visionary entrepreneur and Managing Director of Data Group of Industries, Dr. Ajay Data introduced the internet to Rajasthan. He pioneered the world’s first linguistic email, advancing digital inclusion globally.",
+        "Visionary entrepreneur and Managing Director of Data Group of Industries, Dr. Ajay Data introduced the internet to Rajasthan and pioneered the world’s first linguistic email, driving digital inclusion.",
       youtube: "https://youtu.be/JfBAk9jj--0?si=zxpNOvTTxz3shQOU",
       instagram: "https://www.instagram.com/ajaydata?igsh=ZGg2bmxhMzA4ZHNu",
     },
@@ -92,7 +92,7 @@ export default function PastSpeakers() {
       name: "Dr. Kamna Chhibber",
       image: "/images/image2.webp",
       description:
-        "Head of Mental Health at Fortis Healthcare, Dr. Kamna Chhibber is a clinical psychologist with over 15 years of experience. She specializes in CBT, trauma, relationships, and emotional well-being.",
+        "Head of Mental Health at Fortis Healthcare, Dr. Kamna Chhibber is a clinical psychologist with 15+ years of experience, specializing in CBT, trauma, relationships, and emotional well-being.",
       youtube: "https://youtu.be/n0me_a9Amnk?si=z1uwpYOGEZlwguZM",
       instagram:
         "https://www.instagram.com/fortismentalhealth?igsh=MW5qa25hdW05aWhiNw==",
@@ -198,7 +198,7 @@ export default function PastSpeakers() {
                 {speaker.description}
               </p>
 
-              <div className="flex items-center justify-center gap-6 mt-4 pointer-events-auto">
+              <div className="flex items-center justify-center gap-6 mt-8 pointer-events-auto">
                 {speaker.youtube && (
                   <a
                     href={speaker.youtube}
