@@ -1,7 +1,6 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 
-/* 🔒 STATIC PATHS — required for astro build */
 export async function getStaticPaths() {
   return [
     { params: { speaker: "gunjan-saini" } },
@@ -79,16 +78,16 @@ const talks = {
 const { speaker } = Astro.params;
 const talk = talks[speaker];
 
-if (!talk) {
-  throw new Error("Talk not found");
-}
+if (!talk) throw new Error("Talk not found");
 
-/* ▶️ FIXED EMBED — no autoplay, stable playback */
 const embedUrl =
   `https://www.youtube-nocookie.com/embed/${talk.embedId}?rel=0&playsinline=1`;
 ---
 
-<MainLayout title={`${talk.name} | TEDx LNMIIT`} description={talk.description}>
+<MainLayout
+  title={`${talk.name} | TEDx LNMIIT`}
+  description={talk.description}
+>
   <section class="min-h-screen flex flex-col items-center justify-center px-4 py-20">
     <h1 class="text-3xl md:text-4xl font-light text-[#EB0028] mb-8 text-center">
       {talk.name}
@@ -102,14 +101,24 @@ const embedUrl =
     ></iframe>
   </section>
 
-  <!-- 🔍 SEO: Video indexing -->
-  <script type="application/ld+json">
-    {JSON.stringify({
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "VideoObject",
       "name": talk.name,
       "description": talk.description,
       "embedUrl": embedUrl,
+      "thumbnailUrl": `https://img.youtube.com/vi/${talk.embedId}/hqdefault.jpg`,
+      "uploadDate": "2024-01-01",
+      "publisher": {
+        "@type": "Organization",
+        "name": "TEDx LNMIIT",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://tedxlnmiit.in/favicon.webp"
+        }
+      }
     })}
-  </script>
+  ></script>
 </MainLayout>

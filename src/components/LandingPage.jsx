@@ -116,7 +116,7 @@ gsap.set(".idea-right", { opacity: 1, x: 0 });
       <div className="mx-auto flex h-full max-w-7xl items-center justify-center px-12 relative">
 
        
-        <div className="idea-left font-semibold hidden sm:flex absolute left-30 h-[30vh] text-white text-3xl text-center z-20 leading-relaxed items-center">
+        <div className="idea-left font-semibold hidden sm:flex absolute left-30 h-[30vh] text-white text-3xl text-center z-20 leading-relaxed items-center  ">
           <span>
             Every Innovation <br />
             began as a <span className="text-[#eb0028]">fragile idea</span>
@@ -124,7 +124,7 @@ gsap.set(".idea-right", { opacity: 1, x: 0 });
         </div>
 
        
-        <div className="-mt-1 z-20 font-semibold idea-right hidden sm:flex absolute right-30 h-[30vh] text-white text-3xl text-center leading-relaxed items-center">
+        <div className="-mt-1 z-20 font-semibold idea-right hidden sm:flex absolute right-30 h-[30vh] text-white  text-3xl text-center leading-relaxed items-center">
           <span>
             Until someone <br />
             <span className="text-[#eb0028]">forged it</span> into reality
@@ -153,10 +153,10 @@ gsap.set(".idea-right", { opacity: 1, x: 0 });
             hero-gradient
             absolute
             z-0
-            w-[900px]
-            h-[900px]
+            w-[800px]
+            h-[800px]
             rounded-full
-            bg-radial from-black from-1% to-transparent
+             -mx-50 bg-radial from-[#38010a] from-1% to-70%
           "
         />
 
@@ -164,7 +164,7 @@ gsap.set(".idea-right", { opacity: 1, x: 0 });
         <img
           src="/images/MainRed3d.webp"
           alt="TEDx LNMIIT Hero"
-          className="img max-h-[90vh] object-contain absolute z-10"
+          className="img max-h-[90vh]  object-contain absolute z-10"
         />
       </div>
     </section>
