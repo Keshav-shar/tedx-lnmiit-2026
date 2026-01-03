@@ -87,6 +87,7 @@ const embedUrl =
 <MainLayout
   title={`${talk.name} | TEDx LNMIIT`}
   description={talk.description}
+  canonical={`https://www.tedxlnmiit.in/talks/${speaker}`}
 >
   <section class="min-h-screen flex flex-col items-center justify-center px-4 py-20">
     <h1 class="text-3xl md:text-4xl font-light text-[#EB0028] mb-8 text-center">
@@ -108,10 +109,10 @@ const embedUrl =
       "@type": "VideoObject",
       "name": talk.name,
       "description": talk.description,
-      "embedUrl": embedUrl,
       "thumbnailUrl": `https://img.youtube.com/vi/${talk.embedId}/hqdefault.jpg`,
      "uploadDate": "2025-01-01T00:00:00+05:30",
-
+      "contentUrl": `https://www.youtube.com/watch?v=${talk.embedId}`,
+        "embedUrl": embedUrl,
       "publisher": {
         "@type": "Organization",
         "name": "TEDx LNMIIT",
