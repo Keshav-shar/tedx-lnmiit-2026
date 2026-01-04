@@ -87,11 +87,16 @@ const embedUrl =
 <MainLayout
   title={`${talk.name} | TEDx LNMIIT`}
   description={talk.description}
+  canonical={`https://www.tedxlnmiit.in/talks/${speaker}`}
 >
   <section class="min-h-screen flex flex-col items-center justify-center px-4 py-20">
-    <h1 class="text-3xl md:text-4xl font-light text-[#EB0028] mb-8 text-center">
-      {talk.name}
-    </h1>
+    <h1 class="text-3xl md:text-4xl font-light text-[#EB0028] mb-4 text-center">
+  Watch {talk.name}'s TEDxLNMIIT Talk
+</h1>
+
+<p class="max-w-3xl text-center mb-6">
+  This is the official TEDx LNMIIT talk by {talk.name}. Watch the full session below.
+</p>
 
     <iframe
       class="w-full max-w-5xl aspect-video rounded-2xl border border-red-600"
@@ -101,25 +106,31 @@ const embedUrl =
     ></iframe>
   </section>
 
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "VideoObject",
-      "name": talk.name,
-      "description": talk.description,
-      "embedUrl": embedUrl,
-      "thumbnailUrl": `https://img.youtube.com/vi/${talk.embedId}/hqdefault.jpg`,
-     "uploadDate": "2025-01-01T00:00:00+05:30",
-
-      "publisher": {
-        "@type": "Organization",
-        "name": "TEDx LNMIIT",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://tedxlnmiit.in/favicon.webp"
-        }
+  <script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `https://www.tedxlnmiit.in/talks/${speaker}`,
+  "url": `https://www.tedxlnmiit.in/talks/${speaker}`,
+  "name": `Watch ${talk.name} – TEDx LNMIIT Talk`,
+  "description": talk.description,
+  "mainEntity": {
+    "@type": "VideoObject",
+    "name": `Watch ${talk.name} – TEDx LNMIIT Talk`,
+    "description": talk.description,
+    "thumbnailUrl": `https://i.ytimg.com/vi/${talk.embedId}/maxresdefault.jpg`,
+    "uploadDate": "2025-01-01T00:00:00+05:30",
+    "contentUrl": `https://www.youtube.com/watch?v=${talk.embedId}`,
+    "embedUrl": embedUrl,
+    "publisher": {
+      "@type": "Organization",
+      "name": "TEDx LNMIIT",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.tedxlnmiit.in/favicon/favicon-32.png"
       }
-    })}
-  ></script>
+    }
+  }
+})}></script>
+
+
 </MainLayout>
