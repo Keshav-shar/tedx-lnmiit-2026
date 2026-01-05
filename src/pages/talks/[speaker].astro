@@ -81,7 +81,7 @@ const talk = talks[speaker];
 if (!talk) throw new Error("Talk not found");
 
 const embedUrl =
-  `https://www.youtube-nocookie.com/embed/${talk.embedId}?rel=0&playsinline=1`;
+  `https://www.youtube.com/embed/${talk.embedId}`;
 ---
 
 <MainLayout
@@ -113,14 +113,17 @@ const embedUrl =
   "url": `https://www.tedxlnmiit.in/talks/${speaker}`,
   "name": `Watch ${talk.name} – TEDx LNMIIT Talk`,
   "description": talk.description,
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": `https://i.ytimg.com/vi/${talk.embedId}/maxresdefault.jpg`
+  },
   "mainEntity": {
     "@type": "VideoObject",
     "name": `Watch ${talk.name} – TEDx LNMIIT Talk`,
     "description": talk.description,
     "thumbnailUrl": `https://i.ytimg.com/vi/${talk.embedId}/maxresdefault.jpg`,
     "uploadDate": "2025-01-01T00:00:00+05:30",
-    "contentUrl": `https://www.youtube.com/watch?v=${talk.embedId}`,
-    "embedUrl": embedUrl,
+    "embedUrl": `https://www.youtube.com/embed/${talk.embedId}`,
     "publisher": {
       "@type": "Organization",
       "name": "TEDx LNMIIT",
@@ -131,6 +134,7 @@ const embedUrl =
     }
   }
 })}></script>
+
 
 
 </MainLayout>

@@ -57,9 +57,9 @@ const teamData = [
   },
 
    {
-    title: "Hospitality head",
+    title: "Speaker Outreach Head",
     members: [
-      { name: "Priyal Maheshwari", role: "Hospitality Head", image: "/team/priyal.webp", linkedin: "https://www.linkedin.com/in/priyal-maheshwari-001494284" }
+      { name: "Priyal Maheshwari", role: "Speaker Outreach Head", image: "/team/priyal.webp", linkedin: "https://www.linkedin.com/in/priyal-maheshwari-001494284" }
     ],
   },
 
