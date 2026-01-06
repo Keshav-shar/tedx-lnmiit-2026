@@ -208,7 +208,7 @@ export default function PastSpeakers() {
                 {speaker.youtube && (
                   <a
   
-  href={speaker.drive ? speaker.youtube : `/talks/${speaker.slug}`}
+  href={speaker.drive ? speaker.youtube : `/watch/${speaker.slug}`}
   target={speaker.drive ? "_blank" : undefined}
   rel={speaker.drive ? "noopener noreferrer" : undefined}
 

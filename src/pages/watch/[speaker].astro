@@ -1,0 +1,179 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+export const prerender = true;
+
+const talks = [
+  {
+    id: 1,
+    name: "Dr. Tanu Jain",
+    slug: "dr-tanu-jain",
+    drive: true,
+    image: "/images/image0.webp",
+    description:
+      "Former IAS officer and DRDO Assistant Director, Dr. Jain advocates for education and UPSC reforms. Her multifaceted career exemplifies her dedication to creating impact beyond conventional roles.",
+    url: "https://drive.google.com/file/d/1b2JeXhUiIs2a75v09skoxKswxAoPksSP/view",
+  },
+  {
+    id: 2,
+    name: "Gunjan Saini",
+    slug: "gunjan-saini",
+    image: "/images/image01.webp",
+    description:
+      "Poet, writer, and founder of Let’s Talk, Gunjan Saini fosters emotional well-being through shared stories.",
+    url: "https://www.youtube.com/watch?v=7Qsg9A-mjgk",
+  },
+  {
+    id: 3,
+    name: "Preksha Kaparwan",
+    slug: "preksha-kaparwan",
+    image: "/images/image1.webp",
+    description:
+      "Entrepreneur and storyteller, Preksha Kaparwan is Co-Founder and CMO of Alphaa AI.",
+    url: "https://youtu.be/rVfCN04AEmg",
+  },
+  {
+    id: 4,
+    name: "Deepak Pareek",
+    slug: "deepak-pareek",
+    image: "/images/deepak.webp",
+    description:
+      "Co-founder of Iceberg Creations and an IMPACT 30 Under 30 honoree.",
+    url: "https://youtu.be/vkIZJ0-hkQY",
+  },
+  {
+    id: 5,
+    name: "Chinmay Gaur",
+    slug: "chinmay-gaur",
+    image: "/images/image5.webp",
+    description:
+      "Indian classical flutist and composer blending tradition with modern expression.",
+    url: "https://youtu.be/KyLREMG86r0",
+  },
+  {
+    id: 6,
+    name: "Dr. Ajay Data",
+    slug: "dr-ajay-data",
+    image: "/images/image3.webp",
+    description:
+      "Visionary entrepreneur who introduced the internet to Rajasthan.",
+    url: "https://youtu.be/JfBAk9jj--0",
+  },
+  {
+    id: 7,
+    name: "Krishnan Sunderarajan",
+    slug: "krishnan-sunderarajan",
+    image: "/images/krishna.webp",
+    description:
+      "Founder of LOKA, India’s first Metaverse app.",
+    url: "https://youtu.be/Z9zx3kWLP6c",
+  },
+  {
+    id: 8,
+    name: "Dr. Lopa Mudraa",
+    slug: "dr-lopa-mudraa",
+    image: "/images/image4.webp",
+    description:
+      "Information Security Evangelist and 4× Global 100 CISO awardee.",
+    url: "https://youtu.be/To9sxO9W_Kw",
+  },
+  {
+    id: 9,
+    name: "Dr. Kamna Chhibber",
+    slug: "dr-kamna-chhibber",
+    image: "/images/image2.webp",
+    description:
+      "Head of Mental Health at Fortis Healthcare.",
+    url: "https://youtu.be/n0me_a9Amnk",
+  },
+  {
+    id: 10,
+    name: "Aabha Hanjura",
+    slug: "aabha-hanjura",
+    image: "/images/image6.webp",
+    description:
+      "Singer-songwriter and founder of the band Sufistication.",
+    url: "https://youtu.be/omzsDD9-Ur8",
+  },
+  {
+    id: 11,
+    name: "Chetna Balhara",
+    slug: "chetna-balhara",
+    image: "/images/chetna.webp",
+    description:
+      "Poet and digital creator known for heartfelt poetry.",
+    url: "https://youtu.be/357IYm05oQU",
+  },
+  {
+    id: 12,
+    name: "Shelly Jyoti",
+    slug: "shelly-jyoti",
+    image: "/images/image7.webp",
+    description:
+      "Contemporary artist exploring Gandhi’s principles through art.",
+    url: "https://youtu.be/Vu_gdUgJAzk",
+  },
+];
+
+export async function getStaticPaths() {
+  return talks.map(t => ({
+    params: { slug: t.slug }
+  }));
+}
+
+const { slug } = Astro.params;
+const talk = talks.find(t => t.slug === slug);
+if (!talk) throw new Error("Talk not found");
+
+function getEmbedUrl(url) {
+  if (url.includes("drive.google.com")) {
+    const id = url.match(/\/d\/(.+?)\//)?.[1];
+    return `https://drive.google.com/file/d/${id}/preview`;
+  }
+  return url.replace("watch?v=", "embed/").replace("youtu.be/", "www.youtube.com/embed/");
+}
+
+const embedUrl = getEmbedUrl(talk.url);
+const canonical = `https://www.tedxlnmiit.in/talks/${talk.slug}`;
+---
+
+<MainLayout
+  title={`${talk.name} | TEDx LNMIIT`}
+  description={talk.description}
+  canonical={canonical}
+>
+  <script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": talk.name,
+    "description": talk.description,
+    "thumbnailUrl": `https://www.tedxlnmiit.in${talk.image}`,
+    "embedUrl": canonical,
+    "contentUrl": talk.url,
+    "publisher": {
+      "@type": "Organization",
+      "name": "TEDxLNMIIT"
+    },
+    "potentialAction": {
+      "@type": "WatchAction",
+      "target": canonical
+    }
+  })}
+></script>
+
+  <main class="max-w-5xl mx-auto py-12 px-4 text-white">
+    <h1 class="text-3xl font-bold mb-6">{talk.name}</h1>
+
+    <div class="aspect-video rounded-xl overflow-hidden shadow-xl">
+      <iframe
+        src={embedUrl}
+        class="w-full h-full"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <p class="mt-6 text-lg text-gray-300">{talk.description}</p>
+  </main>
+</MainLayout>
