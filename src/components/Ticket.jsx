@@ -38,16 +38,6 @@ const Tickets = () => {
 
       {/* Ticket Ribbon */}
       <div className="mx-auto w-fit mt-2">
- <span
-  className="px-3 sm:px-4 py-1 
-  text-[10px] sm:text-[12px] font-semibold tracking-wide
-  uppercase text-[#EB0028]
-  border border-[#EB0028]/70
-  rounded-md bg-black/40 
-  whitespace-nowrap"
->
-  Limited Early Bird Pass — Limited Seats
-</span>
 
 </div>
 
@@ -74,19 +64,14 @@ const Tickets = () => {
       {/* Price Section */}
       <div className="border-t border-gray-700 pt-8 mt-8">
         <p className="text-gray-400 text-sm">Original Price</p>
-        <p className="text-2xl font-semibold line-through text-gray-500">₹499</p>
+        
 
-        <p className="text-red-600 mt-2 text-sm font-medium">
-          Early Bird Offer
-        </p>
+        
 
         <p className="text-5xl font-bold text-[#EB0028] mt-1">
-          ₹399
+          ₹499
         </p>
 
-        <p className="text-gray-400 text-sm mt-2">
-          Save ₹100 — Limited Time Discount
-        </p>
 
         {/* Registration Options */}
 <div className="mt-8">
