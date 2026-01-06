@@ -66,6 +66,7 @@ const teamData = [
   {
     title: "Creative Head",
     members: [
+      { name: "Akshat Gupta", role: "Graphic Designing Head", image: "/team/akshat.webp", linkedin: "https://www.linkedin.com/in/guptaakshat28?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
       { name: "Neha Raniwala", role: "Graphic Designing Head", image: "/team/neha.webp", linkedin: "https://www.linkedin.com/in/neha-raniwala" },
       { name: "Utkrasht Gupta", role: "Graphic Designing Head", image: "/team/utkrasht.webp", linkedin: "https://www.linkedin.com/in/utkrasht-gupta-903317205" },
       { name: "Yash Jain", role: "Video Editing Head", image: "/team/yash.webp", linkedin: "https://www.linkedin.com/in/yash-jain-agkj11" },
