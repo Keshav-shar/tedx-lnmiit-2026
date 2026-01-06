@@ -1,0 +1,30 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const updates = [
+  {
+    title: "TEDx LNMIIT Tickets Are Now Live",
+    slug: "tickets-live",
+    date: "2026-01-06",
+    description: "Book your seats now for TEDx LNMIIT 2026."
+  }
+];
+---
+
+<MainLayout
+  title="TEDx LNMIIT Tickets Are Now Live"
+  description="Book your seats now for TEDx LNMIIT 2026."
+  canonical="https://www.tedxlnmiit.in/updates/tickets-live"
+  type="article"
+  published="2026-01-06T6:00:00+05:30"
+/>
+
+  <h1>Latest Updates</h1>
+
+  {updates.map(u => (
+    <article>
+      <h2><a href={`/updates/${u.slug}`}>{u.title}</a></h2>
+      <p>{u.description}</p>
+    </article>
+  ))}
+</MainLayout>

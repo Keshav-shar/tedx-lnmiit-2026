@@ -1,0 +1,53 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+export async function getStaticPaths() {
+  return [{ params: { slug: "tickets-live" } }];
+}
+
+const updates = {
+  "tickets-live": {
+    title: "TEDx LNMIIT Tickets Are Now Live",
+    description: "Book your seats now for TEDx LNMIIT 2026.",
+    content: `
+      TEDx LNMIIT 2026 tickets are officially live! Join industry leaders,
+      innovators and speakers for a day of inspiring ideas.
+    `,
+    date: "2026-01-06"
+  }
+};
+
+const { slug } = Astro.params;
+const post = updates[slug];
+---
+
+<MainLayout
+  title="TEDx LNMIIT Tickets Are Now Live"
+  description="Book your seats now for TEDx LNMIIT 2026."
+  canonical="https://www.tedxlnmiit.in/updates/tickets-live"
+  type="article"
+  published="2026-01-02T10:00:00+05:30"
+/>
+
+  <article>
+    <h1>{post.title}</h1>
+    <p>{post.content}</p>
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": post.title,
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "mainEntityOfPage": `https://www.tedxlnmiit.in/updates/${slug}`,
+    "publisher": {
+      "@type": "Organization",
+      "name": "TEDx LNMIIT",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.tedxlnmiit.in/favicon.webp"
+      }
+    }
+  })}></script>
+</MainLayout>
