@@ -74,13 +74,18 @@ export default function Sponsors() {
               className="bg-white rounded-2xl p-8 shadow-xl hover:scale-105 transition-transform w-56 h-56 flex flex-col justify-center items-center"
             >
               <img
-                src={partner.logo}
-                alt={partner.name}
-                className="object-contain w-40 h-28 mb-2"
-              />
-              <p className="text-black font-medium text-center text-sm">
-                {partner.name}
-              </p>
+  src={partner.logo}
+  alt={partner.name}
+  className="object-contain w-40 h-24 mb-3"
+/>
+
+<p className="text-black font-semibold text-center text-sm mb-1">
+  {partner.name}
+</p>
+
+<p className="text-gray-600 text-center text-xs py-2">
+  {partner.domain}
+</p>
             </a>
           ))}
         </div>
