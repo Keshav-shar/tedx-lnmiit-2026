@@ -2,7 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 
 export async function getStaticPaths() {
-  return [{ params: { slug: "tickets-live" } }, { params: { slug: "speakers-revealed" } }];
+  return [{ params: { slug: "tickets-live" } }, { params: { slug: "speakers-revealed" } }, { params: { slug: "final-speakers-revealed" } }];
 }
 
 const updates = {
