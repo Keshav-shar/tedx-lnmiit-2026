@@ -6,7 +6,7 @@ const talks = [
   {
     id: 1,
     name: "Dr. Tanu Jain",
-    slug: "dr-tanu-jain",
+    speaker: "dr-tanu-jain",
     drive: true,
     image: "/images/image0.webp",
     description:
@@ -16,7 +16,7 @@ const talks = [
   {
     id: 2,
     name: "Gunjan Saini",
-    slug: "gunjan-saini",
+    speaker: "gunjan-saini",
     image: "/images/image01.webp",
     description:
       "Poet, writer, and founder of Let’s Talk, Gunjan Saini fosters emotional well-being through shared stories.",
@@ -25,7 +25,7 @@ const talks = [
   {
     id: 3,
     name: "Preksha Kaparwan",
-    slug: "preksha-kaparwan",
+    speaker: "preksha-kaparwan",
     image: "/images/image1.webp",
     description:
       "Entrepreneur and storyteller, Preksha Kaparwan is Co-Founder and CMO of Alphaa AI.",
@@ -34,7 +34,7 @@ const talks = [
   {
     id: 4,
     name: "Deepak Pareek",
-    slug: "deepak-pareek",
+    speaker: "deepak-pareek",
     image: "/images/deepak.webp",
     description:
       "Co-founder of Iceberg Creations and an IMPACT 30 Under 30 honoree.",
@@ -43,7 +43,7 @@ const talks = [
   {
     id: 5,
     name: "Chinmay Gaur",
-    slug: "chinmay-gaur",
+    speaker: "chinmay-gaur",
     image: "/images/image5.webp",
     description:
       "Indian classical flutist and composer blending tradition with modern expression.",
@@ -52,7 +52,7 @@ const talks = [
   {
     id: 6,
     name: "Dr. Ajay Data",
-    slug: "dr-ajay-data",
+    speaker: "dr-ajay-data",
     image: "/images/image3.webp",
     description:
       "Visionary entrepreneur who introduced the internet to Rajasthan.",
@@ -61,7 +61,7 @@ const talks = [
   {
     id: 7,
     name: "Krishnan Sunderarajan",
-    slug: "krishnan-sunderarajan",
+    speaker: "krishnan-sunderarajan",
     image: "/images/krishna.webp",
     description:
       "Founder of LOKA, India’s first Metaverse app.",
@@ -70,7 +70,7 @@ const talks = [
   {
     id: 8,
     name: "Dr. Lopa Mudraa",
-    slug: "dr-lopa-mudraa",
+    speaker: "dr-lopa-mudraa",
     image: "/images/image4.webp",
     description:
       "Information Security Evangelist and 4× Global 100 CISO awardee.",
@@ -79,7 +79,7 @@ const talks = [
   {
     id: 9,
     name: "Dr. Kamna Chhibber",
-    slug: "dr-kamna-chhibber",
+    speaker: "dr-kamna-chhibber",
     image: "/images/image2.webp",
     description:
       "Head of Mental Health at Fortis Healthcare.",
@@ -88,7 +88,7 @@ const talks = [
   {
     id: 10,
     name: "Aabha Hanjura",
-    slug: "aabha-hanjura",
+    speaker: "aabha-hanjura",
     image: "/images/image6.webp",
     description:
       "Singer-songwriter and founder of the band Sufistication.",
@@ -97,7 +97,7 @@ const talks = [
   {
     id: 11,
     name: "Chetna Balhara",
-    slug: "chetna-balhara",
+    speaker: "chetna-balhara",
     image: "/images/chetna.webp",
     description:
       "Poet and digital creator known for heartfelt poetry.",
@@ -106,7 +106,7 @@ const talks = [
   {
     id: 12,
     name: "Shelly Jyoti",
-    slug: "shelly-jyoti",
+    speaker: "shelly-jyoti",
     image: "/images/image7.webp",
     description:
       "Contemporary artist exploring Gandhi’s principles through art.",
@@ -115,13 +115,26 @@ const talks = [
 ];
 
 export async function getStaticPaths() {
-  return talks.map(t => ({
-    params: { slug: t.slug }
-  }));
+  return [
+    { params: { speaker: "dr-tanu-jain" } },
+    { params: { speaker: "gunjan-saini" } },
+    { params: { speaker: "preksha-kaparwan" } },
+    { params: { speaker: "deepak-pareek" } },
+    { params: { speaker: "chinmay-gaur" } },
+    { params: { speaker: "dr-ajay-data" } },
+    { params: { speaker: "krishnan-sunderarajan" } },
+    { params: { speaker: "dr-lopa-mudraa" } },
+    { params: { speaker: "dr-kamna-chhibber" } },
+    { params: { speaker: "aabha-hanjura" } },
+    { params: { speaker: "chetna-balhara" } },
+    { params: { speaker: "shelly-jyoti" } }
+  ];
 }
 
-const { slug } = Astro.params;
-const talk = talks.find(t => t.slug === slug);
+
+
+const { speaker } = Astro.params;
+const talk = talks.find(t => t.speaker === speaker);
 if (!talk) throw new Error("Talk not found");
 
 function getEmbedUrl(url) {
@@ -133,7 +146,7 @@ function getEmbedUrl(url) {
 }
 
 const embedUrl = getEmbedUrl(talk.url);
-const canonical = `https://www.tedxlnmiit.in/talks/${talk.slug}`;
+const canonical = `https://www.tedxlnmiit.in/talks/${talk.speaker}`;
 ---
 
 <MainLayout
