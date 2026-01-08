@@ -162,9 +162,12 @@ const canonical = `https://www.tedxlnmiit.in/talks/${talk.speaker}`;
     "name": talk.name,
     "description": talk.description,
     "thumbnailUrl": `https://www.tedxlnmiit.in${talk.image}`,
+    "contentUrl": canonical,
     "embedUrl": canonical,
-    "contentUrl": talk.url,
-    "uploadDate": "2026-02-15",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": canonical
+    },
     "publisher": {
       "@type": "Organization",
       "name": "TEDxLNMIIT"
@@ -175,6 +178,7 @@ const canonical = `https://www.tedxlnmiit.in/talks/${talk.speaker}`;
     }
   })}
 ></script>
+
 
   <main class="max-w-5xl mx-auto py-12 px-4 text-white">
     <h1 class="text-3xl font-bold mb-6">{talk.name}</h1>
