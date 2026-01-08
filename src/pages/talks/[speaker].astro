@@ -180,18 +180,23 @@ const canonical = `https://www.tedxlnmiit.in/talks/${talk.speaker}`;
 ></script>
 
 
-  <main class="max-w-5xl mx-auto py-12 px-4 text-white">
-    <h1 class="text-3xl font-bold mb-6">{talk.name}</h1>
+ <main class="max-w-5xl mx-auto py-12 px-4 text-white">
 
-    <div class="aspect-video rounded-xl overflow-hidden shadow-xl">
-      <iframe
-        src={embedUrl}
-        class="w-full h-full"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-      </iframe>
-    </div>
+  <!-- VIDEO MUST BE FIRST -->
+  <div class="aspect-video rounded-xl overflow-hidden shadow-xl">
+    <iframe
+      src={embedUrl}
+      class="w-full h-full"
+      loading="eager"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </div>
 
-    <p class="mt-6 text-lg text-gray-300">{talk.description}</p>
-  </main>
+  <h1 class="text-3xl font-bold mt-6 mb-4">{talk.name}</h1>
+
+  <p class="text-lg text-gray-300">{talk.description}</p>
+
+</main>
+
 </MainLayout>
