@@ -8,6 +8,7 @@ const talks = [
     name: "Dr. Tanu Jain",
     speaker: "dr-tanu-jain",
     drive: true,
+    uploadDate: "2023-11-15",
     image: "/images/image0.webp",
     description:
       "Former IAS officer and DRDO Assistant Director, Dr. Jain advocates for education and UPSC reforms. Her multifaceted career exemplifies her dedication to creating impact beyond conventional roles.",
@@ -17,6 +18,7 @@ const talks = [
     id: 2,
     name: "Gunjan Saini",
     speaker: "gunjan-saini",
+    uploadDate: "2024-03-25",
     image: "/images/image01.webp",
     description:
       "Poet, writer, and founder of Let’s Talk, Gunjan Saini fosters emotional well-being through shared stories.",
@@ -26,6 +28,7 @@ const talks = [
     id: 3,
     name: "Preksha Kaparwan",
     speaker: "preksha-kaparwan",
+    uploadDate: "2025-05-22",
     image: "/images/image1.webp",
     description:
       "Entrepreneur and storyteller, Preksha Kaparwan is Co-Founder and CMO of Alphaa AI.",
@@ -35,6 +38,7 @@ const talks = [
     id: 4,
     name: "Deepak Pareek",
     speaker: "deepak-pareek",
+    uploadDate: "2024-03-21",
     image: "/images/deepak.webp",
     description:
       "Co-founder of Iceberg Creations and an IMPACT 30 Under 30 honoree.",
@@ -44,6 +48,7 @@ const talks = [
     id: 5,
     name: "Chinmay Gaur",
     speaker: "chinmay-gaur",
+    uploadDate: "2024-03-21",
     image: "/images/image5.webp",
     description:
       "Indian classical flutist and composer blending tradition with modern expression.",
@@ -53,6 +58,7 @@ const talks = [
     id: 6,
     name: "Dr. Ajay Data",
     speaker: "dr-ajay-data",
+    uploadDate: "2025-05-21",
     image: "/images/image3.webp",
     description:
       "Visionary entrepreneur who introduced the internet to Rajasthan.",
@@ -62,6 +68,7 @@ const talks = [
     id: 7,
     name: "Krishnan Sunderarajan",
     speaker: "krishnan-sunderarajan",
+    uploadDate: "2024-03-21",
     image: "/images/krishna.webp",
     description:
       "Founder of LOKA, India’s first Metaverse app.",
@@ -71,6 +78,7 @@ const talks = [
     id: 8,
     name: "Dr. Lopa Mudraa",
     speaker: "dr-lopa-mudraa",
+    uploadDate: "2025-05-21",
     image: "/images/image4.webp",
     description:
       "Information Security Evangelist and 4× Global 100 CISO awardee.",
@@ -80,6 +88,7 @@ const talks = [
     id: 9,
     name: "Dr. Kamna Chhibber",
     speaker: "dr-kamna-chhibber",
+    uploadDate: "2025-05-21",
     image: "/images/image2.webp",
     description:
       "Head of Mental Health at Fortis Healthcare.",
@@ -89,6 +98,7 @@ const talks = [
     id: 10,
     name: "Aabha Hanjura",
     speaker: "aabha-hanjura",
+    uploadDate: "2025-05-21",
     image: "/images/image6.webp",
     description:
       "Singer-songwriter and founder of the band Sufistication.",
@@ -98,6 +108,7 @@ const talks = [
     id: 11,
     name: "Chetna Balhara",
     speaker: "chetna-balhara",
+    uploadDate: "2025-05-21",
     image: "/images/chetna.webp",
     description:
       "Poet and digital creator known for heartfelt poetry.",
@@ -107,6 +118,7 @@ const talks = [
     id: 12,
     name: "Shelly Jyoti",
     speaker: "shelly-jyoti",
+    uploadDate: "2025-05-21",
     image: "/images/image7.webp",
     description:
       "Contemporary artist exploring Gandhi’s principles through art.",
@@ -164,6 +176,7 @@ const canonical = `https://www.tedxlnmiit.in/talks/${talk.speaker}`;
     "thumbnailUrl": `https://www.tedxlnmiit.in${talk.image}`,
     "contentUrl": canonical,
     "embedUrl": canonical,
+    "uploadDate": talk.uploadDate,
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": canonical
